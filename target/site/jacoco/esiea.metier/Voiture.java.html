@@ -141,16 +141,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 <span class="fc" id="L141">		}</span>
 		
 		public String toString() {
-<span class="nc" id="L144">			return label;</span>
+<span class="fc" id="L144">			return label;</span>
 		}
 		
 		public char getChar() {
-<span class="nc" id="L148">			return label.charAt(0);</span>
+<span class="fc" id="L148">			return label.charAt(0);</span>
 		}
 		
 		public static Carburant get(String valeur) {
 <span class="pc bpc" id="L152" title="1 of 2 branches missed.">			for (Carburant c : values()) { </span>
-<span class="pc bpc" id="L153" title="1 of 2 branches missed.">				if(c.label.equals(valeur)) {</span>
+<span class="fc bfc" id="L153" title="All 2 branches covered.">				if(c.label.equals(valeur)) {</span>
 <span class="fc" id="L154">					return c;</span>
 				}
 			}
