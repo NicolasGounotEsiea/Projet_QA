@@ -39,8 +39,8 @@ public class VoitureAPITest {
     @Before
     public void setUp() {
         //intégration
-        RestAssured.baseURI = "http://localhost:8080/esieaBack/rest/voiture";
-        RestAssured.port = 8080;
+        RestAssured.baseURI = "https://cours-qualite.groupe-esiea.fr/esieaBack/rest/voiture";
+
         //Unitaire
         vDao = mock(VoitureDAO.class);
         MockitoAnnotations.initMocks(this);
