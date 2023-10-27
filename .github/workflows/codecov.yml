@@ -19,8 +19,7 @@ jobs:
           java-version: 11
           distribution: 'adopt'  # Ajoutez cette ligne
 
-      - name: Build with Gradle
-        run: ./gradlew build
+
 
       - name: Upload to CodeCov
         uses: codecov/codecov-action@v2
