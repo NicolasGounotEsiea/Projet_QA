@@ -19,7 +19,34 @@ jobs:
           java-version: 11
           distribution: 'adopt'  # Ajoutez cette ligne
 
+  - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: 11
+        distribution: 'adopt'
+        architecture: x64
 
+      - name: Build with Maven
+        run: mvn clean install
+
+      - name: Run Tests
+        run: mvn test
+
+      - name: Generate Jacoco Coverage Report
+        run: mvn jacoco:report
+        continue-on-error: true
+
+      - name: Publish Jacoco Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: jacoco-report
+          path: target/site/jacoco
+
+      - name: Publish Test Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: target/surefire-reports
 
       - name: Upload to CodeCov
         uses: codecov/codecov-action@v2
