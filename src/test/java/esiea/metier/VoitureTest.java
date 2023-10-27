@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import net.bytebuddy.description.annotation.AnnotationList;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -181,6 +182,15 @@ public class VoitureTest {
 
     }
 
+    @Test
+    public void CaruburantgetTestFalse() {
+
+
+        assertEquals(null,Voiture.Carburant.get("00") );
+
+    }
+
+
 
 
 
@@ -225,12 +235,14 @@ public class VoitureTest {
     @Test
     public void testCheckInvalidModele() {
         Voiture voiture = new Voiture();
+        voiture.setMarque("Toyaota");
         voiture.setModele(null);
         assertFalse(voiture.check());
     }
     @Test
     public void testCheckInvalidModeleEmpty() {
         Voiture voiture = new Voiture();
+        voiture.setMarque("Toyaota");
         voiture.setModele("");
         assertFalse(voiture.check());
     }
@@ -238,6 +250,8 @@ public class VoitureTest {
     @Test
     public void testCheckInvalidFinition() {
         Voiture voiture = new Voiture();
+        voiture.setMarque("Toyaota");
+        voiture.setModele("Serie E");
         voiture.setFinition(null);
         assertFalse(voiture.check());
     }
@@ -245,6 +259,8 @@ public class VoitureTest {
     @Test
     public void testCheckInvalidFinitionEmpty() {
         Voiture voiture = new Voiture();
+        voiture.setMarque("Toyaota");
+        voiture.setModele("Serie E");
         voiture.setFinition("");
         assertFalse(voiture.check());
     }
@@ -252,6 +268,9 @@ public class VoitureTest {
     @Test
     public void testCheckInvalidCarburant() {
         Voiture voiture = new Voiture();
+        voiture.setMarque("Toyaota");
+        voiture.setModele("Serie E");
+        voiture.setFinition("FIni");
         voiture.setCarburant(null);
         assertFalse(voiture.check());
     }
@@ -259,6 +278,10 @@ public class VoitureTest {
     @Test
     public void testCheckInvalidKM() {
         Voiture voiture = new Voiture();
+        voiture.setMarque("Toyaota");
+        voiture.setModele("Serie E");
+        voiture.setFinition("Finin");
+        voiture.setCarburant(Voiture.Carburant.ELECTRIQUE);
         voiture.setKm(-10);
         assertFalse(voiture.check());
     }
@@ -266,15 +289,27 @@ public class VoitureTest {
     @Test
     public void testCheckInvalidAnneeOld() {
         Voiture voiture = new Voiture();
+        voiture.setMarque("Toyaota");
+        voiture.setModele("Serie E");
+        voiture.setFinition("Finin");
+        voiture.setCarburant(Voiture.Carburant.ELECTRIQUE);
+        voiture.setKm(10);
         voiture.setAnnee(1800);
         assertFalse(voiture.check());
     }
+
+
 
     @Test
     public void testCheckInvalidAnneeFuture() {
         Voiture voiture = new Voiture();
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date());
+        voiture.setMarque("Toyaota");
+        voiture.setModele("Serie E");
+        voiture.setFinition("Finin");
+        voiture.setCarburant(Voiture.Carburant.ELECTRIQUE);
+        voiture.setKm(10);
         voiture.setAnnee(calendar.get(Calendar.YEAR) + 100);
         assertFalse(voiture.check());
     }
@@ -283,7 +318,20 @@ public class VoitureTest {
     @Test
     public void testCheckInvalidPrix() {
         Voiture voiture = new Voiture();
+        voiture.setMarque("Toyaota");
+        voiture.setModele("Serie E");
+        voiture.setFinition("Finin");
+        voiture.setCarburant(Voiture.Carburant.ELECTRIQUE);
+        voiture.setKm(10);
+        voiture.setAnnee(2000);
         voiture.setPrix(-10);
+        assertFalse(voiture.check());
+    }
+
+    @Test
+    public void testCheckInvalidPrixDeux() {
+        Voiture voiture = new Voiture();
+        voiture.setPrix(0);
         assertFalse(voiture.check());
     }
 

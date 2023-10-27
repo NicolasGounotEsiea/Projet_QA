@@ -98,14 +98,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 	public boolean check() {
 <span class="fc bfc" id="L99" title="All 2 branches covered.">		if (id &lt; 0) { return false; }</span>
 <span class="fc bfc" id="L100" title="All 4 branches covered.">		if (marque == null || marque.isEmpty()) { return false; }</span>
-<span class="pc bpc" id="L101" title="2 of 4 branches missed.">		if (modele == null || modele.isEmpty()) { return false; }</span>
-<span class="pc bpc" id="L102" title="2 of 4 branches missed.">		if (finition == null || finition.isEmpty()) { return false; }</span>
-<span class="pc bpc" id="L103" title="1 of 2 branches missed.">		if (carburant == null) { return false; }</span>
-<span class="pc bpc" id="L104" title="1 of 2 branches missed.">		if (km &lt; 0) { return false; }</span>
+<span class="fc bfc" id="L101" title="All 4 branches covered.">		if (modele == null || modele.isEmpty()) { return false; }</span>
+<span class="fc bfc" id="L102" title="All 4 branches covered.">		if (finition == null || finition.isEmpty()) { return false; }</span>
+<span class="fc bfc" id="L103" title="All 2 branches covered.">		if (carburant == null) { return false; }</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">		if (km &lt; 0) { return false; }</span>
 <span class="fc" id="L105">		Calendar calendar = Calendar.getInstance();</span>
 <span class="fc" id="L106">		calendar.setTime(new Date());</span>
-<span class="pc bpc" id="L107" title="2 of 4 branches missed.">		if (annee &lt; 1900 || annee &gt;	calendar.get(Calendar.YEAR)) { return false; }</span>
-<span class="pc bpc" id="L108" title="1 of 2 branches missed.">		if (prix &lt; 0) { return false; }</span>
+<span class="fc bfc" id="L107" title="All 4 branches covered.">		if (annee &lt; 1900 || annee &gt;	calendar.get(Calendar.YEAR)) { return false; }</span>
+<span class="fc bfc" id="L108" title="All 2 branches covered.">		if (prix &lt; 0) { return false; }</span>
 <span class="fc" id="L109">		return true;</span>
 	}
 
@@ -149,12 +149,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 		}
 		
 		public static Carburant get(String valeur) {
-<span class="pc bpc" id="L152" title="1 of 2 branches missed.">			for (Carburant c : values()) { </span>
+<span class="fc bfc" id="L152" title="All 2 branches covered.">			for (Carburant c : values()) { </span>
 <span class="fc bfc" id="L153" title="All 2 branches covered.">				if(c.label.equals(valeur)) {</span>
 <span class="fc" id="L154">					return c;</span>
 				}
 			}
-<span class="nc" id="L157">			return null;</span>
+<span class="fc" id="L157">			return null;</span>
 		}
 	}
 }
