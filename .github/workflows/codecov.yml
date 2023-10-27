@@ -1,43 +1,27 @@
-name: Build and Test
+name: CodeCov
 
 on:
+  pull_request:
   push:
     branches:
       - main
 
 jobs:
-  build:
+  codecov:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up JDK
+      - name: Set up Java
         uses: actions/setup-java@v2
         with:
           java-version: 11
-          distribution: 'adopt'
-          architecture: x64
+          distribution: 'adopt'  # Ajoutez cette ligne
 
-      - name: Build with Maven
-        run: mvn clean install
 
-      - name: Run Tests
-        run: mvn test
 
-      - name: Generate Jacoco Coverage Report
-        run: mvn jacoco:report
-        continue-on-error: true
-
-      - name: Publish Jacoco Report
-        uses: actions/upload-artifact@v2
+      - name: Upload to CodeCov
+        uses: codecov/codecov-action@v2
         with:
-          name: jacoco-report
-          path: target/site/jacoco
-
-      - name: Publish Test Results
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-results
-          path: target/surefire-reports
+          token: ${{ secrets.CODECOV_TOKEN }}
