@@ -163,7 +163,7 @@ public class VoitureAPI {
 	
 	/**
 	 * Utilise le DAO pour obtenir les informations d'une voiture à partir de son ID 
-	 * @param id L'ID de la voiture à récupérer en base
+	 * @param
 	 * @return Retourne une voiture sous forme d'objet voiture
 	 */
 	public ReponseVoiture getReponse(String param, int mini, int nbVoitures) {

@@ -1,11 +1,16 @@
 package esiea.api;
 
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 import esiea.dao.ReponseVoiture;
+
 import esiea.dao.VoitureDAO;
 import esiea.metier.Voiture;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,6 +22,8 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.powermock.api.mockito.PowerMockito;
 
+
+import io.restassured.RestAssured;
 
 import java.sql.SQLException;
 
@@ -31,9 +38,11 @@ public class VoitureAPITest {
 
     @Before
     public void setUp() {
-
+        //intégration
+        RestAssured.baseURI = "http://localhost:8080/esieaBack/rest/voiture";
+        RestAssured.port = 8080;
+        //Unitaire
         vDao = mock(VoitureDAO.class);
-
         MockitoAnnotations.initMocks(this);
     }
 
@@ -156,19 +165,93 @@ public class VoitureAPITest {
 
 
 
+    @Test
+    public void testGetVoituresJson() {
+        // Test avec paramètre "param" égal à "all"
+        Response responseAll = given()
+                .pathParam("param", "all")
+                .pathParam("mini", "0")
+                .pathParam("nbVoitures", "10")
+                .when()
+                .get("/get/{param}/{mini}/{nbVoitures}");
+
+        // Assurez-vous que la réponse a un code de statut HTTP 200 (OK)
+        responseAll.then().statusCode(200);
+
+        // Test avec paramètre "param" numérique
+        Response responseNumeric = given()
+                .pathParam("param", "123") // Remplacez 123 par une valeur numérique valide
+                .pathParam("mini", "0")
+                .pathParam("nbVoitures", "10")
+                .when()
+                .get("/get/{param}/{mini}/{nbVoitures}");
+
+        // Assurez-vous que la réponse a un code de statut HTTP 200 (OK)
+        responseNumeric.then().statusCode(200);
 
 
+        JsonPath jsonPath = responseAll.jsonPath();
+        assertTrue(jsonPath.getList("voitures").size() > 0);
+        assertNotNull(jsonPath.getInt("volume"));
+        try {
+            doThrow(new SQLException("Erreur SQL simulée")).when(vDao).ajouterVoiture(org.mockito.ArgumentMatchers.any(Voiture.class));
+
+        } catch (Exception e) {
+        }
+    }
 
 
+    //test non passé, retour de l'api null
+    @Test
+    public void testParametreNonValide() {
+        // Test avec un paramètre "param" non valide
+        Response responseInvalidParam = given()
+                .pathParam("param", "param_invalid")
+                .pathParam("mini", "0")
+                .pathParam("nbVoitures", "10")
+                .when()
+                .get("/get/{param}/{mini}/{nbVoitures}");
 
 
+        responseInvalidParam.then().statusCode(404); // Assurez-vous que le code d'erreur est bien 404 (Not Found)
+    }
 
+    @Test
+    public void testParametreNonValideNum() {
+        // Test avec un paramètre "mini" non numérique
+        Response responseInvalidMini = given()
+                .pathParam("param", "all")
+                .pathParam("mini", "ff") // Paramètre "mini" non numérique
+                .pathParam("nbVoitures", "10")
+                .when()
+                .get("/get/{param}/{mini}/{nbVoitures}");
 
-
-
-
-
-
+        // Assurez-vous que la réponse a un code de statut HTTP 500 (Internal Server Error)
+        responseInvalidMini.then().statusCode(500); // Assurez-vous que le code d'erreur est bien 500 (Internal Server Error)
+    }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
