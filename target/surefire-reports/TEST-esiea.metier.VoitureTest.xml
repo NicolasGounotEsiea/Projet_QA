@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="24" failures="0" name="esiea.metier.VoitureTest" time="0.217" errors="0" skipped="0">
+<testsuite tests="24" failures="0" name="esiea.metier.VoitureTest" time="0.198" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.3.1"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -68,21 +68,21 @@
   <testcase classname="esiea.metier.VoitureTest" name="testCheckInvalidAnneeFuture" time="0"/>
   <testcase classname="esiea.metier.VoitureTest" name="getMarqueTest" time="0"/>
   <testcase classname="esiea.metier.VoitureTest" name="getCarburantTest" time="0"/>
-  <testcase classname="esiea.metier.VoitureTest" name="toStringWorkTest" time="0.214"/>
+  <testcase classname="esiea.metier.VoitureTest" name="toStringWorkTest" time="0.195"/>
   <testcase classname="esiea.metier.VoitureTest" name="testCheckInvalidId" time="0"/>
   <testcase classname="esiea.metier.VoitureTest" name="testCheckInvalidKM" time="0"/>
   <testcase classname="esiea.metier.VoitureTest" name="toStringCaruburantTest" time="0"/>
-  <testcase classname="esiea.metier.VoitureTest" name="testCheckValidVoiture" time="0"/>
+  <testcase classname="esiea.metier.VoitureTest" name="testCheckValidVoiture" time="0.001"/>
   <testcase classname="esiea.metier.VoitureTest" name="getCharTest" time="0"/>
   <testcase classname="esiea.metier.VoitureTest" name="toStringFailedTest" time="0.001"/>
-  <testcase classname="esiea.metier.VoitureTest" name="getIdTest" time="0.001"/>
+  <testcase classname="esiea.metier.VoitureTest" name="getIdTest" time="0"/>
   <testcase classname="esiea.metier.VoitureTest" name="testCheckInvalidFinition" time="0"/>
   <testcase classname="esiea.metier.VoitureTest" name="testCheckInvalidAnneeOld" time="0"/>
   <testcase classname="esiea.metier.VoitureTest" name="getKmTest" time="0"/>
   <testcase classname="esiea.metier.VoitureTest" name="getTypeDonneesTest" time="0"/>
   <testcase classname="esiea.metier.VoitureTest" name="getPrixTest" time="0"/>
-  <testcase classname="esiea.metier.VoitureTest" name="testCheckInvalidPrix" time="0"/>
-  <testcase classname="esiea.metier.VoitureTest" name="getAnneeTest" time="0.001"/>
+  <testcase classname="esiea.metier.VoitureTest" name="testCheckInvalidPrix" time="0.001"/>
+  <testcase classname="esiea.metier.VoitureTest" name="getAnneeTest" time="0"/>
   <testcase classname="esiea.metier.VoitureTest" name="CaruburantgetTest" time="0"/>
   <testcase classname="esiea.metier.VoitureTest" name="getFinition" time="0"/>
   <testcase classname="esiea.metier.VoitureTest" name="testCheckInvalidMarque" time="0"/>
