@@ -19,12 +19,12 @@ jobs:
           java-version: 11
           distribution: 'adopt'  # Ajoutez cette ligne
 
-  - name: Set up JDK
-      uses: actions/setup-java@v2
-      with:
-        java-version: 11
-        distribution: 'adopt'
-        architecture: x64
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: 11
+          distribution: 'adopt'
+          architecture: x64
 
       - name: Build with Maven
         run: mvn clean install
