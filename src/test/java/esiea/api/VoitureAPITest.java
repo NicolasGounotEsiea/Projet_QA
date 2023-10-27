@@ -225,7 +225,6 @@ public class VoitureAPITest {
         // Assurez-vous que la réponse a un code de statut HTTP 500 (Internal Server Error)
         responseInvalidMini.then().statusCode(500); // Assurez-vous que le code d'erreur est bien 500 (Internal Server Error)
 
-
     }
 
 

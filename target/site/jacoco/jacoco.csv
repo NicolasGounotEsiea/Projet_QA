@@ -3,6 +3,6 @@ esiea Maven Webapp,utils,Configuration,129,0,6,0,27,0,8,0,5,0
 esiea Maven Webapp,utils,StringUtils,33,0,6,0,11,0,6,0,3,0
 esiea Maven Webapp,esiea.dao,VoitureDAO,668,7,48,0,135,3,35,2,11,2
 esiea Maven Webapp,esiea.dao,ReponseVoiture,32,0,2,0,11,0,7,0,6,0
-esiea Maven Webapp,esiea.metier,Voiture.Carburant,2,87,1,3,1,13,1,6,0,5
+esiea Maven Webapp,esiea.metier,Voiture.Carburant,2,70,1,3,1,13,1,6,0,5
 esiea Maven Webapp,esiea.metier,Voiture,17,203,10,24,3,47,10,27,0,20
 esiea Maven Webapp,esiea.api,VoitureAPI,193,118,11,17,43,31,11,11,5,3
