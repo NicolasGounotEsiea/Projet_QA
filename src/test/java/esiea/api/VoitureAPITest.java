@@ -39,8 +39,8 @@ public class VoitureAPITest {
     @Before
     public void setUp() {
         //intégration
-        RestAssured.baseURI = "http://localhost:8080/esieaBack/rest/voiture";
-        RestAssured.port = 8080;
+        RestAssured.baseURI = "https://cours-qualite.groupe-esiea.fr/esieaBack/rest/voiture";
+
         //Unitaire
         vDao = mock(VoitureDAO.class);
         MockitoAnnotations.initMocks(this);
@@ -193,15 +193,11 @@ public class VoitureAPITest {
         JsonPath jsonPath = responseAll.jsonPath();
         assertTrue(jsonPath.getList("voitures").size() > 0);
         assertNotNull(jsonPath.getInt("volume"));
-        try {
-            doThrow(new SQLException("Erreur SQL simulée")).when(vDao).ajouterVoiture(org.mockito.ArgumentMatchers.any(Voiture.class));
-
-        } catch (Exception e) {
-        }
     }
 
 
     //test non passé, retour de l'api null
+
     @Test
     public void testParametreNonValide() {
         // Test avec un paramètre "param" non valide
@@ -228,7 +224,6 @@ public class VoitureAPITest {
 
         // Assurez-vous que la réponse a un code de statut HTTP 500 (Internal Server Error)
         responseInvalidMini.then().statusCode(500); // Assurez-vous que le code d'erreur est bien 500 (Internal Server Error)
-
 
     }
 
