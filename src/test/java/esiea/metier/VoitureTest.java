@@ -1,12 +1,18 @@
 package esiea.metier;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.*;
 
 public class VoitureTest {
 
@@ -136,13 +142,50 @@ public class VoitureTest {
 
     }
 
-   /* @Test(expected = JsonProcessingException.class)
-    public void toStringFailedTest()
-    {//TODO
+    @Test
+    public void toStringFailedTest() throws JsonProcessingException {
+        Voiture voiture = new Voiture();
+        voiture.toString();
+    }
 
+    @Test
+    public void getCharTest() {
+        assertEquals('E', Voiture.Carburant.ESSENCE.getChar());
+        assertEquals('D', Voiture.Carburant.DIESEL.getChar());
+        assertEquals('H', Voiture.Carburant.HYBRIDE.getChar());
+        assertEquals('W', Voiture.Carburant.ELECTRIQUE.getChar());
+    }
+
+    @Test
+    public void toStringCaruburantTest() {
+        assertEquals("E", Voiture.Carburant.ESSENCE.toString());
+        assertEquals("D", Voiture.Carburant.DIESEL.toString());
+        assertEquals("H", Voiture.Carburant.HYBRIDE.toString());
+        assertEquals("W", Voiture.Carburant.ELECTRIQUE.toString());
+    }
+
+    @Test
+    public void CaruburantgetTest() {
+
+        Voiture.Carburant carb = Voiture.Carburant.get("D");
+        assertEquals(Voiture.Carburant.DIESEL,carb );
+
+        Voiture.Carburant ESSENCE = Voiture.Carburant.get("E");
+        assertEquals(Voiture.Carburant.ESSENCE,ESSENCE );
+
+        Voiture.Carburant HYBRIDE = Voiture.Carburant.get("H");
+        assertEquals(Voiture.Carburant.HYBRIDE,HYBRIDE );
+
+        Voiture.Carburant ELECTRIQUE = Voiture.Carburant.get("W");
+        assertEquals(Voiture.Carburant.ELECTRIQUE,ELECTRIQUE );
 
     }
-*/
+
+
+
+
+
+
 
     @Test
     public void testCheckValidVoiture() {
