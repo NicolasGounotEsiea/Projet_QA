@@ -193,11 +193,6 @@ public class VoitureAPITest {
         JsonPath jsonPath = responseAll.jsonPath();
         assertTrue(jsonPath.getList("voitures").size() > 0);
         assertNotNull(jsonPath.getInt("volume"));
-        try {
-            doThrow(new SQLException("Erreur SQL simulée")).when(vDao).ajouterVoiture(org.mockito.ArgumentMatchers.any(Voiture.class));
-
-        } catch (Exception e) {
-        }
     }
 
 
