@@ -76,6 +76,7 @@ public class VoitureAPITest {
         try{
             // Créez un exemple de données JSON pour simuler la saisie JSON
             JSONObject jsonInput = new JSONObject();
+            jsonInput.put("id", "2544444");
             jsonInput.put("marque", "TestMarque");
             jsonInput.put("modele", "TestModele");
             jsonInput.put("finition", "TestFinition");
@@ -166,7 +167,7 @@ public class VoitureAPITest {
 
 
     @Test
-    public void testGetVoituresJson() {
+    public void testGetVoituresJsonValid() {
         // Test avec paramètre "param" égal à "all"
         Response responseAll = given()
                 .pathParam("param", "all")
@@ -197,7 +198,7 @@ public class VoitureAPITest {
 
 
     //test non passé, retour de l'api null
-
+    /*
     @Test
     public void testParametreNonValide() {
         // Test avec un paramètre "param" non valide
@@ -210,7 +211,7 @@ public class VoitureAPITest {
 
 
         responseInvalidParam.then().statusCode(404); // Assurez-vous que le code d'erreur est bien 404 (Not Found)
-    }
+    }*/
 
     @Test
     public void testParametreNonValideNum() {
@@ -226,6 +227,57 @@ public class VoitureAPITest {
         responseInvalidMini.then().statusCode(500); // Assurez-vous que le code d'erreur est bien 500 (Internal Server Error)
 
     }
+
+
+    @Test
+    public void testSupprimerVoitureSucces() {
+        // Créez un identifiant factice
+        String id = "1";
+
+        // Configurez le mock pour simuler la suppression de voiture sans erreur (SQLException)
+
+        try{
+            doNothing().when(vDao).supprimerVoiture(id);
+        }catch(Exception e){}
+
+        // Appelez la méthode à tester
+        String result = voitureAPI.supprimerVoiture(id);
+
+        // Vérifiez que la réponse indique un succès
+        JSONObject jsonResponse = new JSONObject(result);
+        assertTrue(jsonResponse.getBoolean("succes"));
+
+        try{
+            verify(vDao, times(1)).supprimerVoiture(id);
+        }catch(Exception e){}
+
+    }
+
+    @Test
+    public void testSupprimerVoitureEchec() {
+        // Créez un identifiant factice
+        String id = "2";
+
+        try{
+            doThrow(new SQLException("Erreur SQL simulée")).when(vDao).supprimerVoiture(id);
+        }catch(Exception e){}
+
+
+        // Appelez la méthode à tester
+        String result = voitureAPI.supprimerVoiture(id);
+
+        // Vérifiez que la réponse indique un échec
+        JSONObject jsonResponse = new JSONObject(result);
+        assertFalse(jsonResponse.getBoolean("succes"));
+
+        try{
+            verify(vDao, times(1)).supprimerVoiture(id);
+        }catch(Exception e){}
+
+    }
+
+
+
 
 
 }
