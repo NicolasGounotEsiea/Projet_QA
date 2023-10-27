@@ -197,7 +197,7 @@ public class VoitureAPITest {
 
 
     //test non passé, retour de l'api null
-    /*
+
     @Test
     public void testParametreNonValide() {
         // Test avec un paramètre "param" non valide
@@ -210,7 +210,7 @@ public class VoitureAPITest {
 
 
         responseInvalidParam.then().statusCode(404); // Assurez-vous que le code d'erreur est bien 404 (Not Found)
-    }*/
+    }
 
     @Test
     public void testParametreNonValideNum() {
