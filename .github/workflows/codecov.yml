@@ -1,0 +1,27 @@
+name: CodeCov
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  codecov:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: 11
+
+      - name: Build with Gradle
+        run: ./gradlew build
+
+      - name: Upload to CodeCov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
