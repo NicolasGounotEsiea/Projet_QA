@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>VoitureAPI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">esiea Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">esiea.api</a> &gt; <span class="el_source">VoitureAPI.java</span></div><h1>VoitureAPI.java</h1><pre class="source lang-java linenums">package esiea.api;
+
+import java.sql.SQLException;
+
+import javax.ws.rs.DefaultValue;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import esiea.dao.ReponseVoiture;
+import esiea.dao.VoitureDAO;
+import esiea.metier.Voiture;
+import esiea.metier.Voiture.Carburant;
+import utils.StringUtils;
+
+@Path(&quot;/voiture&quot;)
+<span class="fc" id="L23">public class VoitureAPI {</span>
+	
+<span class="fc" id="L25">	private VoitureDAO vDao = new VoitureDAO();</span>
+	
+	@Path(&quot;get/{param}&quot;)
+	@GET
+	@Produces(&quot;application/json&quot;)
+	public String getVoituresJson(@PathParam(&quot;param&quot;) String param) {
+<span class="nc" id="L31">		return getVoituresJson(param, &quot;-1&quot;, &quot;-1&quot;);</span>
+	}
+	
+	@Path(&quot;get/{param}/{mini}/{nbVoitures}&quot;)
+	@GET
+	@Produces(&quot;application/json&quot;)
+	public String getVoituresJson(@PathParam(&quot;param&quot;) String param, 
+			@PathParam(&quot;mini&quot;) String miniS, 
+			@PathParam(&quot;nbVoitures&quot;) String nbVoituresS) {
+<span class="nc" id="L40">		int mini = Integer.parseInt(miniS), nbVoitures = Integer.parseInt(nbVoituresS);</span>
+		ReponseVoiture reponse;
+<span class="nc" id="L42">		JSONObject ret = new JSONObject();</span>
+<span class="nc" id="L43">		JSONArray liste = new JSONArray();</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">		if (&quot;all&quot;.equals(param)) { </span>
+<span class="nc" id="L45">			reponse = getToutesVoitures(mini, nbVoitures);</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">			for (Voiture v : reponse.getData()) {</span>
+<span class="nc" id="L47">				liste.put(v);</span>
+			}
+<span class="nc" id="L49">			ret.put(&quot;voitures&quot;, liste);</span>
+<span class="nc" id="L50">			ret.put(&quot;volume&quot;, reponse.getVolume());</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">		} else  if (StringUtils.estEntier(param)){</span>
+<span class="nc" id="L52">			reponse = getReponse(param, mini, nbVoitures);</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">			if (reponse.getData().length &gt; 0) {</span>
+<span class="nc" id="L54">				ret.put(&quot;voiture&quot;, reponse.getData()[0]);</span>
+<span class="nc" id="L55">				ret.put(&quot;volume&quot;, 1);</span>
+			}
+		}
+		else {
+<span class="nc" id="L59">			reponse = getReponse(param, mini, nbVoitures);</span>
+<span class="nc bnc" id="L60" title="All 2 branches missed.">			for (Voiture v : reponse.getData()) {</span>
+<span class="nc" id="L61">				liste.put(v);</span>
+			}
+<span class="nc" id="L63">			ret.put(&quot;voitures&quot;, liste);</span>
+<span class="nc" id="L64">			ret.put(&quot;volume&quot;, reponse.getVolume());</span>
+		}
+<span class="nc" id="L66">		return ret.toString();</span>
+	}
+	
+	
+	
+	/**
+	 * Utilise le DAO pour insérer une voiture en base de données
+	 * @return Retourne true si l'insertion s'est déroulée avec succès
+	 */
+	@Path(&quot;add&quot;)
+	@POST
+	@Produces(&quot;application/json&quot;)
+	public String ajouterVoiture(String saisieJson) {
+<span class="fc" id="L79">		JSONObject json = new JSONObject(saisieJson);</span>
+<span class="fc" id="L80">		boolean succes = false;</span>
+		try {
+<span class="fc" id="L82">			Voiture v = voitureFromJson(json);</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">			if (v.check()) {</span>
+<span class="fc" id="L84">				vDao.ajouterVoiture(v);</span>
+<span class="fc" id="L85">				succes = true;</span>
+			}
+			
+<span class="fc" id="L88">		} catch (SQLException sql) {</span>
+<span class="fc" id="L89">			sql.printStackTrace();</span>
+<span class="fc" id="L90">		}</span>
+<span class="fc" id="L91">		JSONObject ret = new JSONObject();</span>
+<span class="fc" id="L92">		ret.put(&quot;succes&quot;, succes);</span>
+<span class="fc" id="L93">		return ret.toString();</span>
+	}
+	
+	/**
+	 * Utilise le DAO pour supprimer une voiture en base de données
+	 * @return Retourne true si l'insertion s'est déroulée avec succès
+	 */
+	@Path(&quot;del&quot;)
+	@POST
+	@Produces(&quot;application/json&quot;)
+	public String supprimerVoiture(String id) {
+<span class="nc" id="L104">		boolean succes = false;</span>
+		try {
+<span class="nc" id="L106">			vDao.supprimerVoiture(id);</span>
+<span class="nc" id="L107">			succes = true;</span>
+<span class="nc" id="L108">		} catch (SQLException sql) {</span>
+<span class="nc" id="L109">			sql.printStackTrace();</span>
+<span class="nc" id="L110">		}</span>
+<span class="nc" id="L111">		JSONObject ret = new JSONObject();</span>
+<span class="nc" id="L112">		ret.put(&quot;succes&quot;, succes);</span>
+<span class="nc" id="L113">		return ret.toString();</span>
+	}
+	
+	/**
+	 * Récupère toutes les voitures en base
+	 * @return Retourne un ensemble de voitures sous forme de tableau de Voitures
+	 */
+	public ReponseVoiture getToutesVoitures(int mini, int nbVoitures) {
+<span class="nc" id="L121">		ReponseVoiture ret = new ReponseVoiture();</span>
+		try {
+<span class="nc" id="L123">			ret = vDao.getVoitures(null, mini, nbVoitures);</span>
+			/*vDao.getVoitures(null, mini, nbVoitures);
+			ret[0] = new Voiture();
+			ret[0].setAnnee(2008);
+			ret[0].setCarburant(Carburant.DIESEL);
+			ret[0].setFinition(&quot;Initiale&quot;);
+			ret[0].setId(1);
+			ret[0].setKm(174826);
+			ret[0].setMarque(&quot;Renault&quot;);
+			ret[0].setModele(&quot;VelSatis&quot;);
+			ret[0].setPrix(4600);
+			
+			ret[1] = new Voiture();
+			ret[1].setAnnee(2013);
+			ret[1].setCarburant(Carburant.DIESEL);
+			ret[1].setFinition(&quot;Business&quot;);
+			ret[1].setId(2);
+			ret[1].setKm(124987);
+			ret[1].setMarque(&quot;Renault&quot;);
+			ret[1].setModele(&quot;Scénic&quot;);
+			ret[1].setPrix(8800);
+
+			ret[2] = new Voiture();
+			ret[2].setAnnee(2018);
+			ret[2].setCarburant(Carburant.DIESEL);
+			ret[2].setFinition(&quot;Feel&quot;);
+			ret[2].setId(3);
+			ret[2].setKm(78730);
+			ret[2].setMarque(&quot;Citroën&quot;);
+			ret[2].setModele(&quot;Spacetourer&quot;);
+			ret[2].setPrix(29000);
+			
+			for (int i=3; i&lt; ret.length; i++) {
+				ret[i] = ret[i%3];
+			}*/
+<span class="nc" id="L158">		} catch (SQLException sql) {</span>
+<span class="nc" id="L159">			sql.printStackTrace();</span>
+<span class="nc" id="L160">		}</span>
+<span class="nc" id="L161">		return ret;</span>
+	}
+	
+	/**
+	 * Utilise le DAO pour obtenir les informations d'une voiture à partir de son ID 
+	 * @param id L'ID de la voiture à récupérer en base
+	 * @return Retourne une voiture sous forme d'objet voiture
+	 */
+	public ReponseVoiture getReponse(String param, int mini, int nbVoitures) {
+<span class="nc" id="L170">		ReponseVoiture ret = new ReponseVoiture();</span>
+		try {
+<span class="nc" id="L172">			ret = vDao.rechercherVoitures(param, mini, nbVoitures);</span>
+<span class="nc" id="L173">		} catch (SQLException sql) {</span>
+<span class="nc" id="L174">			sql.printStackTrace();</span>
+<span class="nc" id="L175">		}</span>
+<span class="nc" id="L176">		return ret;</span>
+	}
+	
+	public Voiture voitureFromJson(JSONObject json) {
+<span class="fc" id="L180">		Voiture voiture = new Voiture();</span>
+<span class="pc bpc" id="L181" title="1 of 2 branches missed.">		if(json.has(&quot;id&quot;)) {</span>
+<span class="nc" id="L182">			voiture.setId(json.getInt(&quot;id&quot;));</span>
+<span class="fc bfc" id="L183" title="All 2 branches covered.">		} if(json.has(&quot;marque&quot;)) {</span>
+<span class="fc" id="L184">			voiture.setMarque(json.getString(&quot;marque&quot;));</span>
+<span class="fc bfc" id="L185" title="All 2 branches covered.">		} if(json.has(&quot;modele&quot;)) {</span>
+<span class="fc" id="L186">			voiture.setModele(json.getString(&quot;modele&quot;));</span>
+<span class="fc bfc" id="L187" title="All 2 branches covered.">		} if(json.has(&quot;finition&quot;)) {</span>
+<span class="fc" id="L188">			voiture.setFinition(json.getString(&quot;finition&quot;));</span>
+<span class="fc bfc" id="L189" title="All 2 branches covered.">		} if(json.has(&quot;carburant&quot;)) {</span>
+<span class="fc" id="L190">			voiture.setCarburant(Carburant.get(json.getString(&quot;carburant&quot;)));</span>
+<span class="fc bfc" id="L191" title="All 2 branches covered.">		} if(json.has(&quot;km&quot;)) {</span>
+<span class="fc" id="L192">			voiture.setKm(json.getInt(&quot;km&quot;));</span>
+<span class="fc bfc" id="L193" title="All 2 branches covered.">		} if(json.has(&quot;annee&quot;)) {</span>
+<span class="fc" id="L194">			voiture.setAnnee(json.getInt(&quot;annee&quot;));</span>
+<span class="fc bfc" id="L195" title="All 2 branches covered.">		} if(json.has(&quot;prix&quot;)) {</span>
+<span class="fc" id="L196">			voiture.setPrix(json.getInt(&quot;prix&quot;));</span>
+		}
+<span class="fc" id="L198">		return voiture;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

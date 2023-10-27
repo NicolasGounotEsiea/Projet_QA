@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Voiture.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">esiea Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">esiea.metier</a> &gt; <span class="el_source">Voiture.java</span></div><h1>Voiture.java</h1><pre class="source lang-java linenums">package esiea.metier;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+<span class="fc" id="L9">public class Voiture {</span>
+	private int id;
+	
+	private String marque;
+	private String modele;
+	private String finition;
+	
+	private Carburant carburant;
+	private int km;
+	private int annee;
+	private int prix;
+	
+	public int getId() {
+<span class="nc" id="L22">		return id;</span>
+	}
+
+	public void setId(int id) {
+<span class="nc" id="L26">		this.id = id;</span>
+<span class="nc" id="L27">	}</span>
+
+	public String getMarque() {
+<span class="nc" id="L30">		return marque;</span>
+	}
+
+	public void setMarque(String marque) {
+<span class="fc" id="L34">		this.marque = marque;</span>
+<span class="fc" id="L35">	}</span>
+
+	public String getModele() {
+<span class="nc" id="L38">		return modele;</span>
+	}
+
+	public void setModele(String modele) {
+<span class="fc" id="L42">		this.modele = modele;</span>
+<span class="fc" id="L43">	}</span>
+
+	public String getFinition() {
+<span class="nc" id="L46">		return finition;</span>
+	}
+
+	public void setFinition(String finition) {
+<span class="fc" id="L50">		this.finition = finition;</span>
+<span class="fc" id="L51">	}</span>
+
+	public Carburant getCarburant() {
+<span class="nc" id="L54">		return carburant;</span>
+	}
+
+	public void setCarburant(Carburant carburant) {
+<span class="fc" id="L58">		this.carburant = carburant;</span>
+<span class="fc" id="L59">	}</span>
+
+	public int getKm() {
+<span class="nc" id="L62">		return km;</span>
+	}
+
+	public void setKm(int km) {
+<span class="fc" id="L66">		this.km = km;</span>
+<span class="fc" id="L67">	}</span>
+
+	public int getAnnee() {
+<span class="nc" id="L70">		return annee;</span>
+	}
+
+	public void setAnnee(int annee) {
+<span class="fc" id="L74">		this.annee = annee;</span>
+<span class="fc" id="L75">	}</span>
+
+	public int getPrix() {
+<span class="nc" id="L78">		return prix;</span>
+	}
+
+	public void setPrix(int prix) {
+<span class="fc" id="L82">		this.prix = prix;</span>
+<span class="fc" id="L83">	}</span>
+	
+	public String toString() {
+		try {
+<span class="nc" id="L87">			return new ObjectMapper().writeValueAsString(this);</span>
+<span class="nc" id="L88">		} catch (JsonProcessingException json) {</span>
+<span class="nc" id="L89">			json.printStackTrace();</span>
+		}
+<span class="nc" id="L91">		return &quot;&quot;;</span>
+	}
+	
+	/**
+	 * Vérifie les champs d'une voiture pour déterminer si la voiture est cohérente, pour être insérée en base
+	 * @return Retourne true si les données sont cohérentes
+	 */
+	public boolean check() {
+<span class="pc bpc" id="L99" title="1 of 2 branches missed.">		if (id &lt; 0) { return false; }</span>
+<span class="pc bpc" id="L100" title="1 of 4 branches missed.">		if (marque == null || marque.isEmpty()) { return false; }</span>
+<span class="pc bpc" id="L101" title="2 of 4 branches missed.">		if (modele == null || modele.isEmpty()) { return false; }</span>
+<span class="pc bpc" id="L102" title="2 of 4 branches missed.">		if (finition == null || finition.isEmpty()) { return false; }</span>
+<span class="pc bpc" id="L103" title="1 of 2 branches missed.">		if (carburant == null) { return false; }</span>
+<span class="pc bpc" id="L104" title="1 of 2 branches missed.">		if (km &lt; 0) { return false; }</span>
+<span class="fc" id="L105">		Calendar calendar = Calendar.getInstance();</span>
+<span class="fc" id="L106">		calendar.setTime(new Date());</span>
+<span class="pc bpc" id="L107" title="2 of 4 branches missed.">		if (annee &lt; 1900 || annee &gt;	calendar.get(Calendar.YEAR)) { return false; }</span>
+<span class="pc bpc" id="L108" title="1 of 2 branches missed.">		if (prix &lt; 0) { return false; }</span>
+<span class="fc" id="L109">		return true;</span>
+	}
+
+	public static String getTypeDonnee(String donnee) {
+<span class="nc" id="L113">		String[] strings = {&quot;marque&quot;, &quot;modele&quot;, &quot;finition&quot; };</span>
+<span class="nc" id="L114">		String[] entiers = {&quot;id&quot;, &quot;annee&quot;, &quot;km&quot;, &quot;prix&quot;};</span>
+		
+<span class="nc bnc" id="L116" title="All 2 branches missed.">		if(donnee != null) {</span>
+<span class="nc bnc" id="L117" title="All 2 branches missed.">			for (String attribut : strings) {</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">				if(attribut.equals(donnee)) {</span>
+<span class="nc" id="L119">					return &quot;string&quot;;</span>
+				}
+			} 
+<span class="nc bnc" id="L122" title="All 2 branches missed.">			for (String attribut : entiers) {</span>
+<span class="nc bnc" id="L123" title="All 2 branches missed.">				if(attribut.equals(donnee)) {</span>
+<span class="nc" id="L124">					return &quot;entier&quot;;</span>
+				}
+			}
+		}
+<span class="nc" id="L128">		return &quot;&quot;;</span>
+	}
+	
+<span class="fc" id="L131">	public enum Carburant {</span>
+<span class="fc" id="L132">		ESSENCE(&quot;E&quot;),</span>
+<span class="fc" id="L133">		DIESEL(&quot;D&quot;),</span>
+<span class="fc" id="L134">		HYBRIDE(&quot;H&quot;),</span>
+<span class="fc" id="L135">		ELECTRIQUE(&quot;W&quot;);</span>
+		
+		private String label;
+		
+<span class="fc" id="L139">		Carburant (String carburant) {</span>
+<span class="fc" id="L140">			this.label = carburant;</span>
+<span class="fc" id="L141">		}</span>
+		
+		public String toString() {
+<span class="nc" id="L144">			return label;</span>
+		}
+		
+		public char getChar() {
+<span class="nc" id="L148">			return label.charAt(0);</span>
+		}
+		
+		public static Carburant get(String valeur) {
+<span class="pc bpc" id="L152" title="1 of 2 branches missed.">			for (Carburant c : values()) { </span>
+<span class="pc bpc" id="L153" title="1 of 2 branches missed.">				if(c.label.equals(valeur)) {</span>
+<span class="fc" id="L154">					return c;</span>
+				}
+			}
+<span class="nc" id="L157">			return null;</span>
+		}
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
