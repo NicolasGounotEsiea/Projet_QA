@@ -215,6 +215,12 @@ public class VoitureTest {
         voiture.setMarque(null);
         assertFalse(voiture.check());
     }
+    @Test
+    public void testCheckInvalidMarqueEmpty() {
+        Voiture voiture = new Voiture();
+        voiture.setMarque("");
+        assertFalse(voiture.check());
+    }
 
     @Test
     public void testCheckInvalidModele() {
@@ -222,11 +228,24 @@ public class VoitureTest {
         voiture.setModele(null);
         assertFalse(voiture.check());
     }
+    @Test
+    public void testCheckInvalidModeleEmpty() {
+        Voiture voiture = new Voiture();
+        voiture.setModele("");
+        assertFalse(voiture.check());
+    }
 
     @Test
     public void testCheckInvalidFinition() {
         Voiture voiture = new Voiture();
         voiture.setFinition(null);
+        assertFalse(voiture.check());
+    }
+
+    @Test
+    public void testCheckInvalidFinitionEmpty() {
+        Voiture voiture = new Voiture();
+        voiture.setFinition("");
         assertFalse(voiture.check());
     }
 
