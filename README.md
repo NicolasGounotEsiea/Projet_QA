@@ -1,3 +1,6 @@
+#Badge codecov
+[![codecov](https://codecov.io/gh/NicolasGounotEsiea/Projet_QA/graph/badge.svg?token=NZPUNU6PX2)](https://codecov.io/gh/NicolasGounotEsiea/Projet_QA)
+
 # Application Back Stock Car
 Ce projet contient le code de la partie Back du projet Stock Car. Il est composé de code Java intéragissant avec une base de données.
 
