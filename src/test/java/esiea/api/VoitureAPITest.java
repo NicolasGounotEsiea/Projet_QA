@@ -3,6 +3,7 @@ package esiea.api;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+import esiea.dao.ReponseVoiture;
 import esiea.dao.VoitureDAO;
 import esiea.metier.Voiture;
 import org.json.JSONObject;
@@ -14,6 +15,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.powermock.api.mockito.PowerMockito;
 
 
 import java.sql.SQLException;
@@ -29,6 +31,9 @@ public class VoitureAPITest {
 
     @Before
     public void setUp() {
+
+        vDao = mock(VoitureDAO.class);
+
         MockitoAnnotations.initMocks(this);
     }
 
@@ -146,6 +151,14 @@ public class VoitureAPITest {
         assertTrue(jsonResponse.getBoolean("succes"));
 
     }
+
+
+
+
+
+
+
+
 
 
 
