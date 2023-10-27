@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="esiea.api.VoitureAPITest" time="1.177" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="esiea.api.VoitureAPITest" time="1.145" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17.0.6+10"/>
@@ -62,9 +62,9 @@
     <property name="sun.stdout.encoding" value="cp850"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="esiea.api.VoitureAPITest" name="testAjouterVoitureAvecEchec" time="1.16"/>
-  <testcase classname="esiea.api.VoitureAPITest" name="testAjoutAvecException" time="0.008"/>
-  <testcase classname="esiea.api.VoitureAPITest" name="testAjoutAvecDonneesCorrectes" time="0.006"/>
-  <testcase classname="esiea.api.VoitureAPITest" name="testAjoutAvecDonneesIncorrectes" time="0"/>
-  <testcase classname="esiea.api.VoitureAPITest" name="testAjoutVoitureReussi" time="0.003"/>
+  <testcase classname="esiea.api.VoitureAPITest" name="testAjouterVoitureAvecEchec" time="1.131"/>
+  <testcase classname="esiea.api.VoitureAPITest" name="testAjoutAvecException" time="0.006"/>
+  <testcase classname="esiea.api.VoitureAPITest" name="testAjoutAvecDonneesCorrectes" time="0.005"/>
+  <testcase classname="esiea.api.VoitureAPITest" name="testAjoutAvecDonneesIncorrectes" time="0.001"/>
+  <testcase classname="esiea.api.VoitureAPITest" name="testAjoutVoitureReussi" time="0.002"/>
 </testsuite>
