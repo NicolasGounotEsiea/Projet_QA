@@ -1,7 +1,6 @@
 package esiea.api;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 import esiea.dao.VoitureDAO;
@@ -120,6 +119,38 @@ public class VoitureAPITest {
         JSONObject jsonResponse = new JSONObject(responseJson);
         assertFalse(jsonResponse.getBoolean("succes"));
     }
+
+    @Test
+    public void testAjoutAvecDonneesCorrectes() {
+        // Créez un exemple de données JSON avec des données correctes
+        JSONObject jsonInput = new JSONObject();
+        jsonInput.put("marque", "TestMarque");
+        jsonInput.put("modele", "TestModele");
+        jsonInput.put("finition", "TestFinition");
+        jsonInput.put("carburant", "E");
+        jsonInput.put("km", 120000);
+        jsonInput.put("annee", 2001);
+        jsonInput.put("prix", 2500);
+
+
+        try {
+            doNothing().when(vDao).ajouterVoiture(any(Voiture.class));
+        } catch (Exception e) {
+        }
+
+        String inputJson = jsonInput.toString();
+        String responseJson = voitureAPI.ajouterVoiture(inputJson);
+
+        // Vérifiez que la réponse indique un succès
+        JSONObject jsonResponse = new JSONObject(responseJson);
+        assertTrue(jsonResponse.getBoolean("succes"));
+
+    }
+
+
+
+
+
 
 
 
