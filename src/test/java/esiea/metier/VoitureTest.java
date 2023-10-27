@@ -2,16 +2,11 @@ package esiea.metier;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import net.bytebuddy.description.annotation.AnnotationList;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.junit.Assert.*;
 
@@ -142,6 +137,24 @@ public class VoitureTest {
 
 
     }
+
+    /*@Test()
+    public void toStringFailTest()
+    {
+        //Invalide
+        ObjectMapper objectMapper = new ObjectMapper() {
+            public String writeValueAsString(Object value) throws JsonProcessingException {
+                throw new JsonProcessingException("Test exception") {
+                };
+            }
+        };
+        String erreur = objectMapper.toString();
+        //JsonProcessingException json = JsonProcessingException();
+        // Utiliser l'ObjectMapper modifié pour provoquer l'exception
+        assertEquals("erreur",erreur);
+       // assertEquals("", voitureString);
+
+    }*/
 
     @Test
     public void toStringFailedTest() throws JsonProcessingException {
