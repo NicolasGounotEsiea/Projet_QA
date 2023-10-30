@@ -9,6 +9,10 @@ on:
 jobs:
   codecov:
     runs-on: ubuntu-latest
+    env:
+      BDD_SERVEUR: ${{ secrets.BDD_SERVEUR }}
+      BDD_PORT: ${{ secrets.BDD_PORT }}
+      BDD_NOM: ${{ secrets.BDD_NOM }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -17,7 +21,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: 11
-          distribution: 'adopt'  # Ajoutez cette ligne
+          distribution: 'adopt'
 
       - name: Set up JDK
         uses: actions/setup-java@v2
@@ -25,9 +29,6 @@ jobs:
           java-version: 11
           distribution: 'adopt'
           architecture: x64
-
-      - name: Set up secrets
-          run: echo "BDD_SERVEUR=$BDD_SERVEUR" >> $GITHUB_ENV && echo "BDD_PORT=$BDD_PORT" >> $GITHUB_ENV && echo "BDD_NOM=$BDD_NOM" >> $GITHUB_ENV
 
       - name: Build with Maven
         run: mvn clean install
