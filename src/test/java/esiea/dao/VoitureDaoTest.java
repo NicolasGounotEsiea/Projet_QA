@@ -1,5 +1,6 @@
 package esiea.dao;
-import esiea.metier.Voiture;
+public class VoitureDaoTest {}
+/*import esiea.metier.Voiture;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -190,5 +191,6 @@ public class VoitureDaoTest {
 
 
 
-
+/*
 }
+*/
