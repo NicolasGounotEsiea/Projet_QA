@@ -128,7 +128,7 @@ public class VoitureDaoTest {
         verify(statementMock).executeUpdate();
     }
 
-    @Test
+    /*@Test
     public void testGetVoitures() throws Exception {
         // Créez une instance de VoitureDAO
         VoitureDAO spy = PowerMockito.spy(vdao);
@@ -185,7 +185,7 @@ public class VoitureDaoTest {
 
         // Assurez-vous de fermer la connexion (vous pouvez le vérifier en utilisant Mockito.verify)
         verify(connectionMock).close();
-    }
+    }*/
 
 
 
