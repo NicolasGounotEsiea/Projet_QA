@@ -8,5 +8,8 @@
       </list>
     </option>
   </component>
+  <component name="ProjectResources">
+    <resource url="http://jakarta.apache.org/log4j/" location="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK" />
 </project>
