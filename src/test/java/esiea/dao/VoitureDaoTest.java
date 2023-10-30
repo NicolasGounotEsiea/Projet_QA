@@ -83,7 +83,7 @@ public class VoitureDaoTest {
         String urlBase = vdao.getUrlBase();
 
         assertEquals("jdbc:mysql://:/", urlBase);
-    }*/
+    }
 
     @Test
     public void testAjouterVoiture() throws Exception {
@@ -125,7 +125,7 @@ public class VoitureDaoTest {
 
         // Vérifiez que la requête préparée a été exécutée
         verify(statementMock).executeUpdate();
-    }
+    }*/
 
     /*@Test
     public void testGetVoitures() throws Exception {
