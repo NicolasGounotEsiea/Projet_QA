@@ -48,8 +48,7 @@ public class VoitureDaoTest {
         when(Configuration.getConfig("bdd.serveur")).thenReturn("localhost");
         when(Configuration.getConfig("bdd.port")).thenReturn("3306");
         when(Configuration.getConfig("bdd.nom")).thenReturn("mydb");
-        when(Configuration.getConfig("bdd.utilisateur")).thenReturn("testUser");
-        when(Configuration.getConfig("bdd.mdp")).thenReturn("testPassword");
+
 
     }
 
