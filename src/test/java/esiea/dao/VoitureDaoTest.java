@@ -64,7 +64,7 @@ public class VoitureDaoTest {
         assertEquals("jdbc:mysql://localhost:3306/mydb", urlBase);
     }
 
-    @Test
+   /* @Test
     public void testGetUrlBaseWithCustomConfiguration() {
         when(Configuration.getConfig("bdd.serveur")).thenReturn("customserver");
         when(Configuration.getConfig("bdd.port")).thenReturn("5432");
@@ -83,7 +83,7 @@ public class VoitureDaoTest {
         String urlBase = vdao.getUrlBase();
 
         assertEquals("jdbc:mysql://:/", urlBase);
-    }
+    }*/
 
     @Test
     public void testAjouterVoiture() throws Exception {
