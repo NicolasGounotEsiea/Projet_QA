@@ -56,12 +56,12 @@ public class VoitureDaoTest {
 
     @Test
     public void testGetUrlBaseWithDefaultConfiguration() {
-        when(Configuration.getConfig("bdd.serveur")).thenReturn("localhost");
-        when(Configuration.getConfig("bdd.port")).thenReturn("3306");
-        when(Configuration.getConfig("bdd.nom")).thenReturn("mydb");
+        when(Configuration.getConfig("bdd.serveur")).thenReturn("${{ secrets.BDD_SERVEUR_1 }}");
+        when(Configuration.getConfig("bdd.port")).thenReturn("${{ secrets.BDD_PORT_1 }}");
+        when(Configuration.getConfig("bdd.nom")).thenReturn("${{ secrets.BDD_NOM_1 }}");
 
         String urlBase = vdao.getUrlBase();
-        assertEquals("jdbc:mysql://localhost:3306/mydb", urlBase);
+        assertEquals("jdbc:mysql://${{ secrets.BDD_SERVEUR_1 }}:${{ secrets.BDD_PORT_1 }}/${{ secrets.BDD_NOM_1 }}", urlBase);
     }
 
    /* @Test
