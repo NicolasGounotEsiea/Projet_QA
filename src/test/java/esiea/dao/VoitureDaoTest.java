@@ -109,7 +109,7 @@ public class VoitureDaoTest {
         when(connectionMock.prepareStatement(anyString())).thenReturn(statementMock);
 
         // Utilisez doReturn pour stubber la méthode getUrlBase() de VoitureDAO
-        doReturn("jdbc:mysql://localhost:3306/mydb").when(spy, "getUrlBase");
+        doReturn("jdbc:mysql://${{ secrets.BDD_SERVEUR_1 }}:${{ secrets.BDD_PORT_1 }}/${{ secrets.BDD_NOM_1 }}").when(spy, "getUrlBase");
 
         // Appelez la méthode à tester
         spy.ajouterVoiture(voiture);
