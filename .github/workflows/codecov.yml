@@ -27,8 +27,7 @@ jobs:
           architecture: x64
 
       - name: Set up secrets
-          run: |
-            echo "BDD_SERVEUR=$BDD_SERVEUR" >> $GITHUB_ENV
+          run: echo "BDD_SERVEUR=$BDD_SERVEUR" >> $GITHUB_ENV
             echo "BDD_PORT=$BDD_PORT" >> $GITHUB_ENV
             echo "BDD_NOM=$BDD_NOM" >> $GITHUB_ENV
 
