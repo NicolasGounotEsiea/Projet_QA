@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>VoitureDAO.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">esiea Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">esiea.dao</a> &gt; <span class="el_source">VoitureDAO.java</span></div><h1>VoitureDAO.java</h1><pre class="source lang-java linenums">package esiea.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashMap;
+
+import org.apache.log4j.Logger;
+
+import esiea.metier.Voiture;
+import esiea.metier.Voiture.Carburant;
+import utils.Configuration;
+import utils.StringUtils;
+
+public class VoitureDAO {
+	
+	private Connection connection;
+<span class="fc" id="L20">	protected static final Logger logger = Logger.getLogger(VoitureDAO.class);</span>
+	
+<span class="fc" id="L22">	public VoitureDAO() {</span>
+		
+<span class="fc" id="L24">	}</span>
+	
+	private Connection getConnexion() {
+		try {
+<span class="fc" id="L28">			Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">			if (connection == null) {</span>
+<span class="fc" id="L30">				connection = DriverManager.getConnection(getUrlBase(), Configuration.getConfig(&quot;bdd.utilisateur&quot;), Configuration.getConfig(&quot;bdd.mdp&quot;));</span>
+			}
+<span class="nc" id="L32">		} catch (SQLException sql) {</span>
+<span class="nc" id="L33">			sql.printStackTrace(); </span>
+<span class="nc" id="L34">			logger.debug(&quot;Impossible de se connecter � la base !&quot; + sql);} </span>
+<span class="nc" id="L35">		catch (ClassNotFoundException e) {</span>
+<span class="nc" id="L36">			e.printStackTrace();</span>
+<span class="pc" id="L37">		}</span>
+<span class="fc" id="L38">		logger.debug(&quot;Connexion � la base OK !&quot; + connection);</span>
+<span class="fc" id="L39">		return connection;</span>
+	}
+	
+	public String getUrlBase() {
+<span class="fc" id="L43">		String url = &quot;jdbc:mysql://&quot;;</span>
+<span class="fc" id="L44">		url += Configuration.getConfig(&quot;bdd.serveur&quot;);</span>
+<span class="fc" id="L45">		url += &quot;:&quot; + Configuration.getConfig(&quot;bdd.port&quot;);</span>
+<span class="fc" id="L46">		url += &quot;/&quot; + Configuration.getConfig(&quot;bdd.nom&quot;);</span>
+<span class="fc" id="L47">		return url;</span>
+	}
+	
+	private void deconnecter() throws SQLException {
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">		if(connection != null) {</span>
+<span class="fc" id="L52">			connection.close();</span>
+		}
+<span class="fc" id="L54">	}</span>
+	
+	public void ajouterVoiture(Voiture voiture) throws SQLException {
+<span class="fc" id="L57">		String requete = &quot;INSERT INTO Voiture (marque, modele, finition, carburant, km, annee, prix) VALUES  &quot;</span>
+				+ &quot;(?,?,?,?,?,?,?)&quot;;
+<span class="fc" id="L59">		PreparedStatement stmt = getConnexion().prepareStatement(requete);</span>
+<span class="fc" id="L60">		stmt.setString(1, voiture.getMarque());</span>
+<span class="fc" id="L61">		stmt.setString(2, voiture.getModele());</span>
+<span class="fc" id="L62">		stmt.setString(3, voiture.getFinition());</span>
+<span class="fc" id="L63">		stmt.setString(4, voiture.getCarburant().toString());</span>
+<span class="fc" id="L64">		stmt.setInt(5, voiture.getKm());</span>
+<span class="fc" id="L65">		stmt.setInt(6, voiture.getAnnee());</span>
+<span class="fc" id="L66">		stmt.setInt(7, voiture.getPrix());</span>
+<span class="fc" id="L67">		stmt.executeUpdate();</span>
+<span class="fc" id="L68">		deconnecter();</span>
+<span class="fc" id="L69">	}</span>
+	
+	public void modifierVoiture(int id, Voiture nouvelle) throws SQLException {
+<span class="nc" id="L72">		String requete = &quot;UPDATE Voiture SET marque = ?, &quot;</span>
+				+ &quot;modele = ?, &quot;
+				+ &quot;finition = ?, &quot;
+				+ &quot;carburant = ?, &quot;
+				+ &quot;km = ?, &quot;
+				+ &quot;annee = ?, &quot;
+				+ &quot;prix = ?), &quot;
+				+ &quot;WHERE id = ?&quot;;
+<span class="nc" id="L80">		PreparedStatement stmt = getConnexion().prepareStatement(requete);</span>
+<span class="nc" id="L81">		stmt.setString(1, nouvelle.getMarque());</span>
+<span class="nc" id="L82">		stmt.setString(2, nouvelle.getModele());</span>
+<span class="nc" id="L83">		stmt.setString(3, nouvelle.getFinition());</span>
+		//stmt.set(4, nouvelle.getCarburant().getChar());
+<span class="nc" id="L85">		stmt.setInt(5, nouvelle.getKm());</span>
+<span class="nc" id="L86">		stmt.setInt(6, nouvelle.getAnnee());</span>
+<span class="nc" id="L87">		stmt.setInt(7, nouvelle.getPrix());</span>
+<span class="nc" id="L88">		stmt.setInt(8, id);</span>
+<span class="nc" id="L89">		stmt.executeQuery();</span>
+<span class="nc" id="L90">		deconnecter();</span>
+<span class="nc" id="L91">	}</span>
+	
+	public ReponseVoiture rechercherVoitures(String saisie, int mini, int nbVoitures) throws SQLException {
+<span class="fc" id="L94">		HashMap&lt;String, String&gt; criteres = new HashMap&lt;String, String&gt;();</span>
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">		if(StringUtils.estEntier(saisie)) {</span>
+<span class="nc" id="L96">			criteres.put(&quot;id&quot;, saisie);</span>
+		} else {
+<span class="fc" id="L98">			criteres.put(&quot;masque&quot;, saisie);</span>
+		}
+<span class="nc" id="L100">		return getVoitures(criteres, mini, nbVoitures);</span>
+	}
+	
+	public ReponseVoiture getVoitures(HashMap&lt;String, String&gt; criteres, int mini, int nbVoitures) throws SQLException {
+<span class="fc" id="L104">		String requete = &quot;SELECT id, marque, modele, finition, carburant, km, annee, prix &quot;</span>
+				+ &quot;FROM Voiture &quot;,
+<span class="fc" id="L106">				requeteComptage = &quot;SELECT COUNT(*) FROM Voiture &quot;;</span>
+<span class="fc" id="L107">		String masque = null;</span>
+<span class="fc" id="L108">		ReponseVoiture ret = new ReponseVoiture();</span>
+<span class="fc" id="L109">		int nbCol = 0;</span>
+<span class="pc bpc" id="L110" title="2 of 4 branches missed.">		if (criteres != null &amp;&amp; !criteres.isEmpty()) {</span>
+<span class="fc" id="L111">			requete += &quot;WHERE &quot;;</span>
+<span class="fc" id="L112">			requeteComptage += &quot;WHERE &quot;;</span>
+<span class="fc" id="L113">			masque = criteres.get(&quot;masque&quot;);</span>
+<span class="pc bpc" id="L114" title="1 of 2 branches missed.">			if (masque != null) {</span>
+<span class="fc" id="L115">				requete += construireRequeteMasque(masque);</span>
+<span class="fc" id="L116">				requeteComptage += construireRequeteMasque(masque);</span>
+<span class="fc" id="L117">				nbCol = StringUtils.nbOccurrence(requete, '?')/masque.split(&quot; &quot;).length;</span>
+			} else {
+<span class="nc bnc" id="L119" title="All 2 branches missed.">				for(String colonne : criteres.keySet()) {</span>
+<span class="nc" id="L120">					requete += colonne + &quot; = ?,&quot;;</span>
+<span class="nc" id="L121">					requeteComptage += colonne + &quot; = ?,&quot;;</span>
+<span class="nc" id="L122">				}</span>
+				//retrait de la dernière virgule
+<span class="nc" id="L124">				requete = requete.substring(0, requete.length()-1);</span>
+<span class="nc" id="L125">				requeteComptage = requeteComptage.substring(0, requeteComptage.length()-1);</span>
+			}
+		}
+<span class="pc bpc" id="L128" title="3 of 4 branches missed.">		if (nbVoitures &gt; 1 &amp;&amp; mini &gt;= 0) {</span>
+<span class="nc" id="L129">			requete += &quot; LIMIT ? OFFSET ?&quot;;</span>
+		}
+<span class="nc" id="L131">		PreparedStatement pstmt = getPreparedStatemnt (requete, masque, nbCol, criteres, mini, nbVoitures);</span>
+<span class="nc" id="L132">		ResultSet res = pstmt.executeQuery();</span>
+<span class="nc" id="L133">		res.last();</span>
+<span class="nc" id="L134">		ret.setData(new Voiture[res.getRow()]);</span>
+<span class="nc" id="L135">		res.beforeFirst();</span>
+<span class="nc" id="L136">		int cpt = 0;</span>
+<span class="nc bnc" id="L137" title="All 2 branches missed.">		while (res.next()) {</span>
+<span class="nc" id="L138">			ret.setData(setVoiture(res), cpt++);</span>
+		}
+<span class="nc" id="L140">		pstmt = getPreparedStatemnt (requeteComptage, masque, nbCol, criteres, -1, -1);</span>
+<span class="nc" id="L141">		res = pstmt.executeQuery();</span>
+<span class="nc bnc" id="L142" title="All 2 branches missed.">		if (res.next()) {</span>
+<span class="nc" id="L143">			ret.setVolume(res.getInt(1));</span>
+		}
+<span class="nc" id="L145">		deconnecter();</span>
+<span class="nc" id="L146">		return ret;</span>
+	}
+	
+	private PreparedStatement getPreparedStatemnt (String requete, String masque, int nbCol, HashMap&lt;String, String&gt; criteres, int mini, int nbVoitures) throws SQLException {
+<span class="nc" id="L150">		PreparedStatement stmt = getConnexion().prepareStatement(requete, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);</span>
+<span class="nc" id="L151">		int cpt =1;</span>
+<span class="nc bnc" id="L152" title="All 2 branches missed.">		if (criteres != null) {</span>
+<span class="nc bnc" id="L153" title="All 2 branches missed.">			if (masque == null) {</span>
+<span class="nc bnc" id="L154" title="All 2 branches missed.">				for(String colonne : criteres.keySet()) {</span>
+<span class="nc bnc" id="L155" title="All 2 branches missed.">					if(&quot;string&quot;.equals(Voiture.getTypeDonnee(colonne))) {</span>
+<span class="nc" id="L156">						stmt.setString(cpt, criteres.get(colonne));</span>
+					}
+<span class="nc bnc" id="L158" title="All 2 branches missed.">					if(&quot;entier&quot;.equals(Voiture.getTypeDonnee(colonne))) {</span>
+<span class="nc" id="L159">						stmt.setInt(cpt, Integer.parseInt(criteres.get(colonne)));</span>
+					}
+<span class="nc" id="L161">					cpt++;</span>
+<span class="nc" id="L162">				}</span>
+<span class="nc bnc" id="L163" title="All 2 branches missed.">			} else if (masque != null) {</span>
+<span class="nc" id="L164">				String[] mots = masque.split(&quot; &quot;);</span>
+<span class="nc" id="L165">				int indexMot = 0;</span>
+<span class="nc bnc" id="L166" title="All 2 branches missed.">				for (String mot : mots) {</span>
+<span class="nc bnc" id="L167" title="All 2 branches missed.">					for (int i=1; i&lt; nbCol+1; i++) {</span>
+<span class="nc" id="L168">						cpt = indexMot * nbCol + i;</span>
+<span class="nc" id="L169">						stmt.setString(cpt, &quot;%&quot;+mot+&quot;%&quot;);</span>
+					}
+<span class="nc" id="L171">					indexMot++;</span>
+				}
+<span class="nc" id="L173">				cpt++;</span>
+			}
+		}
+<span class="nc bnc" id="L176" title="All 4 branches missed.">		if (nbVoitures &gt; 1 &amp;&amp; mini &gt;= 0) {</span>
+<span class="nc" id="L177">			stmt.setInt(cpt++, nbVoitures);</span>
+<span class="nc" id="L178">			stmt.setInt(cpt++, mini);</span>
+		}
+<span class="nc" id="L180">		return stmt;</span>
+	}
+	
+	public String construireRequeteMasque(String saisie) {
+<span class="fc" id="L184">		StringBuilder sb = new StringBuilder();</span>
+<span class="fc" id="L185">		String[] colonnes = {&quot;marque&quot;, &quot;modele&quot;, &quot;finition&quot;, &quot;carburant&quot;};</span>
+<span class="fc" id="L186">		String[] mots = saisie.split(&quot; &quot;);</span>
+<span class="fc" id="L187">		boolean or = false;</span>
+<span class="fc bfc" id="L188" title="All 2 branches covered.">		for (int i=0; i&lt;mots.length; i++) {</span>
+<span class="fc bfc" id="L189" title="All 2 branches covered.">			for (String col : colonnes) {</span>
+<span class="fc bfc" id="L190" title="All 2 branches covered.">				if (or) {</span>
+<span class="fc" id="L191">					sb.append(&quot; OR &quot;);</span>
+				}
+<span class="fc" id="L193">				sb.append(col);</span>
+<span class="fc" id="L194">				sb.append(&quot; like ? &quot;);</span>
+<span class="fc" id="L195">				or = true;</span>
+			}
+		}
+<span class="fc" id="L198">		return sb.toString();</span>
+	}
+	
+	private Voiture setVoiture(ResultSet res) throws SQLException {
+<span class="nc" id="L202">		Voiture ret = new Voiture();</span>
+<span class="nc" id="L203">		ret.setId(res.getInt(&quot;id&quot;));</span>
+<span class="nc" id="L204">		ret.setMarque(res.getString(&quot;marque&quot;));</span>
+<span class="nc" id="L205">		ret.setModele(res.getString(&quot;modele&quot;));</span>
+<span class="nc" id="L206">		ret.setFinition(res.getString(&quot;finition&quot;));</span>
+<span class="nc" id="L207">		ret.setCarburant(Carburant.get(res.getString(&quot;carburant&quot;)));</span>
+<span class="nc" id="L208">		ret.setKm(res.getInt(&quot;km&quot;));</span>
+<span class="nc" id="L209">		ret.setAnnee(res.getInt(&quot;annee&quot;));</span>
+<span class="nc" id="L210">		ret.setPrix(res.getInt(&quot;prix&quot;));</span>
+<span class="nc" id="L211">		return ret;</span>
+	}
+	
+	public void supprimerVoiture(String id) throws SQLException {
+<span class="nc" id="L215">		String requete = &quot;DELETE FROM Voiture WHERE id = ?&quot;;</span>
+<span class="nc" id="L216">		PreparedStatement stmt = getConnexion().prepareStatement(requete);</span>
+<span class="nc" id="L217">		stmt.setString(1, id);</span>
+<span class="nc" id="L218">		stmt.executeUpdate();</span>
+<span class="nc" id="L219">		deconnecter();</span>
+<span class="nc" id="L220">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

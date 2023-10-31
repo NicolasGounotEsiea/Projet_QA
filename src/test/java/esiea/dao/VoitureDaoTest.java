@@ -27,21 +27,24 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.powermock.api.mockito.PowerMockito.*;
 
-@RunWith(PowerMockRunner.class)
-@PrepareForTest({ Configuration.class, VoitureDAO.class })
+//@RunWith(PowerMockRunner.class)
+//@PrepareForTest({Configuration.class, VoitureDAO.class})
 public class VoitureDaoTest {
 
-    private VoitureDAO vdao;
+   /* private VoitureDAO vdao ;
+    private Connection connection;
 
     @Mock
     private PreparedStatement preparedStatement;
 
     @Mock
     private ResultSet resultSet;
-
+    private Connection connectionMock;
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+
+        connectionMock = mock(Connection.class); // Initialisez connectionMock
 
         // Utilisez PowerMock pour simuler la classe Configuration.
         mockStatic(Configuration.class);
@@ -53,6 +56,9 @@ public class VoitureDaoTest {
         vdao = new VoitureDAO(); // Créez une instance réelle de VoitureDAO si nécessaire
     }
 
+
+
+
     @Test
     public void testGetUrlBaseWithDefaultConfiguration() {
         when(Configuration.getConfig("bdd.serveur")).thenReturn("localhost");
@@ -63,7 +69,7 @@ public class VoitureDaoTest {
         assertEquals("jdbc:mysql://localhost:3306/mydb", urlBase);
     }
 
-    @Test
+   @Test
     public void testGetUrlBaseWithCustomConfiguration() {
         when(Configuration.getConfig("bdd.serveur")).thenReturn("customserver");
         when(Configuration.getConfig("bdd.port")).thenReturn("5432");
