@@ -47,18 +47,15 @@ public class VoitureAPITest {
         MockitoAnnotations.initMocks(this);
     }
 
-/*
+
     @Test
     public void getVoituresJsonOneParamTest()
     {
-
         VoitureAPI voitureAPI = new VoitureAPI();
         String aa= voitureAPI.getVoituresJson("all");
         assertNotNull(aa);
 
-    }*/
-    /*
-
+    }
 
     @Test
     public void getVoituresJsonTestParamIsENtier()
@@ -77,10 +74,11 @@ public class VoitureAPITest {
         assertNotNull(aa);
     }
 
+    /*
     @Test
     public void getVoituresJsonTestParamIsNotALlNotEntierButHasData()
     {
-        /*VoitureAPI voitureAPI = new VoitureAPI();
+        VoitureAPI voitureAPI = new VoitureAPI();
 
         try{
             // Créez un exemple de données JSON pour simuler la saisie JSON
@@ -111,12 +109,12 @@ public class VoitureAPITest {
             e.printStackTrace(); // Ou gérer l'exception de manière appropriée
         }
 
-    }
-
+    }*/
+/*
     @Test
     public void getVoituresJsonTest()
     {
-        /*
+
         JSONObject jsonInput = new JSONObject();
         jsonInput.put("marque", "TestMarque");
         jsonInput.put("modele", "TestModele");
@@ -139,7 +137,7 @@ public class VoitureAPITest {
         String inputJson2 = jsonInput2.toString();
         String responseJson2 = voitureAPI.ajouterVoiture(inputJson2);
 
-/*
+
         String param = "all";
         String mini = "0";
         String nbVoitures = "1";
@@ -151,8 +149,8 @@ public class VoitureAPITest {
         // Vous devrez peut-être analyser la chaîne JSON retournée pour effectuer des vérifications spécifiques.
 
         // Exemple d'assertion simple
-        assertNotNull(result);*/
-        /*ReponseVoiture reponseMock = new ReponseVoiture();
+        assertNotNull(result);
+        ReponseVoiture reponseMock = new ReponseVoiture();
         Voiture[] voitures = new Voiture[1]; // Remplacez 1 par le nombre de voitures souhaité
         // Initialisez vos voitures comme vous le souhaitez
         voitures[0] = new Voiture("Marque", "Modele", "Finition", "E", 120000, 2001, 2500);
@@ -170,9 +168,8 @@ public class VoitureAPITest {
 
         // Exemple d'assertion simple
         assertNotNull(result);
-    }
-
     }*/
+
 
 
     @Test
@@ -411,7 +408,7 @@ public class VoitureAPITest {
 
     }
 
-    /*@Test
+    @Test
     public void getReponseTest()
     {
         JSONObject jsonInput = new JSONObject();
@@ -434,7 +431,7 @@ public class VoitureAPITest {
         //JSONObject jsonResponse = new JSONObject(responseJson);
         assertNotNull(reponse);
 
-    }*/
+    }
 
 
 
