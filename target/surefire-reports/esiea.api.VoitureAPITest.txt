@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: esiea.api.VoitureAPITest
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.434 s - in esiea.api.VoitureAPITest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.378 s - in esiea.api.VoitureAPITest

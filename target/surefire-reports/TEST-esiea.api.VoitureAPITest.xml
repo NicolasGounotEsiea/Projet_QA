@@ -1,68 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="esiea.api.VoitureAPITest" time="3.434" tests="9" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="esiea.api.VoitureAPITest" time="3.378" tests="9" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="sun.desktop" value="windows"/>
-    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
-    <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="java.specification.version" value="1.8"/>
+    <property name="java.specification.version" value="16"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.class.path" value="F:\QA\esieaBack\target\test-classes;F:\QA\esieaBack\target\classes;C:\Users\ng200\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\ng200\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\ng200\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\ng200\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\ng200\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\ng200\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\ng200\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\ng200\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\ng200\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\ng200\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\ng200\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\ng200\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\ng200\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\ng200\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\ng200\.m2\repository\io\rest-assured\rest-assured-common\4.4.0\rest-assured-common-4.4.0.jar;C:\Users\ng200\.m2\repository\io\rest-assured\xml-path\4.4.0\xml-path-4.4.0.jar;C:\Users\ng200\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\ng200\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\ng200\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\ng200\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\ng200\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\ng200\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\ng200\.m2\repository\asm\asm\3.3.1\asm-3.3.1.jar;C:\Users\ng200\.m2\repository\org\mockito\mockito-core\3.12.4\mockito-core-3.12.4.jar;C:\Users\ng200\.m2\repository\net\bytebuddy\byte-buddy\1.11.13\byte-buddy-1.11.13.jar;C:\Users\ng200\.m2\repository\net\bytebuddy\byte-buddy-agent\1.11.13\byte-buddy-agent-1.11.13.jar;C:\Users\ng200\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\ng200\.m2\repository\com\sun\jersey\jersey-bundle\1.19.2\jersey-bundle-1.19.2.jar;C:\Users\ng200\.m2\repository\javax\ws\rs\jsr311-api\1.1.1\jsr311-api-1.1.1.jar;C:\Users\ng200\.m2\repository\org\json\json\20160810\json-20160810.jar;C:\Users\ng200\.m2\repository\com\sun\jersey\jersey-server\1.19.2\jersey-server-1.19.2.jar;C:\Users\ng200\.m2\repository\com\sun\jersey\jersey-core\1.19.2\jersey-core-1.19.2.jar;C:\Users\ng200\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\ng200\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\ng200\.m2\repository\mysql\mysql-connector-java\8.0.25\mysql-connector-java-8.0.25.jar;C:\Users\ng200\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\ng200\.m2\repository\org\powermock\powermock-api-mockito2\2.0.9\powermock-api-mockito2-2.0.9.jar;C:\Users\ng200\.m2\repository\org\powermock\powermock-api-support\2.0.9\powermock-api-support-2.0.9.jar;C:\Users\ng200\.m2\repository\org\powermock\powermock-reflect\2.0.9\powermock-reflect-2.0.9.jar;C:\Users\ng200\.m2\repository\org\powermock\powermock-core\2.0.9\powermock-core-2.0.9.jar;C:\Users\ng200\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\ng200\.m2\repository\org\powermock\powermock-module-junit4\2.0.9\powermock-module-junit4-2.0.9.jar;C:\Users\ng200\.m2\repository\org\powermock\powermock-module-junit4-common\2.0.9\powermock-module-junit4-common-2.0.9.jar;C:\Users\ng200\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.8\jackson-databind-2.9.8.jar;C:\Users\ng200\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\ng200\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.8\jackson-core-2.9.8.jar;C:\Users\ng200\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;"/>
-    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
-    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="Europe/Berlin"/>
-    <property name="java.vm.specification.version" value="1.8"/>
     <property name="os.name" value="Windows 10"/>
-    <property name="user.country" value="FR"/>
+    <property name="java.vm.specification.version" value="16"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.boot.library.path" value="C:\Users\ng200\.jdks\corretto-1.8.0_392\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\ng200\AppData\Local\Temp\surefire7622959675188014489\surefirebooter-20231031103317189_3.jar C:\Users\ng200\AppData\Local\Temp\surefire7622959675188014489 2023-10-31T10-33-17_003-jvmRun1 surefire-20231031103317189_1tmp surefire_0-20231031103317189_2tmp"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk-16.0.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\ng200\AppData\Local\Temp\surefire140359721735508165\surefirebooter-20231031110607070_3.jar C:\Users\ng200\AppData\Local\Temp\surefire140359721735508165 2023-10-31T11-06-06_948-jvmRun1 surefire-20231031110607070_1tmp surefire_0-20231031110607070_2tmp"/>
+    <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="F:\QA\esieaBack\target\test-classes;F:\QA\esieaBack\target\classes;C:\Users\ng200\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\ng200\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\ng200\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\ng200\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\ng200\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\ng200\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\ng200\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\ng200\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\ng200\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\ng200\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\ng200\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\ng200\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\ng200\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\ng200\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\ng200\.m2\repository\io\rest-assured\rest-assured-common\4.4.0\rest-assured-common-4.4.0.jar;C:\Users\ng200\.m2\repository\io\rest-assured\xml-path\4.4.0\xml-path-4.4.0.jar;C:\Users\ng200\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\ng200\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\ng200\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\ng200\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\ng200\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\ng200\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\ng200\.m2\repository\asm\asm\3.3.1\asm-3.3.1.jar;C:\Users\ng200\.m2\repository\org\mockito\mockito-core\3.12.4\mockito-core-3.12.4.jar;C:\Users\ng200\.m2\repository\net\bytebuddy\byte-buddy\1.11.13\byte-buddy-1.11.13.jar;C:\Users\ng200\.m2\repository\net\bytebuddy\byte-buddy-agent\1.11.13\byte-buddy-agent-1.11.13.jar;C:\Users\ng200\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\ng200\.m2\repository\com\sun\jersey\jersey-bundle\1.19.2\jersey-bundle-1.19.2.jar;C:\Users\ng200\.m2\repository\javax\ws\rs\jsr311-api\1.1.1\jsr311-api-1.1.1.jar;C:\Users\ng200\.m2\repository\org\json\json\20160810\json-20160810.jar;C:\Users\ng200\.m2\repository\com\sun\jersey\jersey-server\1.19.2\jersey-server-1.19.2.jar;C:\Users\ng200\.m2\repository\com\sun\jersey\jersey-core\1.19.2\jersey-core-1.19.2.jar;C:\Users\ng200\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\ng200\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\ng200\.m2\repository\mysql\mysql-connector-java\8.0.25\mysql-connector-java-8.0.25.jar;C:\Users\ng200\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\ng200\.m2\repository\org\powermock\powermock-api-mockito2\2.0.9\powermock-api-mockito2-2.0.9.jar;C:\Users\ng200\.m2\repository\org\powermock\powermock-api-support\2.0.9\powermock-api-support-2.0.9.jar;C:\Users\ng200\.m2\repository\org\powermock\powermock-reflect\2.0.9\powermock-reflect-2.0.9.jar;C:\Users\ng200\.m2\repository\org\powermock\powermock-core\2.0.9\powermock-core-2.0.9.jar;C:\Users\ng200\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\ng200\.m2\repository\org\powermock\powermock-module-junit4\2.0.9\powermock-module-junit4-2.0.9.jar;C:\Users\ng200\.m2\repository\org\powermock\powermock-module-junit4-common\2.0.9\powermock-module-junit4-common-2.0.9.jar;C:\Users\ng200\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.8\jackson-databind-2.9.8.jar;C:\Users\ng200\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\ng200\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.8\jackson-core-2.9.8.jar;C:\Users\ng200\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\ng200"/>
     <property name="user.language" value="fr"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.home" value="C:\Users\ng200\.jdks\corretto-1.8.0_392\jre"/>
-    <property name="basedir" value="F:\QA\esieaBack"/>
+    <property name="java.version.date" value="2021-04-20"/>
+    <property name="java.home" value="C:\Program Files (x86)\Java\jdk-16.0.1"/>
     <property name="file.separator" value="\"/>
+    <property name="basedir" value="F:\QA\esieaBack"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\ng200\AppData\Local\Temp\surefire7622959675188014489\surefirebooter-20231031103317189_3.jar;C:\\Users\\ng200\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.7\\org.jacoco.agent-0.8.7-runtime.jar"/>
-    <property name="sun.boot.class.path" value="C:\Users\ng200\.jdks\corretto-1.8.0_392\jre\lib\resources.jar;C:\Users\ng200\.jdks\corretto-1.8.0_392\jre\lib\rt.jar;C:\Users\ng200\.jdks\corretto-1.8.0_392\jre\lib\sunrsasign.jar;C:\Users\ng200\.jdks\corretto-1.8.0_392\jre\lib\jsse.jar;C:\Users\ng200\.jdks\corretto-1.8.0_392\jre\lib\jce.jar;C:\Users\ng200\.jdks\corretto-1.8.0_392\jre\lib\charsets.jar;C:\Users\ng200\.jdks\corretto-1.8.0_392\jre\lib\jfr.jar;C:\Users\ng200\.jdks\corretto-1.8.0_392\jre\classes"/>
+    <property name="surefire.real.class.path" value="C:\Users\ng200\AppData\Local\Temp\surefire140359721735508165\surefirebooter-20231031110607070_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="1.8.0_392-b08"/>
+    <property name="java.runtime.version" value="16.0.1+9-24"/>
     <property name="user.name" value="ng200"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
-    <property name="java.endorsed.dirs" value="C:\Users\ng200\.jdks\corretto-1.8.0_392\jre\lib\endorsed"/>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="Cp1252"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="C:\Users\ng200\.m2\repository"/>
-    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-8/issues/"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\ng200\AppData\Local\Temp\"/>
-    <property name="idea.version" value="2021.3.1"/>
-    <property name="java.version" value="1.8.0_392"/>
+    <property name="java.version" value="16.0.1"/>
     <property name="user.dir" value="F:\QA\esieaBack"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="java.library.path" value="C:\Users\ng200\.jdks\corretto-1.8.0_392\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\PostgreSQL\15\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\libnvvp;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.6.10-hotspot\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Node.js;C:\Program Files\nodejs\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\NVIDIA Corporation\Nsight Compute 2023.1.0\;C:\ProgramData\ComposerSetup\bin;C:\Windows\System32;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\PuTTY\;C:\Program Files\Amazon\AWSCLIV2\;C:\Users\ng200\scoop\shims;C:\Users\ng200\AppData\Local\Programs\Python\Python310\Scripts;C:\Program Files\MongoDB\Server\6.0\bin;C:\Users\ng200\AppData\Local\Microsoft\WindowsApps;C:\Program Files\apache-maven-3.8.4\bin;C:\Program Files (x86)\Java\jdk-16.0.1\bin;C:\Program Files\apache-maven-3.8.4\bin;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Node.js;C:\Program Files\PostgreSQL\15\bin;C:\Program Files\PostgreSQL\15\lib;C:\Program Files\OpenSSL-Win64\bin;C:\Users\ng200\AppData\Roaming\npm;C:\Users\ng200\AppData\Roaming\Composer\vendor\bin;F:\winutils-master\hadoop-3.0.0\bin;C:\Program Files\MySQL\MySQL Server 8.1\bin;;."/>
-    <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.vendor" value="Amazon.com Inc."/>
-    <property name="java.vm.version" value="25.392-b08"/>
-    <property name="java.specification.maintenance.version" value="5"/>
-    <property name="java.ext.dirs" value="C:\Users\ng200\.jdks\corretto-1.8.0_392\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="java.library.path" value="C:\Program Files (x86)\Java\jdk-16.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\ng200\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\PostgreSQL\15\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\libnvvp;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.6.10-hotspot\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Node.js;C:\Program Files\nodejs;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\NVIDIA Corporation\Nsight Compute 2023.1.0;C:\ProgramData\ComposerSetup\bin;C:\Windows\System32;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\PuTTY;C:\Program Files\Amazon\AWSCLIV2;C:\Users\ng200\scoop\shims;C:\Users\ng200\AppData\Local\Programs\Python\Python310\Scripts;C:\Program Files\MongoDB\Server\6.0\bin;C:\Users\ng200\AppData\Local\Microsoft\WindowsApps;C:\Program Files\apache-maven-3.8.4\bin;C:\Program Files (x86)\Java\jdk-16.0.1\bin;C:\Program Files\apache-maven-3.8.4\bin;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Node.js;C:\Program Files\PostgreSQL\15\bin;C:\Program Files\PostgreSQL\15\lib;C:\Program Files\OpenSSL-Win64\bin;C:\Users\ng200\AppData\Roaming\npm;C:\Users\ng200\AppData\Roaming\Composer\vendor\bin;F:\winutils-master\hadoop-3.0.0\bin;C:\Program Files\MySQL\MySQL Server 8.1\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="16.0.1+9-24"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="52.0"/>
+    <property name="java.class.version" value="60.0"/>
   </properties>
-  <testcase name="testAjouterVoitureAvecEchec" classname="esiea.api.VoitureAPITest" time="1.242">
+  <testcase name="testAjouterVoitureAvecEchec" classname="esiea.api.VoitureAPITest" time="1.528">
     <system-out><![CDATA[log4j: reset attribute= "false".
 log4j: Threshold ="null".
 log4j: Class name: [org.apache.log4j.FileAppender]
@@ -88,12 +81,11 @@ log4j: Adding appender named [console] to category [root].
 ]]></system-out>
     <system-err><![CDATA[log4j:ERROR Could not instantiate class [org.apache.log4j.varia.LevelRangerFilter].
 java.lang.ClassNotFoundException: org.apache.log4j.varia.LevelRangerFilter
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-	at java.lang.Class.forName0(Native Method)
-	at java.lang.Class.forName(Class.java:264)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:636)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:375)
 	at org.apache.log4j.helpers.Loader.loadClass(Loader.java:198)
 	at org.apache.log4j.helpers.OptionConverter.instantiateByClassName(OptionConverter.java:327)
 	at org.apache.log4j.xml.DOMConfigurator.parseFilters(DOMConfigurator.java:360)
@@ -109,8 +101,9 @@ java.lang.ClassNotFoundException: org.apache.log4j.varia.LevelRangerFilter
 	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
 	at org.apache.log4j.Logger.getLogger(Logger.java:117)
 	at esiea.dao.VoitureDAO.<clinit>(VoitureDAO.java:20)
-	at sun.reflect.GeneratedSerializationConstructorAccessor2.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at jdk.internal.reflect.GeneratedSerializationConstructorAccessor2.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
 	at org.objenesis.instantiator.sun.SunReflectionFactoryInstantiator.newInstance(SunReflectionFactoryInstantiator.java:48)
 	at org.objenesis.ObjenesisBase.newInstance(ObjenesisBase.java:73)
 	at org.mockito.internal.creation.instance.ObjenesisInstantiator.newInstance(ObjenesisInstantiator.java:22)
@@ -155,12 +148,11 @@ java.lang.ClassNotFoundException: org.apache.log4j.varia.LevelRangerFilter
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 log4j:ERROR Could not instantiate class [org.apache.log4j.varia.LevelRangerFilter].
 java.lang.ClassNotFoundException: org.apache.log4j.varia.LevelRangerFilter
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-	at java.lang.Class.forName0(Native Method)
-	at java.lang.Class.forName(Class.java:264)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:636)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:375)
 	at org.apache.log4j.helpers.Loader.loadClass(Loader.java:198)
 	at org.apache.log4j.helpers.OptionConverter.instantiateByClassName(OptionConverter.java:327)
 	at org.apache.log4j.xml.DOMConfigurator.parseFilters(DOMConfigurator.java:360)
@@ -176,8 +168,9 @@ java.lang.ClassNotFoundException: org.apache.log4j.varia.LevelRangerFilter
 	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
 	at org.apache.log4j.Logger.getLogger(Logger.java:117)
 	at esiea.dao.VoitureDAO.<clinit>(VoitureDAO.java:20)
-	at sun.reflect.GeneratedSerializationConstructorAccessor2.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at jdk.internal.reflect.GeneratedSerializationConstructorAccessor2.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
 	at org.objenesis.instantiator.sun.SunReflectionFactoryInstantiator.newInstance(SunReflectionFactoryInstantiator.java:48)
 	at org.objenesis.ObjenesisBase.newInstance(ObjenesisBase.java:73)
 	at org.mockito.internal.creation.instance.ObjenesisInstantiator.newInstance(ObjenesisInstantiator.java:22)
@@ -220,7 +213,7 @@ java.lang.ClassNotFoundException: org.apache.log4j.varia.LevelRangerFilter
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-java.sql.SQLException: Erreur SQL simulée
+java.sql.SQLException: Erreur SQL simulÃ©e
 	at esiea.api.VoitureAPI.ajouterVoiture(VoitureAPI.java:84)
 	at esiea.api.VoitureAPITest.testAjouterVoitureAvecEchec(VoitureAPITest.java:66)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -255,8 +248,8 @@ java.sql.SQLException: Erreur SQL simulée
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></system-err>
   </testcase>
-  <testcase name="testSupprimerVoitureEchec" classname="esiea.api.VoitureAPITest" time="0.377">
-    <system-err><![CDATA[java.sql.SQLException: Erreur SQL simulée
+  <testcase name="testSupprimerVoitureEchec" classname="esiea.api.VoitureAPITest" time="0.006">
+    <system-err><![CDATA[java.sql.SQLException: Erreur SQL simulÃ©e
 	at esiea.api.VoitureAPI.supprimerVoiture(VoitureAPI.java:106)
 	at esiea.api.VoitureAPITest.testSupprimerVoitureEchec(VoitureAPITest.java:267)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -291,8 +284,8 @@ java.sql.SQLException: Erreur SQL simulée
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></system-err>
   </testcase>
-  <testcase name="testAjoutAvecException" classname="esiea.api.VoitureAPITest" time="0.005">
-    <system-err><![CDATA[java.sql.SQLException: Erreur SQL simulée
+  <testcase name="testAjoutAvecException" classname="esiea.api.VoitureAPITest" time="0.007">
+    <system-err><![CDATA[java.sql.SQLException: Erreur SQL simulÃ©e
 	at esiea.api.VoitureAPI.ajouterVoiture(VoitureAPI.java:84)
 	at esiea.api.VoitureAPITest.testAjoutAvecException(VoitureAPITest.java:118)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -329,136 +322,135 @@ java.sql.SQLException: Erreur SQL simulée
   </testcase>
   <testcase name="testSupprimerVoitureSucces" classname="esiea.api.VoitureAPITest" time="0"/>
   <testcase name="testAjoutAvecDonneesCorrectes" classname="esiea.api.VoitureAPITest" time="0"/>
-  <testcase name="testParametreNonValideNum" classname="esiea.api.VoitureAPITest" time="0.964">
-    <system-out><![CDATA[2023-10-31 10:33:20 DEBUG BasicClientConnectionManager:161 - Get connection for route {s}->https://cours-qualite.groupe-esiea.fr:443
-2023-10-31 10:33:20 DEBUG DefaultClientConnectionOperator:177 - Connecting to cours-qualite.groupe-esiea.fr:443
-2023-10-31 10:33:20 DEBUG RequestAddCookies:123 - CookieSpec selected: ignoreCookies
-2023-10-31 10:33:20 DEBUG RequestAuthCache:77 - Auth cache not set in the context
-2023-10-31 10:33:20 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
-2023-10-31 10:33:20 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
-2023-10-31 10:33:20 DEBUG DefaultHttpClient:677 - Attempt 1 to execute request
-2023-10-31 10:33:20 DEBUG DefaultClientConnection:274 - Sending request: GET /esieaBack/rest/voiture/get/all/ff/10 HTTP/1.1
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "GET /esieaBack/rest/voiture/get/all/ff/10 HTTP/1.1[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "Accept: */*[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "Host: cours-qualite.groupe-esiea.fr[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "[\r][\n]"
-2023-10-31 10:33:20 DEBUG headers:278 - >> GET /esieaBack/rest/voiture/get/all/ff/10 HTTP/1.1
-2023-10-31 10:33:20 DEBUG headers:281 - >> Accept: */*
-2023-10-31 10:33:20 DEBUG headers:281 - >> Host: cours-qualite.groupe-esiea.fr
-2023-10-31 10:33:20 DEBUG headers:281 - >> Connection: Keep-Alive
-2023-10-31 10:33:20 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)
-2023-10-31 10:33:20 DEBUG headers:281 - >> Accept-Encoding: gzip,deflate
-2023-10-31 10:33:20 DEBUG wire:73 -  << "HTTP/1.1 500 Internal Server Error[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Alt-Svc: h3=":443"; ma=2592000[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Content-Language: fr[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Content-Length: 3143[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Content-Type: text/html;charset=utf-8[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Date: Tue, 31 Oct 2023 09:33:21 GMT[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Server: Caddy[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "[\r][\n]"
-2023-10-31 10:33:20 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 500 Internal Server Error
-2023-10-31 10:33:20 DEBUG headers:262 - << HTTP/1.1 500 Internal Server Error
-2023-10-31 10:33:20 DEBUG headers:265 - << Alt-Svc: h3=":443"; ma=2592000
-2023-10-31 10:33:20 DEBUG headers:265 - << Content-Language: fr
-2023-10-31 10:33:20 DEBUG headers:265 - << Content-Length: 3143
-2023-10-31 10:33:20 DEBUG headers:265 - << Content-Type: text/html;charset=utf-8
-2023-10-31 10:33:20 DEBUG headers:265 - << Date: Tue, 31 Oct 2023 09:33:21 GMT
-2023-10-31 10:33:20 DEBUG headers:265 - << Server: Caddy
-2023-10-31 10:33:20 DEBUG DefaultHttpClient:504 - Connection can be kept alive indefinitely
-2023-10-31 10:33:20 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: text/html;charset=utf-8
-2023-10-31 10:33:20 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+  <testcase name="testParametreNonValideNum" classname="esiea.api.VoitureAPITest" time="1.003">
+    <system-out><![CDATA[2023-10-31 11:06:10 DEBUG BasicClientConnectionManager:161 - Get connection for route {s}->https://cours-qualite.groupe-esiea.fr:443
+2023-10-31 11:06:10 DEBUG DefaultClientConnectionOperator:177 - Connecting to cours-qualite.groupe-esiea.fr:443
+2023-10-31 11:06:10 DEBUG RequestAddCookies:123 - CookieSpec selected: ignoreCookies
+2023-10-31 11:06:10 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2023-10-31 11:06:10 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2023-10-31 11:06:10 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2023-10-31 11:06:10 DEBUG DefaultHttpClient:677 - Attempt 1 to execute request
+2023-10-31 11:06:10 DEBUG DefaultClientConnection:274 - Sending request: GET /esieaBack/rest/voiture/get/all/ff/10 HTTP/1.1
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "GET /esieaBack/rest/voiture/get/all/ff/10 HTTP/1.1[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "Accept: */*[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "Host: cours-qualite.groupe-esiea.fr[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "[\r][\n]"
+2023-10-31 11:06:10 DEBUG headers:278 - >> GET /esieaBack/rest/voiture/get/all/ff/10 HTTP/1.1
+2023-10-31 11:06:10 DEBUG headers:281 - >> Accept: */*
+2023-10-31 11:06:10 DEBUG headers:281 - >> Host: cours-qualite.groupe-esiea.fr
+2023-10-31 11:06:10 DEBUG headers:281 - >> Connection: Keep-Alive
+2023-10-31 11:06:10 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+2023-10-31 11:06:10 DEBUG headers:281 - >> Accept-Encoding: gzip,deflate
+2023-10-31 11:06:10 DEBUG wire:73 -  << "HTTP/1.1 500 Internal Server Error[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Alt-Svc: h3=":443"; ma=2592000[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Content-Language: fr[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Content-Length: 3143[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Content-Type: text/html;charset=utf-8[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Date: Tue, 31 Oct 2023 10:06:11 GMT[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Server: Caddy[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "[\r][\n]"
+2023-10-31 11:06:10 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 500 Internal Server Error
+2023-10-31 11:06:10 DEBUG headers:262 - << HTTP/1.1 500 Internal Server Error
+2023-10-31 11:06:10 DEBUG headers:265 - << Alt-Svc: h3=":443"; ma=2592000
+2023-10-31 11:06:10 DEBUG headers:265 - << Content-Language: fr
+2023-10-31 11:06:10 DEBUG headers:265 - << Content-Length: 3143
+2023-10-31 11:06:10 DEBUG headers:265 - << Content-Type: text/html;charset=utf-8
+2023-10-31 11:06:10 DEBUG headers:265 - << Date: Tue, 31 Oct 2023 10:06:11 GMT
+2023-10-31 11:06:10 DEBUG headers:265 - << Server: Caddy
+2023-10-31 11:06:10 DEBUG DefaultHttpClient:504 - Connection can be kept alive indefinitely
+2023-10-31 11:06:10 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: text/html;charset=utf-8
+2023-10-31 11:06:10 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
 ]]></system-out>
   </testcase>
-  <testcase name="testAjoutAvecDonneesIncorrectes" classname="esiea.api.VoitureAPITest" time="0"/>
-  <testcase name="testGetVoituresJsonValid" classname="esiea.api.VoitureAPITest" time="0.75">
-    <system-out><![CDATA[2023-10-31 10:33:20 DEBUG BasicClientConnectionManager:161 - Get connection for route {s}->https://cours-qualite.groupe-esiea.fr:443
-2023-10-31 10:33:20 DEBUG DefaultClientConnectionOperator:177 - Connecting to cours-qualite.groupe-esiea.fr:443
-2023-10-31 10:33:20 DEBUG RequestAddCookies:123 - CookieSpec selected: ignoreCookies
-2023-10-31 10:33:20 DEBUG RequestAuthCache:77 - Auth cache not set in the context
-2023-10-31 10:33:20 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
-2023-10-31 10:33:20 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
-2023-10-31 10:33:20 DEBUG DefaultHttpClient:677 - Attempt 1 to execute request
-2023-10-31 10:33:20 DEBUG DefaultClientConnection:274 - Sending request: GET /esieaBack/rest/voiture/get/all/0/10 HTTP/1.1
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "GET /esieaBack/rest/voiture/get/all/0/10 HTTP/1.1[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "Accept: */*[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "Host: cours-qualite.groupe-esiea.fr[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "[\r][\n]"
-2023-10-31 10:33:20 DEBUG headers:278 - >> GET /esieaBack/rest/voiture/get/all/0/10 HTTP/1.1
-2023-10-31 10:33:20 DEBUG headers:281 - >> Accept: */*
-2023-10-31 10:33:20 DEBUG headers:281 - >> Host: cours-qualite.groupe-esiea.fr
-2023-10-31 10:33:20 DEBUG headers:281 - >> Connection: Keep-Alive
-2023-10-31 10:33:20 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)
-2023-10-31 10:33:20 DEBUG headers:281 - >> Accept-Encoding: gzip,deflate
-2023-10-31 10:33:20 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Alt-Svc: h3=":443"; ma=2592000[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Content-Type: application/json[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Date: Tue, 31 Oct 2023 09:33:21 GMT[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Server: Caddy[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Transfer-Encoding: chunked[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "[\r][\n]"
-2023-10-31 10:33:20 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
-2023-10-31 10:33:20 DEBUG headers:262 - << HTTP/1.1 200 OK
-2023-10-31 10:33:20 DEBUG headers:265 - << Alt-Svc: h3=":443"; ma=2592000
-2023-10-31 10:33:20 DEBUG headers:265 - << Content-Type: application/json
-2023-10-31 10:33:20 DEBUG headers:265 - << Date: Tue, 31 Oct 2023 09:33:21 GMT
-2023-10-31 10:33:20 DEBUG headers:265 - << Server: Caddy
-2023-10-31 10:33:20 DEBUG headers:265 - << Transfer-Encoding: chunked
-2023-10-31 10:33:20 DEBUG DefaultHttpClient:504 - Connection can be kept alive indefinitely
-2023-10-31 10:33:20 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json
-2023-10-31 10:33:20 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2023-10-31 10:33:20 DEBUG BasicClientConnectionManager:161 - Get connection for route {s}->https://cours-qualite.groupe-esiea.fr:443
-2023-10-31 10:33:20 DEBUG DefaultClientConnectionOperator:177 - Connecting to cours-qualite.groupe-esiea.fr:443
-2023-10-31 10:33:20 DEBUG RequestAddCookies:123 - CookieSpec selected: ignoreCookies
-2023-10-31 10:33:20 DEBUG RequestAuthCache:77 - Auth cache not set in the context
-2023-10-31 10:33:20 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
-2023-10-31 10:33:20 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
-2023-10-31 10:33:20 DEBUG DefaultHttpClient:677 - Attempt 1 to execute request
-2023-10-31 10:33:20 DEBUG DefaultClientConnection:274 - Sending request: GET /esieaBack/rest/voiture/get/123/0/10 HTTP/1.1
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "GET /esieaBack/rest/voiture/get/123/0/10 HTTP/1.1[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "Accept: */*[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "Host: cours-qualite.groupe-esiea.fr[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  >> "[\r][\n]"
-2023-10-31 10:33:20 DEBUG headers:278 - >> GET /esieaBack/rest/voiture/get/123/0/10 HTTP/1.1
-2023-10-31 10:33:20 DEBUG headers:281 - >> Accept: */*
-2023-10-31 10:33:20 DEBUG headers:281 - >> Host: cours-qualite.groupe-esiea.fr
-2023-10-31 10:33:20 DEBUG headers:281 - >> Connection: Keep-Alive
-2023-10-31 10:33:20 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)
-2023-10-31 10:33:20 DEBUG headers:281 - >> Accept-Encoding: gzip,deflate
-2023-10-31 10:33:20 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Alt-Svc: h3=":443"; ma=2592000[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Content-Type: application/json[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Date: Tue, 31 Oct 2023 09:33:21 GMT[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Server: Caddy[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "Transfer-Encoding: chunked[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "[\r][\n]"
-2023-10-31 10:33:20 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
-2023-10-31 10:33:20 DEBUG headers:262 - << HTTP/1.1 200 OK
-2023-10-31 10:33:20 DEBUG headers:265 - << Alt-Svc: h3=":443"; ma=2592000
-2023-10-31 10:33:20 DEBUG headers:265 - << Content-Type: application/json
-2023-10-31 10:33:20 DEBUG headers:265 - << Date: Tue, 31 Oct 2023 09:33:21 GMT
-2023-10-31 10:33:20 DEBUG headers:265 - << Server: Caddy
-2023-10-31 10:33:20 DEBUG headers:265 - << Transfer-Encoding: chunked
-2023-10-31 10:33:20 DEBUG DefaultHttpClient:504 - Connection can be kept alive indefinitely
-2023-10-31 10:33:20 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json
-2023-10-31 10:33:20 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2023-10-31 10:33:20 DEBUG wire:73 -  << "5d4[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:87 -  << "{"volume":12,"voitures":["{\"id\":25679,\"marque\":\"toyota\",\"modele\":\"Camry\",\"finition\":\"XLE\",\"carburant\":\"ESSENCE\",\"km\":13,\"annee\":2012,\"prix\":1890}","{\"id\":25680,\"marque\":\"test2\",\"modele\":\"test2\",\"finition\":\"test\",\"carburant\":\"HYBRIDE\",\"km\":32,\"annee\":1999,\"prix\":123}","{\"id\":25681,\"marque\":\"yes\",\"modele\":\"yes\",\"finition\":\"yes\",\"carburant\":\"DIESEL\",\"km\":12,\"annee\":1986,\"prix\":1000}","{\"id\":25682,\"marque\":\"123\",\"modele\":\"YES\",\"finition\":\"yes\",\"carburant\":\"ELECTRIQUE\",\"km\":12,\"annee\":2012,\"prix\":1234}","{\"id\":25683,\"marque\":\"yes\",\"modele\":\"123\",\"finition\":\"TER\",\"carburant\":\"HYBRIDE\",\"km\":54,\"annee\":2010,\"prix\":733}","{\"id\":25688,\"marque\":\"peugeot\",\"modele\":\"peugeot\",\"finition\":\"peugeot\",\"carburant\":\"ESSENCE\",\"km\":54,\"annee\":1950,\"prix\":876}","{\"id\":25690,\"marque\":\"peugeot\",\"modele\":\"peugeot\",\"finition\":\"peugeot\",\"carburant\":\"ESSENCE\",\"km\":56,\"annee\":1900,\"prix\":876}","{\"id\":25692,\"marque\":\"peugeot\",\"modele\":\"peugeot\",\"finition\":\"peugeot\",\"carburant\":\"HYBRIDE\",\"km\":12,\"annee\":2023,\"prix\":564}","{\"id\":25694,\"marque\":\"peu_geot\",\"modele\":\"peu_geot\",\"finition\":\"peu_geot\",\"carburant\":\"ESSENCE\",\"km\":12,\"annee\":1999,\"prix\":123}","{\"id\":25695,\"marque\":\"PEU\",\"modele\":\"PEU\",\"finition\":\"PEU\",\"carburant\":\"HYBRIDE\",\"km\":12,\"annee\":2012,\"prix\":767}"]}"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "0[\r][\n]"
-2023-10-31 10:33:20 DEBUG wire:73 -  << "[\r][\n]"
-2023-10-31 10:33:20 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@563d89de
-2023-10-31 10:33:20 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
-2023-10-31 10:33:20 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:51974<->185.235.207.2:443 closed
+  <testcase name="testAjoutAvecDonneesIncorrectes" classname="esiea.api.VoitureAPITest" time="0.001"/>
+  <testcase name="testGetVoituresJsonValid" classname="esiea.api.VoitureAPITest" time="0.736">
+    <system-out><![CDATA[2023-10-31 11:06:10 DEBUG BasicClientConnectionManager:161 - Get connection for route {s}->https://cours-qualite.groupe-esiea.fr:443
+2023-10-31 11:06:10 DEBUG DefaultClientConnectionOperator:177 - Connecting to cours-qualite.groupe-esiea.fr:443
+2023-10-31 11:06:10 DEBUG RequestAddCookies:123 - CookieSpec selected: ignoreCookies
+2023-10-31 11:06:10 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2023-10-31 11:06:10 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2023-10-31 11:06:10 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2023-10-31 11:06:10 DEBUG DefaultHttpClient:677 - Attempt 1 to execute request
+2023-10-31 11:06:10 DEBUG DefaultClientConnection:274 - Sending request: GET /esieaBack/rest/voiture/get/all/0/10 HTTP/1.1
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "GET /esieaBack/rest/voiture/get/all/0/10 HTTP/1.1[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "Accept: */*[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "Host: cours-qualite.groupe-esiea.fr[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "[\r][\n]"
+2023-10-31 11:06:10 DEBUG headers:278 - >> GET /esieaBack/rest/voiture/get/all/0/10 HTTP/1.1
+2023-10-31 11:06:10 DEBUG headers:281 - >> Accept: */*
+2023-10-31 11:06:10 DEBUG headers:281 - >> Host: cours-qualite.groupe-esiea.fr
+2023-10-31 11:06:10 DEBUG headers:281 - >> Connection: Keep-Alive
+2023-10-31 11:06:10 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+2023-10-31 11:06:10 DEBUG headers:281 - >> Accept-Encoding: gzip,deflate
+2023-10-31 11:06:10 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Alt-Svc: h3=":443"; ma=2592000[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Content-Type: application/json[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Date: Tue, 31 Oct 2023 10:06:11 GMT[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Server: Caddy[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Transfer-Encoding: chunked[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "[\r][\n]"
+2023-10-31 11:06:10 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2023-10-31 11:06:10 DEBUG headers:262 - << HTTP/1.1 200 OK
+2023-10-31 11:06:10 DEBUG headers:265 - << Alt-Svc: h3=":443"; ma=2592000
+2023-10-31 11:06:10 DEBUG headers:265 - << Content-Type: application/json
+2023-10-31 11:06:10 DEBUG headers:265 - << Date: Tue, 31 Oct 2023 10:06:11 GMT
+2023-10-31 11:06:10 DEBUG headers:265 - << Server: Caddy
+2023-10-31 11:06:10 DEBUG headers:265 - << Transfer-Encoding: chunked
+2023-10-31 11:06:10 DEBUG DefaultHttpClient:504 - Connection can be kept alive indefinitely
+2023-10-31 11:06:10 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json
+2023-10-31 11:06:10 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2023-10-31 11:06:10 DEBUG BasicClientConnectionManager:161 - Get connection for route {s}->https://cours-qualite.groupe-esiea.fr:443
+2023-10-31 11:06:10 DEBUG DefaultClientConnectionOperator:177 - Connecting to cours-qualite.groupe-esiea.fr:443
+2023-10-31 11:06:10 DEBUG RequestAddCookies:123 - CookieSpec selected: ignoreCookies
+2023-10-31 11:06:10 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2023-10-31 11:06:10 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2023-10-31 11:06:10 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2023-10-31 11:06:10 DEBUG DefaultHttpClient:677 - Attempt 1 to execute request
+2023-10-31 11:06:10 DEBUG DefaultClientConnection:274 - Sending request: GET /esieaBack/rest/voiture/get/123/0/10 HTTP/1.1
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "GET /esieaBack/rest/voiture/get/123/0/10 HTTP/1.1[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "Accept: */*[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "Host: cours-qualite.groupe-esiea.fr[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  >> "[\r][\n]"
+2023-10-31 11:06:10 DEBUG headers:278 - >> GET /esieaBack/rest/voiture/get/123/0/10 HTTP/1.1
+2023-10-31 11:06:10 DEBUG headers:281 - >> Accept: */*
+2023-10-31 11:06:10 DEBUG headers:281 - >> Host: cours-qualite.groupe-esiea.fr
+2023-10-31 11:06:10 DEBUG headers:281 - >> Connection: Keep-Alive
+2023-10-31 11:06:10 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+2023-10-31 11:06:10 DEBUG headers:281 - >> Accept-Encoding: gzip,deflate
+2023-10-31 11:06:10 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Alt-Svc: h3=":443"; ma=2592000[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Content-Type: application/json[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Date: Tue, 31 Oct 2023 10:06:11 GMT[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Server: Caddy[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "Transfer-Encoding: chunked[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "[\r][\n]"
+2023-10-31 11:06:10 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2023-10-31 11:06:10 DEBUG headers:262 - << HTTP/1.1 200 OK
+2023-10-31 11:06:10 DEBUG headers:265 - << Alt-Svc: h3=":443"; ma=2592000
+2023-10-31 11:06:10 DEBUG headers:265 - << Content-Type: application/json
+2023-10-31 11:06:10 DEBUG headers:265 - << Date: Tue, 31 Oct 2023 10:06:11 GMT
+2023-10-31 11:06:10 DEBUG headers:265 - << Server: Caddy
+2023-10-31 11:06:10 DEBUG headers:265 - << Transfer-Encoding: chunked
+2023-10-31 11:06:10 DEBUG DefaultHttpClient:504 - Connection can be kept alive indefinitely
+2023-10-31 11:06:10 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json
+2023-10-31 11:06:10 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2023-10-31 11:06:10 DEBUG wire:73 -  << "5d4[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:87 -  << "{"volume":12,"voitures":["{\"id\":25679,\"marque\":\"toyota\",\"modele\":\"Camry\",\"finition\":\"XLE\",\"carburant\":\"ESSENCE\",\"km\":13,\"annee\":2012,\"prix\":1890}","{\"id\":25680,\"marque\":\"test2\",\"modele\":\"test2\",\"finition\":\"test\",\"carburant\":\"HYBRIDE\",\"km\":32,\"annee\":1999,\"prix\":123}","{\"id\":25681,\"marque\":\"yes\",\"modele\":\"yes\",\"finition\":\"yes\",\"carburant\":\"DIESEL\",\"km\":12,\"annee\":1986,\"prix\":1000}","{\"id\":25682,\"marque\":\"123\",\"modele\":\"YES\",\"finition\":\"yes\",\"carburant\":\"ELECTRIQUE\",\"km\":12,\"annee\":2012,\"prix\":1234}","{\"id\":25683,\"marque\":\"yes\",\"modele\":\"123\",\"finition\":\"TER\",\"carburant\":\"HYBRIDE\",\"km\":54,\"annee\":2010,\"prix\":733}","{\"id\":25688,\"marque\":\"peugeot\",\"modele\":\"peugeot\",\"finition\":\"peugeot\",\"carburant\":\"ESSENCE\",\"km\":54,\"annee\":1950,\"prix\":876}","{\"id\":25690,\"marque\":\"peugeot\",\"modele\":\"peugeot\",\"finition\":\"peugeot\",\"carburant\":\"ESSENCE\",\"km\":56,\"annee\":1900,\"prix\":876}","{\"id\":25692,\"marque\":\"peugeot\",\"modele\":\"peugeot\",\"finition\":\"peugeot\",\"carburant\":\"HYBRIDE\",\"km\":12,\"annee\":2023,\"prix\":564}","{\"id\":25694,\"marque\":\"peu_geot\",\"modele\":\"peu_geot\",\"finition\":\"peu_geot\",\"carburant\":\"ESSENCE\",\"km\":12,\"annee\":1999,\"prix\":123}","{\"id\":25695,\"marque\":\"PEU\",\"modele\":\"PEU\",\"finition\":\"PEU\",\"carburant\":\"HYBRIDE\",\"km\":12,\"annee\":2012,\"prix\":767}"]}"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "0[\r][\n]"
+2023-10-31 11:06:10 DEBUG wire:73 -  << "[\r][\n]"
+2023-10-31 11:06:10 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@548c5127
+2023-10-31 11:06:10 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
 ]]></system-out>
   </testcase>
-  <testcase name="testAjoutVoitureReussi" classname="esiea.api.VoitureAPITest" time="0.001"/>
+  <testcase name="testAjoutVoitureReussi" classname="esiea.api.VoitureAPITest" time="0.002"/>
 </testsuite>
