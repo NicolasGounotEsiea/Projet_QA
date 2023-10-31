@@ -1,4 +1,5 @@
 package esiea.dao;
+
 import esiea.metier.Voiture;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,6 +9,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.exceptions.base.MockitoException;
 import org.powermock.api.mockito.PowerMockito;
+import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 import org.powermock.reflect.Whitebox;
@@ -21,13 +23,14 @@ import java.util.HashMap;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.powermock.api.mockito.PowerMockito.*;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({Configuration.class, VoitureDAO.class})
 public class VoitureDaoTest {
-    private VoitureDAO vdao;
+    private VoitureDAO vdao ;
     private Connection connection;
 
     @Mock
@@ -40,6 +43,8 @@ public class VoitureDaoTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         vdao = new VoitureDAO();
+        //vdao = mock(VoitureDAO.class);
+
         connectionMock = mock(Connection.class); // Initialisez connectionMock
 
         // Utilisez PowerMock pour simuler la classe Configuration.
@@ -56,15 +61,15 @@ public class VoitureDaoTest {
 
     @Test
     public void testGetUrlBaseWithDefaultConfiguration() {
-        when(Configuration.getConfig("bdd.serveur")).thenReturn("${{ secrets.BDD_SERVEUR_1 }}");
-        when(Configuration.getConfig("bdd.port")).thenReturn("${{ secrets.BDD_PORT_1 }}");
-        when(Configuration.getConfig("bdd.nom")).thenReturn("${{ secrets.BDD_NOM_1 }}");
+        when(Configuration.getConfig("bdd.serveur")).thenReturn("localhost");
+        when(Configuration.getConfig("bdd.port")).thenReturn("3306");
+        when(Configuration.getConfig("bdd.nom")).thenReturn("mydb");
 
         String urlBase = vdao.getUrlBase();
-        assertEquals("jdbc:mysql://${{ secrets.BDD_SERVEUR_1 }}:${{ secrets.BDD_PORT_1 }}/${{ secrets.BDD_NOM_1 }}", urlBase);
+        assertEquals("jdbc:mysql://localhost:3306/mydb", urlBase);
     }
 
-   /* @Test
+   @Test
     public void testGetUrlBaseWithCustomConfiguration() {
         when(Configuration.getConfig("bdd.serveur")).thenReturn("customserver");
         when(Configuration.getConfig("bdd.port")).thenReturn("5432");
@@ -125,7 +130,7 @@ public class VoitureDaoTest {
 
         // Vérifiez que la requête préparée a été exécutée
         verify(statementMock).executeUpdate();
-    }*/
+    }
 
     /*@Test
     public void testGetVoitures() throws Exception {
