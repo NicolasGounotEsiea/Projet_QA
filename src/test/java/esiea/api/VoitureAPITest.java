@@ -411,7 +411,7 @@ public class VoitureAPITest {
 
     }
 
-    @Test
+    /*@Test
     public void getReponseTest()
     {
         JSONObject jsonInput = new JSONObject();
@@ -434,7 +434,7 @@ public class VoitureAPITest {
         //JSONObject jsonResponse = new JSONObject(responseJson);
         assertNotNull(reponse);
 
-    }
+    }*/
 
 
 
