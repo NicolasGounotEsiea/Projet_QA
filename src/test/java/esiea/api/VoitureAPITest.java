@@ -424,8 +424,8 @@ public class VoitureAPITest {
         String inputJson = jsonInput.toString();
         voitureapi.ajouterVoiture(inputJson);
         ReponseVoiture reponse = voitureapi.getReponse("all",0,1);
-        System.out.println("Reponse :");
-        System.out.println(reponse);
+        //System.out.println("Reponse :");
+        //System.out.println(reponse);
         //ReponseVoiture shouldbe = new ReponseVoiture();
         // Vérifiez que la réponse indique un succès
         //JSONObject jsonResponse = new JSONObject(responseJson);
