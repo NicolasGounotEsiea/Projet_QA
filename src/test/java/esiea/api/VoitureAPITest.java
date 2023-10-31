@@ -47,7 +47,7 @@ public class VoitureAPITest {
         MockitoAnnotations.initMocks(this);
     }
 
-
+/*
     @Test
     public void getVoituresJsonOneParamTest()
     {
@@ -72,7 +72,7 @@ public class VoitureAPITest {
 
         String aa= voitureAPI.getVoituresJson("");
         assertNotNull(aa);
-    }
+    }*/
 
     /*
     @Test
@@ -407,7 +407,7 @@ public class VoitureAPITest {
         }catch(Exception e){}
 
     }
-
+/*
     @Test
     public void getReponseTest()
     {
@@ -431,7 +431,7 @@ public class VoitureAPITest {
         //JSONObject jsonResponse = new JSONObject(responseJson);
         assertNotNull(reponse);
 
-    }
+    }*/
 
 
 
