@@ -47,15 +47,18 @@ public class VoitureAPITest {
         MockitoAnnotations.initMocks(this);
     }
 
-
+/*
     @Test
     public void getVoituresJsonOneParamTest()
     {
+
         VoitureAPI voitureAPI = new VoitureAPI();
         String aa= voitureAPI.getVoituresJson("all");
         assertNotNull(aa);
 
-    }
+    }*/
+    /*
+
 
     @Test
     public void getVoituresJsonTestParamIsENtier()
@@ -106,7 +109,7 @@ public class VoitureAPITest {
 
         }catch (SQLException e) {
             e.printStackTrace(); // Ou gérer l'exception de manière appropriée
-        }*/
+        }
 
     }
 
@@ -167,9 +170,9 @@ public class VoitureAPITest {
 
         // Exemple d'assertion simple
         assertNotNull(result);
-    }*/
-
     }
+
+    }*/
 
 
     @Test

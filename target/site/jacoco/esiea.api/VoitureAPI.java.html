@@ -28,7 +28,7 @@ import utils.StringUtils;
 	@GET
 	@Produces(&quot;application/json&quot;)
 	public String getVoituresJson(@PathParam(&quot;param&quot;) String param) {
-<span class="fc" id="L31">		return getVoituresJson(param, &quot;-1&quot;, &quot;-1&quot;);</span>
+<span class="nc" id="L31">		return getVoituresJson(param, &quot;-1&quot;, &quot;-1&quot;);</span>
 	}
 	
 	@Path(&quot;get/{param}/{mini}/{nbVoitures}&quot;)
@@ -37,33 +37,33 @@ import utils.StringUtils;
 	public String getVoituresJson(@PathParam(&quot;param&quot;) String param, 
 			@PathParam(&quot;mini&quot;) String miniS, 
 			@PathParam(&quot;nbVoitures&quot;) String nbVoituresS) {
-<span class="fc" id="L40">		int mini = Integer.parseInt(miniS), nbVoitures = Integer.parseInt(nbVoituresS);</span>
+<span class="nc" id="L40">		int mini = Integer.parseInt(miniS), nbVoitures = Integer.parseInt(nbVoituresS);</span>
 		ReponseVoiture reponse;
-<span class="fc" id="L42">		JSONObject ret = new JSONObject();</span>
-<span class="fc" id="L43">		JSONArray liste = new JSONArray();</span>
-<span class="fc bfc" id="L44" title="All 2 branches covered.">		if (&quot;all&quot;.equals(param)) { </span>
-<span class="fc" id="L45">			reponse = getToutesVoitures(mini, nbVoitures);</span>
-<span class="fc bfc" id="L46" title="All 2 branches covered.">			for (Voiture v : reponse.getData()) {</span>
-<span class="fc" id="L47">				liste.put(v);</span>
+<span class="nc" id="L42">		JSONObject ret = new JSONObject();</span>
+<span class="nc" id="L43">		JSONArray liste = new JSONArray();</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">		if (&quot;all&quot;.equals(param)) { </span>
+<span class="nc" id="L45">			reponse = getToutesVoitures(mini, nbVoitures);</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">			for (Voiture v : reponse.getData()) {</span>
+<span class="nc" id="L47">				liste.put(v);</span>
 			}
-<span class="fc" id="L49">			ret.put(&quot;voitures&quot;, liste);</span>
-<span class="fc" id="L50">			ret.put(&quot;volume&quot;, reponse.getVolume());</span>
-<span class="fc bfc" id="L51" title="All 2 branches covered.">		} else  if (StringUtils.estEntier(param)){</span>
-<span class="fc" id="L52">			reponse = getReponse(param, mini, nbVoitures);</span>
-<span class="pc bpc" id="L53" title="1 of 2 branches missed.">			if (reponse.getData().length &gt; 0) {</span>
-<span class="fc" id="L54">				ret.put(&quot;voiture&quot;, reponse.getData()[0]);</span>
-<span class="fc" id="L55">				ret.put(&quot;volume&quot;, 1);</span>
+<span class="nc" id="L49">			ret.put(&quot;voitures&quot;, liste);</span>
+<span class="nc" id="L50">			ret.put(&quot;volume&quot;, reponse.getVolume());</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">		} else  if (StringUtils.estEntier(param)){</span>
+<span class="nc" id="L52">			reponse = getReponse(param, mini, nbVoitures);</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">			if (reponse.getData().length &gt; 0) {</span>
+<span class="nc" id="L54">				ret.put(&quot;voiture&quot;, reponse.getData()[0]);</span>
+<span class="nc" id="L55">				ret.put(&quot;volume&quot;, 1);</span>
 			}
 		}
 		else {
-<span class="fc" id="L59">			reponse = getReponse(param, mini, nbVoitures);</span>
-<span class="fc bfc" id="L60" title="All 2 branches covered.">			for (Voiture v : reponse.getData()) {</span>
-<span class="fc" id="L61">				liste.put(v);</span>
+<span class="nc" id="L59">			reponse = getReponse(param, mini, nbVoitures);</span>
+<span class="nc bnc" id="L60" title="All 2 branches missed.">			for (Voiture v : reponse.getData()) {</span>
+<span class="nc" id="L61">				liste.put(v);</span>
 			}
-<span class="fc" id="L63">			ret.put(&quot;voitures&quot;, liste);</span>
-<span class="fc" id="L64">			ret.put(&quot;volume&quot;, reponse.getVolume());</span>
+<span class="nc" id="L63">			ret.put(&quot;voitures&quot;, liste);</span>
+<span class="nc" id="L64">			ret.put(&quot;volume&quot;, reponse.getVolume());</span>
 		}
-<span class="fc" id="L66">		return ret.toString();</span>
+<span class="nc" id="L66">		return ret.toString();</span>
 	}
 	
 	
@@ -118,9 +118,9 @@ import utils.StringUtils;
 	 * @return Retourne un ensemble de voitures sous forme de tableau de Voitures
 	 */
 	public ReponseVoiture getToutesVoitures(int mini, int nbVoitures) {
-<span class="fc" id="L121">		ReponseVoiture ret = new ReponseVoiture();</span>
+<span class="nc" id="L121">		ReponseVoiture ret = new ReponseVoiture();</span>
 		try {
-<span class="fc" id="L123">			ret = vDao.getVoitures(null, mini, nbVoitures);</span>
+<span class="nc" id="L123">			ret = vDao.getVoitures(null, mini, nbVoitures);</span>
 			/*vDao.getVoitures(null, mini, nbVoitures);
 			ret[0] = new Voiture();
 			ret[0].setAnnee(2008);
@@ -157,8 +157,8 @@ import utils.StringUtils;
 			}*/
 <span class="nc" id="L158">		} catch (SQLException sql) {</span>
 <span class="nc" id="L159">			sql.printStackTrace();</span>
-<span class="fc" id="L160">		}</span>
-<span class="fc" id="L161">		return ret;</span>
+<span class="nc" id="L160">		}</span>
+<span class="nc" id="L161">		return ret;</span>
 	}
 	
 	/**
@@ -169,10 +169,10 @@ import utils.StringUtils;
 	public ReponseVoiture getReponse(String param, int mini, int nbVoitures) {
 <span class="fc" id="L170">		ReponseVoiture ret = new ReponseVoiture();</span>
 		try {
-<span class="fc" id="L172">			ret = vDao.rechercherVoitures(param, mini, nbVoitures);</span>
+<span class="nc" id="L172">			ret = vDao.rechercherVoitures(param, mini, nbVoitures);</span>
 <span class="fc" id="L173">		} catch (SQLException sql) {</span>
 <span class="fc" id="L174">			sql.printStackTrace();</span>
-<span class="fc" id="L175">		}</span>
+<span class="nc" id="L175">		}</span>
 <span class="fc" id="L176">		return ret;</span>
 	}
 	

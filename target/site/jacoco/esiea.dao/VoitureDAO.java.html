@@ -92,12 +92,12 @@ public class VoitureDAO {
 	
 	public ReponseVoiture rechercherVoitures(String saisie, int mini, int nbVoitures) throws SQLException {
 <span class="fc" id="L94">		HashMap&lt;String, String&gt; criteres = new HashMap&lt;String, String&gt;();</span>
-<span class="fc bfc" id="L95" title="All 2 branches covered.">		if(StringUtils.estEntier(saisie)) {</span>
-<span class="fc" id="L96">			criteres.put(&quot;id&quot;, saisie);</span>
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">		if(StringUtils.estEntier(saisie)) {</span>
+<span class="nc" id="L96">			criteres.put(&quot;id&quot;, saisie);</span>
 		} else {
 <span class="fc" id="L98">			criteres.put(&quot;masque&quot;, saisie);</span>
 		}
-<span class="fc" id="L100">		return getVoitures(criteres, mini, nbVoitures);</span>
+<span class="nc" id="L100">		return getVoitures(criteres, mini, nbVoitures);</span>
 	}
 	
 	public ReponseVoiture getVoitures(HashMap&lt;String, String&gt; criteres, int mini, int nbVoitures) throws SQLException {
@@ -107,77 +107,77 @@ public class VoitureDAO {
 <span class="fc" id="L107">		String masque = null;</span>
 <span class="fc" id="L108">		ReponseVoiture ret = new ReponseVoiture();</span>
 <span class="fc" id="L109">		int nbCol = 0;</span>
-<span class="pc bpc" id="L110" title="1 of 4 branches missed.">		if (criteres != null &amp;&amp; !criteres.isEmpty()) {</span>
+<span class="pc bpc" id="L110" title="2 of 4 branches missed.">		if (criteres != null &amp;&amp; !criteres.isEmpty()) {</span>
 <span class="fc" id="L111">			requete += &quot;WHERE &quot;;</span>
 <span class="fc" id="L112">			requeteComptage += &quot;WHERE &quot;;</span>
 <span class="fc" id="L113">			masque = criteres.get(&quot;masque&quot;);</span>
-<span class="fc bfc" id="L114" title="All 2 branches covered.">			if (masque != null) {</span>
+<span class="pc bpc" id="L114" title="1 of 2 branches missed.">			if (masque != null) {</span>
 <span class="fc" id="L115">				requete += construireRequeteMasque(masque);</span>
 <span class="fc" id="L116">				requeteComptage += construireRequeteMasque(masque);</span>
 <span class="fc" id="L117">				nbCol = StringUtils.nbOccurrence(requete, '?')/masque.split(&quot; &quot;).length;</span>
 			} else {
-<span class="fc bfc" id="L119" title="All 2 branches covered.">				for(String colonne : criteres.keySet()) {</span>
-<span class="fc" id="L120">					requete += colonne + &quot; = ?,&quot;;</span>
-<span class="fc" id="L121">					requeteComptage += colonne + &quot; = ?,&quot;;</span>
-<span class="fc" id="L122">				}</span>
+<span class="nc bnc" id="L119" title="All 2 branches missed.">				for(String colonne : criteres.keySet()) {</span>
+<span class="nc" id="L120">					requete += colonne + &quot; = ?,&quot;;</span>
+<span class="nc" id="L121">					requeteComptage += colonne + &quot; = ?,&quot;;</span>
+<span class="nc" id="L122">				}</span>
 				//retrait de la dernière virgule
-<span class="fc" id="L124">				requete = requete.substring(0, requete.length()-1);</span>
-<span class="fc" id="L125">				requeteComptage = requeteComptage.substring(0, requeteComptage.length()-1);</span>
+<span class="nc" id="L124">				requete = requete.substring(0, requete.length()-1);</span>
+<span class="nc" id="L125">				requeteComptage = requeteComptage.substring(0, requeteComptage.length()-1);</span>
 			}
 		}
 <span class="pc bpc" id="L128" title="3 of 4 branches missed.">		if (nbVoitures &gt; 1 &amp;&amp; mini &gt;= 0) {</span>
 <span class="nc" id="L129">			requete += &quot; LIMIT ? OFFSET ?&quot;;</span>
 		}
-<span class="fc" id="L131">		PreparedStatement pstmt = getPreparedStatemnt (requete, masque, nbCol, criteres, mini, nbVoitures);</span>
-<span class="fc" id="L132">		ResultSet res = pstmt.executeQuery();</span>
-<span class="fc" id="L133">		res.last();</span>
-<span class="fc" id="L134">		ret.setData(new Voiture[res.getRow()]);</span>
-<span class="fc" id="L135">		res.beforeFirst();</span>
-<span class="fc" id="L136">		int cpt = 0;</span>
-<span class="fc bfc" id="L137" title="All 2 branches covered.">		while (res.next()) {</span>
-<span class="fc" id="L138">			ret.setData(setVoiture(res), cpt++);</span>
+<span class="nc" id="L131">		PreparedStatement pstmt = getPreparedStatemnt (requete, masque, nbCol, criteres, mini, nbVoitures);</span>
+<span class="nc" id="L132">		ResultSet res = pstmt.executeQuery();</span>
+<span class="nc" id="L133">		res.last();</span>
+<span class="nc" id="L134">		ret.setData(new Voiture[res.getRow()]);</span>
+<span class="nc" id="L135">		res.beforeFirst();</span>
+<span class="nc" id="L136">		int cpt = 0;</span>
+<span class="nc bnc" id="L137" title="All 2 branches missed.">		while (res.next()) {</span>
+<span class="nc" id="L138">			ret.setData(setVoiture(res), cpt++);</span>
 		}
-<span class="fc" id="L140">		pstmt = getPreparedStatemnt (requeteComptage, masque, nbCol, criteres, -1, -1);</span>
-<span class="fc" id="L141">		res = pstmt.executeQuery();</span>
-<span class="pc bpc" id="L142" title="1 of 2 branches missed.">		if (res.next()) {</span>
-<span class="fc" id="L143">			ret.setVolume(res.getInt(1));</span>
+<span class="nc" id="L140">		pstmt = getPreparedStatemnt (requeteComptage, masque, nbCol, criteres, -1, -1);</span>
+<span class="nc" id="L141">		res = pstmt.executeQuery();</span>
+<span class="nc bnc" id="L142" title="All 2 branches missed.">		if (res.next()) {</span>
+<span class="nc" id="L143">			ret.setVolume(res.getInt(1));</span>
 		}
-<span class="fc" id="L145">		deconnecter();</span>
-<span class="fc" id="L146">		return ret;</span>
+<span class="nc" id="L145">		deconnecter();</span>
+<span class="nc" id="L146">		return ret;</span>
 	}
 	
 	private PreparedStatement getPreparedStatemnt (String requete, String masque, int nbCol, HashMap&lt;String, String&gt; criteres, int mini, int nbVoitures) throws SQLException {
-<span class="fc" id="L150">		PreparedStatement stmt = getConnexion().prepareStatement(requete, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);</span>
-<span class="fc" id="L151">		int cpt =1;</span>
-<span class="fc bfc" id="L152" title="All 2 branches covered.">		if (criteres != null) {</span>
-<span class="fc bfc" id="L153" title="All 2 branches covered.">			if (masque == null) {</span>
-<span class="fc bfc" id="L154" title="All 2 branches covered.">				for(String colonne : criteres.keySet()) {</span>
-<span class="pc bpc" id="L155" title="1 of 2 branches missed.">					if(&quot;string&quot;.equals(Voiture.getTypeDonnee(colonne))) {</span>
+<span class="nc" id="L150">		PreparedStatement stmt = getConnexion().prepareStatement(requete, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);</span>
+<span class="nc" id="L151">		int cpt =1;</span>
+<span class="nc bnc" id="L152" title="All 2 branches missed.">		if (criteres != null) {</span>
+<span class="nc bnc" id="L153" title="All 2 branches missed.">			if (masque == null) {</span>
+<span class="nc bnc" id="L154" title="All 2 branches missed.">				for(String colonne : criteres.keySet()) {</span>
+<span class="nc bnc" id="L155" title="All 2 branches missed.">					if(&quot;string&quot;.equals(Voiture.getTypeDonnee(colonne))) {</span>
 <span class="nc" id="L156">						stmt.setString(cpt, criteres.get(colonne));</span>
 					}
-<span class="pc bpc" id="L158" title="1 of 2 branches missed.">					if(&quot;entier&quot;.equals(Voiture.getTypeDonnee(colonne))) {</span>
-<span class="fc" id="L159">						stmt.setInt(cpt, Integer.parseInt(criteres.get(colonne)));</span>
+<span class="nc bnc" id="L158" title="All 2 branches missed.">					if(&quot;entier&quot;.equals(Voiture.getTypeDonnee(colonne))) {</span>
+<span class="nc" id="L159">						stmt.setInt(cpt, Integer.parseInt(criteres.get(colonne)));</span>
 					}
-<span class="fc" id="L161">					cpt++;</span>
-<span class="fc" id="L162">				}</span>
-<span class="pc bpc" id="L163" title="1 of 2 branches missed.">			} else if (masque != null) {</span>
-<span class="fc" id="L164">				String[] mots = masque.split(&quot; &quot;);</span>
-<span class="fc" id="L165">				int indexMot = 0;</span>
-<span class="fc bfc" id="L166" title="All 2 branches covered.">				for (String mot : mots) {</span>
-<span class="fc bfc" id="L167" title="All 2 branches covered.">					for (int i=1; i&lt; nbCol+1; i++) {</span>
-<span class="fc" id="L168">						cpt = indexMot * nbCol + i;</span>
-<span class="fc" id="L169">						stmt.setString(cpt, &quot;%&quot;+mot+&quot;%&quot;);</span>
+<span class="nc" id="L161">					cpt++;</span>
+<span class="nc" id="L162">				}</span>
+<span class="nc bnc" id="L163" title="All 2 branches missed.">			} else if (masque != null) {</span>
+<span class="nc" id="L164">				String[] mots = masque.split(&quot; &quot;);</span>
+<span class="nc" id="L165">				int indexMot = 0;</span>
+<span class="nc bnc" id="L166" title="All 2 branches missed.">				for (String mot : mots) {</span>
+<span class="nc bnc" id="L167" title="All 2 branches missed.">					for (int i=1; i&lt; nbCol+1; i++) {</span>
+<span class="nc" id="L168">						cpt = indexMot * nbCol + i;</span>
+<span class="nc" id="L169">						stmt.setString(cpt, &quot;%&quot;+mot+&quot;%&quot;);</span>
 					}
-<span class="fc" id="L171">					indexMot++;</span>
+<span class="nc" id="L171">					indexMot++;</span>
 				}
-<span class="fc" id="L173">				cpt++;</span>
+<span class="nc" id="L173">				cpt++;</span>
 			}
 		}
-<span class="pc bpc" id="L176" title="3 of 4 branches missed.">		if (nbVoitures &gt; 1 &amp;&amp; mini &gt;= 0) {</span>
+<span class="nc bnc" id="L176" title="All 4 branches missed.">		if (nbVoitures &gt; 1 &amp;&amp; mini &gt;= 0) {</span>
 <span class="nc" id="L177">			stmt.setInt(cpt++, nbVoitures);</span>
 <span class="nc" id="L178">			stmt.setInt(cpt++, mini);</span>
 		}
-<span class="fc" id="L180">		return stmt;</span>
+<span class="nc" id="L180">		return stmt;</span>
 	}
 	
 	public String construireRequeteMasque(String saisie) {
@@ -199,16 +199,16 @@ public class VoitureDAO {
 	}
 	
 	private Voiture setVoiture(ResultSet res) throws SQLException {
-<span class="fc" id="L202">		Voiture ret = new Voiture();</span>
-<span class="fc" id="L203">		ret.setId(res.getInt(&quot;id&quot;));</span>
-<span class="fc" id="L204">		ret.setMarque(res.getString(&quot;marque&quot;));</span>
-<span class="fc" id="L205">		ret.setModele(res.getString(&quot;modele&quot;));</span>
-<span class="fc" id="L206">		ret.setFinition(res.getString(&quot;finition&quot;));</span>
-<span class="fc" id="L207">		ret.setCarburant(Carburant.get(res.getString(&quot;carburant&quot;)));</span>
-<span class="fc" id="L208">		ret.setKm(res.getInt(&quot;km&quot;));</span>
-<span class="fc" id="L209">		ret.setAnnee(res.getInt(&quot;annee&quot;));</span>
-<span class="fc" id="L210">		ret.setPrix(res.getInt(&quot;prix&quot;));</span>
-<span class="fc" id="L211">		return ret;</span>
+<span class="nc" id="L202">		Voiture ret = new Voiture();</span>
+<span class="nc" id="L203">		ret.setId(res.getInt(&quot;id&quot;));</span>
+<span class="nc" id="L204">		ret.setMarque(res.getString(&quot;marque&quot;));</span>
+<span class="nc" id="L205">		ret.setModele(res.getString(&quot;modele&quot;));</span>
+<span class="nc" id="L206">		ret.setFinition(res.getString(&quot;finition&quot;));</span>
+<span class="nc" id="L207">		ret.setCarburant(Carburant.get(res.getString(&quot;carburant&quot;)));</span>
+<span class="nc" id="L208">		ret.setKm(res.getInt(&quot;km&quot;));</span>
+<span class="nc" id="L209">		ret.setAnnee(res.getInt(&quot;annee&quot;));</span>
+<span class="nc" id="L210">		ret.setPrix(res.getInt(&quot;prix&quot;));</span>
+<span class="nc" id="L211">		return ret;</span>
 	}
 	
 	public void supprimerVoiture(String id) throws SQLException {

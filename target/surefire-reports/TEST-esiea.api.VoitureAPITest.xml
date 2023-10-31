@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="esiea.api.VoitureAPITest" time="5.305" tests="16" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="esiea.api.VoitureAPITest" time="4.311" tests="11" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\kraff\Desktop\QA\Projet_QA\target\test-classes;C:\Users\kraff\Desktop\QA\Projet_QA\target\classes;C:\Users\kraff\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\kraff\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\kraff\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\kraff\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\kraff\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\kraff\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\kraff\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\kraff\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\kraff\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\kraff\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\kraff\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\kraff\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\kraff\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\kraff\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\kraff\.m2\repository\io\rest-assured\rest-assured-common\4.4.0\rest-assured-common-4.4.0.jar;C:\Users\kraff\.m2\repository\io\rest-assured\xml-path\4.4.0\xml-path-4.4.0.jar;C:\Users\kraff\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\kraff\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\kraff\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\kraff\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\kraff\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\kraff\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\kraff\.m2\repository\asm\asm\3.3.1\asm-3.3.1.jar;C:\Users\kraff\.m2\repository\org\mockito\mockito-core\3.12.4\mockito-core-3.12.4.jar;C:\Users\kraff\.m2\repository\net\bytebuddy\byte-buddy\1.11.13\byte-buddy-1.11.13.jar;C:\Users\kraff\.m2\repository\net\bytebuddy\byte-buddy-agent\1.11.13\byte-buddy-agent-1.11.13.jar;C:\Users\kraff\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\kraff\.m2\repository\com\sun\jersey\jersey-bundle\1.19.2\jersey-bundle-1.19.2.jar;C:\Users\kraff\.m2\repository\javax\ws\rs\jsr311-api\1.1.1\jsr311-api-1.1.1.jar;C:\Users\kraff\.m2\repository\org\json\json\20160810\json-20160810.jar;C:\Users\kraff\.m2\repository\com\sun\jersey\jersey-server\1.19.2\jersey-server-1.19.2.jar;C:\Users\kraff\.m2\repository\com\sun\jersey\jersey-core\1.19.2\jersey-core-1.19.2.jar;C:\Users\kraff\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\kraff\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\kraff\.m2\repository\mysql\mysql-connector-java\8.0.25\mysql-connector-java-8.0.25.jar;C:\Users\kraff\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-api-mockito2\2.0.9\powermock-api-mockito2-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-api-support\2.0.9\powermock-api-support-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-reflect\2.0.9\powermock-reflect-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-core\2.0.9\powermock-core-2.0.9.jar;C:\Users\kraff\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-module-junit4\2.0.9\powermock-module-junit4-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-module-junit4-common\2.0.9\powermock-module-junit4-common-2.0.9.jar;C:\Users\kraff\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.8\jackson-databind-2.9.8.jar;C:\Users\kraff\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\kraff\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.8\jackson-core-2.9.8.jar;C:\Users\kraff\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;"/>
+    <property name="java.class.path" value="C:\Users\kraff\Desktop\QA\Projet_QA\target\test-classes;C:\Users\kraff\Desktop\QA\Projet_QA\target\classes;C:\Users\kraff\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\kraff\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\kraff\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\kraff\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\kraff\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\kraff\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\kraff\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\kraff\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\kraff\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\kraff\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\kraff\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\kraff\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\kraff\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\kraff\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\kraff\.m2\repository\io\rest-assured\rest-assured-common\4.4.0\rest-assured-common-4.4.0.jar;C:\Users\kraff\.m2\repository\io\rest-assured\xml-path\4.4.0\xml-path-4.4.0.jar;C:\Users\kraff\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\kraff\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\kraff\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\kraff\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\kraff\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\kraff\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\kraff\.m2\repository\asm\asm\3.3.1\asm-3.3.1.jar;C:\Users\kraff\.m2\repository\org\mockito\mockito-core\3.4.0\mockito-core-3.4.0.jar;C:\Users\kraff\.m2\repository\net\bytebuddy\byte-buddy\1.10.10\byte-buddy-1.10.10.jar;C:\Users\kraff\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.10\byte-buddy-agent-1.10.10.jar;C:\Users\kraff\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;C:\Users\kraff\.m2\repository\com\sun\jersey\jersey-bundle\1.19.2\jersey-bundle-1.19.2.jar;C:\Users\kraff\.m2\repository\javax\ws\rs\jsr311-api\1.1.1\jsr311-api-1.1.1.jar;C:\Users\kraff\.m2\repository\org\json\json\20160810\json-20160810.jar;C:\Users\kraff\.m2\repository\com\sun\jersey\jersey-server\1.19.2\jersey-server-1.19.2.jar;C:\Users\kraff\.m2\repository\com\sun\jersey\jersey-core\1.19.2\jersey-core-1.19.2.jar;C:\Users\kraff\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\kraff\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\kraff\.m2\repository\mysql\mysql-connector-java\8.0.25\mysql-connector-java-8.0.25.jar;C:\Users\kraff\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-api-mockito2\2.0.9\powermock-api-mockito2-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-api-support\2.0.9\powermock-api-support-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-reflect\2.0.9\powermock-reflect-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-core\2.0.9\powermock-core-2.0.9.jar;C:\Users\kraff\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-module-junit4\2.0.9\powermock-module-junit4-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-module-junit4-common\2.0.9\powermock-module-junit4-common-2.0.9.jar;C:\Users\kraff\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.8\jackson-databind-2.9.8.jar;C:\Users\kraff\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\kraff\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.8\jackson-core-2.9.8.jar;C:\Users\kraff\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.6.10-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\kraff\AppData\Local\Temp\surefire1924175304301286015\surefirebooter-20231031152946455_3.jar C:\Users\kraff\AppData\Local\Temp\surefire1924175304301286015 2023-10-31T15-29-46_280-jvmRun1 surefire-20231031152946455_1tmp surefire_0-20231031152946455_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\kraff\AppData\Local\Temp\surefire2640731518803164971\surefirebooter-20231031165513185_3.jar C:\Users\kraff\AppData\Local\Temp\surefire2640731518803164971 2023-10-31T16-55-13_008-jvmRun1 surefire-20231031165513185_1tmp surefire_0-20231031165513185_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\kraff\Desktop\QA\Projet_QA\target\test-classes;C:\Users\kraff\Desktop\QA\Projet_QA\target\classes;C:\Users\kraff\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\kraff\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\kraff\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\kraff\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\kraff\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\kraff\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\kraff\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\kraff\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\kraff\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\kraff\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\kraff\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\kraff\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\kraff\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\kraff\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\kraff\.m2\repository\io\rest-assured\rest-assured-common\4.4.0\rest-assured-common-4.4.0.jar;C:\Users\kraff\.m2\repository\io\rest-assured\xml-path\4.4.0\xml-path-4.4.0.jar;C:\Users\kraff\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\kraff\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\kraff\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\kraff\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\kraff\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\kraff\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\kraff\.m2\repository\asm\asm\3.3.1\asm-3.3.1.jar;C:\Users\kraff\.m2\repository\org\mockito\mockito-core\3.12.4\mockito-core-3.12.4.jar;C:\Users\kraff\.m2\repository\net\bytebuddy\byte-buddy\1.11.13\byte-buddy-1.11.13.jar;C:\Users\kraff\.m2\repository\net\bytebuddy\byte-buddy-agent\1.11.13\byte-buddy-agent-1.11.13.jar;C:\Users\kraff\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\kraff\.m2\repository\com\sun\jersey\jersey-bundle\1.19.2\jersey-bundle-1.19.2.jar;C:\Users\kraff\.m2\repository\javax\ws\rs\jsr311-api\1.1.1\jsr311-api-1.1.1.jar;C:\Users\kraff\.m2\repository\org\json\json\20160810\json-20160810.jar;C:\Users\kraff\.m2\repository\com\sun\jersey\jersey-server\1.19.2\jersey-server-1.19.2.jar;C:\Users\kraff\.m2\repository\com\sun\jersey\jersey-core\1.19.2\jersey-core-1.19.2.jar;C:\Users\kraff\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\kraff\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\kraff\.m2\repository\mysql\mysql-connector-java\8.0.25\mysql-connector-java-8.0.25.jar;C:\Users\kraff\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-api-mockito2\2.0.9\powermock-api-mockito2-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-api-support\2.0.9\powermock-api-support-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-reflect\2.0.9\powermock-reflect-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-core\2.0.9\powermock-core-2.0.9.jar;C:\Users\kraff\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-module-junit4\2.0.9\powermock-module-junit4-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-module-junit4-common\2.0.9\powermock-module-junit4-common-2.0.9.jar;C:\Users\kraff\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.8\jackson-databind-2.9.8.jar;C:\Users\kraff\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\kraff\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.8\jackson-core-2.9.8.jar;C:\Users\kraff\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\kraff\Desktop\QA\Projet_QA\target\test-classes;C:\Users\kraff\Desktop\QA\Projet_QA\target\classes;C:\Users\kraff\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\kraff\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\kraff\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\kraff\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\kraff\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\kraff\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\kraff\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\kraff\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\kraff\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\kraff\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\kraff\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\kraff\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\kraff\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\kraff\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\kraff\.m2\repository\io\rest-assured\rest-assured-common\4.4.0\rest-assured-common-4.4.0.jar;C:\Users\kraff\.m2\repository\io\rest-assured\xml-path\4.4.0\xml-path-4.4.0.jar;C:\Users\kraff\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\kraff\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\kraff\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\kraff\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\kraff\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\kraff\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\kraff\.m2\repository\asm\asm\3.3.1\asm-3.3.1.jar;C:\Users\kraff\.m2\repository\org\mockito\mockito-core\3.4.0\mockito-core-3.4.0.jar;C:\Users\kraff\.m2\repository\net\bytebuddy\byte-buddy\1.10.10\byte-buddy-1.10.10.jar;C:\Users\kraff\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.10\byte-buddy-agent-1.10.10.jar;C:\Users\kraff\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;C:\Users\kraff\.m2\repository\com\sun\jersey\jersey-bundle\1.19.2\jersey-bundle-1.19.2.jar;C:\Users\kraff\.m2\repository\javax\ws\rs\jsr311-api\1.1.1\jsr311-api-1.1.1.jar;C:\Users\kraff\.m2\repository\org\json\json\20160810\json-20160810.jar;C:\Users\kraff\.m2\repository\com\sun\jersey\jersey-server\1.19.2\jersey-server-1.19.2.jar;C:\Users\kraff\.m2\repository\com\sun\jersey\jersey-core\1.19.2\jersey-core-1.19.2.jar;C:\Users\kraff\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\kraff\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\kraff\.m2\repository\mysql\mysql-connector-java\8.0.25\mysql-connector-java-8.0.25.jar;C:\Users\kraff\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-api-mockito2\2.0.9\powermock-api-mockito2-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-api-support\2.0.9\powermock-api-support-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-reflect\2.0.9\powermock-reflect-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-core\2.0.9\powermock-core-2.0.9.jar;C:\Users\kraff\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-module-junit4\2.0.9\powermock-module-junit4-2.0.9.jar;C:\Users\kraff\.m2\repository\org\powermock\powermock-module-junit4-common\2.0.9\powermock-module-junit4-common-2.0.9.jar;C:\Users\kraff\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.8\jackson-databind-2.9.8.jar;C:\Users\kraff\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\kraff\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.8\jackson-core-2.9.8.jar;C:\Users\kraff\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\kraff"/>
     <property name="user.language" value="fr"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\kraff\AppData\Local\Temp\surefire1924175304301286015\surefirebooter-20231031152946455_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\kraff\AppData\Local\Temp\surefire2640731518803164971\surefirebooter-20231031165513185_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.6+10"/>
@@ -57,7 +57,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testAjouterVoitureAvecEchec" classname="esiea.api.VoitureAPITest" time="2.088">
+  <testcase name="testAjouterVoitureAvecEchec" classname="esiea.api.VoitureAPITest" time="1.875">
     <system-out><![CDATA[log4j: reset attribute= "false".
 log4j: Threshold ="null".
 log4j: Class name: [org.apache.log4j.FileAppender]
@@ -108,22 +108,22 @@ java.lang.ClassNotFoundException: org.apache.log4j.varia.LevelRangerFilter
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
 	at org.objenesis.instantiator.sun.SunReflectionFactoryInstantiator.newInstance(SunReflectionFactoryInstantiator.java:48)
 	at org.objenesis.ObjenesisBase.newInstance(ObjenesisBase.java:73)
-	at org.mockito.internal.creation.instance.ObjenesisInstantiator.newInstance(ObjenesisInstantiator.java:22)
+	at org.mockito.internal.creation.instance.ObjenesisInstantiator.newInstance(ObjenesisInstantiator.java:21)
 	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:48)
-	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:43)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
 	at org.powermock.api.mockito.mockmaker.PowerMockMaker.createMock(PowerMockMaker.java:41)
-	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:53)
-	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:84)
-	at org.mockito.Mockito.mock(Mockito.java:1964)
-	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:66)
-	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:27)
-	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:24)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:69)
+	at org.mockito.Mockito.mock(Mockito.java:1933)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:57)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:26)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:23)
 	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:45)
-	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:73)
-	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:74)
-	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:48)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:72)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:73)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:47)
 	at org.mockito.MockitoAnnotations.openMocks(MockitoAnnotations.java:82)
-	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:50)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:49)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
@@ -136,9 +136,9 @@ java.lang.ClassNotFoundException: org.apache.log4j.varia.LevelRangerFilter
 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:100)
-	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:107)
-	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:41)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:99)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:105)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:40)
 	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
@@ -175,22 +175,22 @@ java.lang.ClassNotFoundException: org.apache.log4j.varia.LevelRangerFilter
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
 	at org.objenesis.instantiator.sun.SunReflectionFactoryInstantiator.newInstance(SunReflectionFactoryInstantiator.java:48)
 	at org.objenesis.ObjenesisBase.newInstance(ObjenesisBase.java:73)
-	at org.mockito.internal.creation.instance.ObjenesisInstantiator.newInstance(ObjenesisInstantiator.java:22)
+	at org.mockito.internal.creation.instance.ObjenesisInstantiator.newInstance(ObjenesisInstantiator.java:21)
 	at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:48)
-	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:43)
+	at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
 	at org.powermock.api.mockito.mockmaker.PowerMockMaker.createMock(PowerMockMaker.java:41)
-	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:53)
-	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:84)
-	at org.mockito.Mockito.mock(Mockito.java:1964)
-	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:66)
-	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:27)
-	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:24)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:69)
+	at org.mockito.Mockito.mock(Mockito.java:1933)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:57)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:26)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:23)
 	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:45)
-	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:73)
-	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:74)
-	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:48)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:72)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:73)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:47)
 	at org.mockito.MockitoAnnotations.openMocks(MockitoAnnotations.java:82)
-	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:50)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:49)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
@@ -203,9 +203,9 @@ java.lang.ClassNotFoundException: org.apache.log4j.varia.LevelRangerFilter
 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:100)
-	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:107)
-	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:41)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:99)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:105)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:40)
 	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
@@ -223,7 +223,7 @@ java.sql.SQLException: Erreur SQL simulÃ©e
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:55)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:54)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
@@ -236,9 +236,9 @@ java.sql.SQLException: Erreur SQL simulÃ©e
 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:100)
-	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:107)
-	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:41)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:99)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:105)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:40)
 	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
@@ -250,7 +250,6 @@ java.sql.SQLException: Erreur SQL simulÃ©e
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></system-err>
   </testcase>
-  <testcase name="getVoituresJsonTest" classname="esiea.api.VoitureAPITest" time="0"/>
   <testcase name="testSupprimerVoitureEchec" classname="esiea.api.VoitureAPITest" time="0.01">
     <system-err><![CDATA[java.sql.SQLException: Erreur SQL simulÃ©e
 	at esiea.api.VoitureAPI.supprimerVoiture(VoitureAPI.java:106)
@@ -260,7 +259,7 @@ java.sql.SQLException: Erreur SQL simulÃ©e
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:55)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:54)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
@@ -273,9 +272,9 @@ java.sql.SQLException: Erreur SQL simulÃ©e
 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:100)
-	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:107)
-	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:41)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:99)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:105)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:40)
 	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
@@ -296,7 +295,7 @@ java.sql.SQLException: Erreur SQL simulÃ©e
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:55)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:54)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
@@ -309,9 +308,9 @@ java.sql.SQLException: Erreur SQL simulÃ©e
 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:100)
-	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:107)
-	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:41)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:99)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:105)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:40)
 	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
@@ -324,24 +323,24 @@ java.sql.SQLException: Erreur SQL simulÃ©e
 ]]></system-err>
   </testcase>
   <testcase name="testSupprimerVoitureSucces" classname="esiea.api.VoitureAPITest" time="0"/>
-  <testcase name="getReponseTest" classname="esiea.api.VoitureAPITest" time="0.597">
-    <system-out><![CDATA[2023-10-31 15:29:49 DEBUG Configuration:31 - Fichier de conf ou contexte : src/main/resources/conf.properties
-2023-10-31 15:29:49 DEBUG Configuration:32 - java.io.BufferedInputStream@2cea921a
-2023-10-31 15:29:49 INFO  Configuration:35 - Chargement du fichier de conf : src/main/resources/conf.properties
-2023-10-31 15:29:49 DEBUG Configuration:52 - Lecture de la clÃ© bdd.serveur dans la config
-2023-10-31 15:29:49 DEBUG Configuration:57 - Lecture de la clé bdd.serveur dans la config : localhost
-2023-10-31 15:29:49 DEBUG Configuration:52 - Lecture de la clÃ© bdd.port dans la config
-2023-10-31 15:29:49 DEBUG Configuration:57 - Lecture de la clé bdd.port dans la config : 3306
-2023-10-31 15:29:49 DEBUG Configuration:52 - Lecture de la clÃ© bdd.nom dans la config
-2023-10-31 15:29:49 DEBUG Configuration:57 - Lecture de la clé bdd.nom dans la config : stockcar
-2023-10-31 15:29:49 DEBUG Configuration:52 - Lecture de la clÃ© bdd.utilisateur dans la config
-2023-10-31 15:29:49 DEBUG Configuration:57 - Lecture de la clé bdd.utilisateur dans la config : root
-2023-10-31 15:29:49 DEBUG Configuration:52 - Lecture de la clÃ© bdd.mdp dans la config
-2023-10-31 15:29:49 DEBUG Configuration:57 - Lecture de la clé bdd.mdp dans la config : root
-2023-10-31 15:29:49 DEBUG VoitureDAO:38 - Connexion ï¿½ la base OK !com.mysql.cj.jdbc.ConnectionImpl@5aec151b
-2023-10-31 15:29:49 DEBUG VoitureDAO:38 - Connexion ï¿½ la base OK !com.mysql.cj.jdbc.ConnectionImpl@5aec151b
+  <testcase name="getReponseTest" classname="esiea.api.VoitureAPITest" time="0.547">
+    <system-out><![CDATA[2023-10-31 16:55:15 DEBUG Configuration:31 - Fichier de conf ou contexte : src/main/resources/conf.properties
+2023-10-31 16:55:15 DEBUG Configuration:32 - java.io.BufferedInputStream@5e0f2c82
+2023-10-31 16:55:15 INFO  Configuration:35 - Chargement du fichier de conf : src/main/resources/conf.properties
+2023-10-31 16:55:15 DEBUG Configuration:52 - Lecture de la clÃ© bdd.serveur dans la config
+2023-10-31 16:55:15 DEBUG Configuration:57 - Lecture de la clé bdd.serveur dans la config : localhost
+2023-10-31 16:55:15 DEBUG Configuration:52 - Lecture de la clÃ© bdd.port dans la config
+2023-10-31 16:55:15 DEBUG Configuration:57 - Lecture de la clé bdd.port dans la config : 3306
+2023-10-31 16:55:15 DEBUG Configuration:52 - Lecture de la clÃ© bdd.nom dans la config
+2023-10-31 16:55:15 DEBUG Configuration:57 - Lecture de la clé bdd.nom dans la config : stockcar
+2023-10-31 16:55:15 DEBUG Configuration:52 - Lecture de la clÃ© bdd.utilisateur dans la config
+2023-10-31 16:55:15 DEBUG Configuration:57 - Lecture de la clé bdd.utilisateur dans la config : root
+2023-10-31 16:55:15 DEBUG Configuration:52 - Lecture de la clÃ© bdd.mdp dans la config
+2023-10-31 16:55:15 DEBUG Configuration:57 - Lecture de la clé bdd.mdp dans la config : root
+2023-10-31 16:55:16 DEBUG VoitureDAO:38 - Connexion ï¿½ la base OK !com.mysql.cj.jdbc.ConnectionImpl@ad6448e
+2023-10-31 16:55:16 DEBUG VoitureDAO:38 - Connexion ï¿½ la base OK !com.mysql.cj.jdbc.ConnectionImpl@ad6448e
 Reponse :
-esiea.dao.ReponseVoiture@2f70d78c
+esiea.dao.ReponseVoiture@e7ddf8d
 ]]></system-out>
     <system-err><![CDATA[java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
@@ -365,7 +364,7 @@ esiea.dao.ReponseVoiture@2f70d78c
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:55)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:54)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
@@ -378,9 +377,9 @@ esiea.dao.ReponseVoiture@2f70d78c
 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:100)
-	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:107)
-	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:41)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:99)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:105)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:40)
 	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
@@ -405,182 +404,137 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 	... 39 more
 ]]></system-err>
   </testcase>
-  <testcase name="getVoituresJsonTestParamIsNotALlNotEntierButHasData" classname="esiea.api.VoitureAPITest" time="0"/>
   <testcase name="testAjoutAvecDonneesCorrectes" classname="esiea.api.VoitureAPITest" time="0"/>
   <testcase name="GetAllVoituresExceptionTest" classname="esiea.api.VoitureAPITest" time="0"/>
-  <testcase name="getVoituresJsonTestParamIsENtier" classname="esiea.api.VoitureAPITest" time="0.334">
-    <system-out><![CDATA[2023-10-31 15:29:49 DEBUG Configuration:52 - Lecture de la clÃ© bdd.serveur dans la config
-2023-10-31 15:29:49 DEBUG Configuration:57 - Lecture de la clé bdd.serveur dans la config : localhost
-2023-10-31 15:29:49 DEBUG Configuration:52 - Lecture de la clÃ© bdd.port dans la config
-2023-10-31 15:29:49 DEBUG Configuration:57 - Lecture de la clé bdd.port dans la config : 3306
-2023-10-31 15:29:49 DEBUG Configuration:52 - Lecture de la clÃ© bdd.nom dans la config
-2023-10-31 15:29:49 DEBUG Configuration:57 - Lecture de la clé bdd.nom dans la config : stockcar
-2023-10-31 15:29:49 DEBUG Configuration:52 - Lecture de la clÃ© bdd.utilisateur dans la config
-2023-10-31 15:29:49 DEBUG Configuration:57 - Lecture de la clé bdd.utilisateur dans la config : root
-2023-10-31 15:29:49 DEBUG Configuration:52 - Lecture de la clÃ© bdd.mdp dans la config
-2023-10-31 15:29:49 DEBUG Configuration:57 - Lecture de la clé bdd.mdp dans la config : root
-2023-10-31 15:29:49 DEBUG VoitureDAO:38 - Connexion ï¿½ la base OK !com.mysql.cj.jdbc.ConnectionImpl@55589ef5
-2023-10-31 15:29:50 DEBUG VoitureDAO:38 - Connexion ï¿½ la base OK !com.mysql.cj.jdbc.ConnectionImpl@55589ef5
-]]></system-out>
-  </testcase>
-  <testcase name="testParametreNonValideNum" classname="esiea.api.VoitureAPITest" time="1.088">
-    <system-out><![CDATA[2023-10-31 15:29:51 DEBUG BasicClientConnectionManager:161 - Get connection for route {s}->https://cours-qualite.groupe-esiea.fr:443
-2023-10-31 15:29:51 DEBUG DefaultClientConnectionOperator:177 - Connecting to cours-qualite.groupe-esiea.fr:443
-2023-10-31 15:29:51 DEBUG RequestAddCookies:123 - CookieSpec selected: ignoreCookies
-2023-10-31 15:29:51 DEBUG RequestAuthCache:77 - Auth cache not set in the context
-2023-10-31 15:29:51 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
-2023-10-31 15:29:51 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
-2023-10-31 15:29:51 DEBUG DefaultHttpClient:677 - Attempt 1 to execute request
-2023-10-31 15:29:51 DEBUG DefaultClientConnection:274 - Sending request: GET /esieaBack/rest/voiture/get/all/ff/10 HTTP/1.1
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "GET /esieaBack/rest/voiture/get/all/ff/10 HTTP/1.1[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "Accept: */*[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "Host: cours-qualite.groupe-esiea.fr[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "[\r][\n]"
-2023-10-31 15:29:51 DEBUG headers:278 - >> GET /esieaBack/rest/voiture/get/all/ff/10 HTTP/1.1
-2023-10-31 15:29:51 DEBUG headers:281 - >> Accept: */*
-2023-10-31 15:29:51 DEBUG headers:281 - >> Host: cours-qualite.groupe-esiea.fr
-2023-10-31 15:29:51 DEBUG headers:281 - >> Connection: Keep-Alive
-2023-10-31 15:29:51 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
-2023-10-31 15:29:51 DEBUG headers:281 - >> Accept-Encoding: gzip,deflate
-2023-10-31 15:29:51 DEBUG wire:73 -  << "HTTP/1.1 500 Internal Server Error[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Alt-Svc: h3=":443"; ma=2592000[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Content-Language: fr[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Content-Length: 3143[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Content-Type: text/html;charset=utf-8[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Date: Tue, 31 Oct 2023 14:29:51 GMT[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Server: Caddy[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "[\r][\n]"
-2023-10-31 15:29:51 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 500 Internal Server Error
-2023-10-31 15:29:51 DEBUG headers:262 - << HTTP/1.1 500 Internal Server Error
-2023-10-31 15:29:51 DEBUG headers:265 - << Alt-Svc: h3=":443"; ma=2592000
-2023-10-31 15:29:51 DEBUG headers:265 - << Content-Language: fr
-2023-10-31 15:29:51 DEBUG headers:265 - << Content-Length: 3143
-2023-10-31 15:29:51 DEBUG headers:265 - << Content-Type: text/html;charset=utf-8
-2023-10-31 15:29:51 DEBUG headers:265 - << Date: Tue, 31 Oct 2023 14:29:51 GMT
-2023-10-31 15:29:51 DEBUG headers:265 - << Server: Caddy
-2023-10-31 15:29:51 DEBUG DefaultHttpClient:504 - Connection can be kept alive indefinitely
-2023-10-31 15:29:51 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: text/html;charset=utf-8
-2023-10-31 15:29:51 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-]]></system-out>
-  </testcase>
-  <testcase name="getVoituresJsonTestParamIsNotALlNotEntier" classname="esiea.api.VoitureAPITest" time="0.052">
-    <system-out><![CDATA[2023-10-31 15:29:51 DEBUG Configuration:52 - Lecture de la clÃ© bdd.serveur dans la config
-2023-10-31 15:29:51 DEBUG Configuration:57 - Lecture de la clé bdd.serveur dans la config : localhost
-2023-10-31 15:29:51 DEBUG Configuration:52 - Lecture de la clÃ© bdd.port dans la config
-2023-10-31 15:29:51 DEBUG Configuration:57 - Lecture de la clé bdd.port dans la config : 3306
-2023-10-31 15:29:51 DEBUG Configuration:52 - Lecture de la clÃ© bdd.nom dans la config
-2023-10-31 15:29:51 DEBUG Configuration:57 - Lecture de la clé bdd.nom dans la config : stockcar
-2023-10-31 15:29:51 DEBUG Configuration:52 - Lecture de la clÃ© bdd.utilisateur dans la config
-2023-10-31 15:29:51 DEBUG Configuration:57 - Lecture de la clé bdd.utilisateur dans la config : root
-2023-10-31 15:29:51 DEBUG Configuration:52 - Lecture de la clÃ© bdd.mdp dans la config
-2023-10-31 15:29:51 DEBUG Configuration:57 - Lecture de la clé bdd.mdp dans la config : root
-2023-10-31 15:29:51 DEBUG VoitureDAO:38 - Connexion ï¿½ la base OK !com.mysql.cj.jdbc.ConnectionImpl@4ff1e20b
-2023-10-31 15:29:51 DEBUG VoitureDAO:38 - Connexion ï¿½ la base OK !com.mysql.cj.jdbc.ConnectionImpl@4ff1e20b
+  <testcase name="testParametreNonValideNum" classname="esiea.api.VoitureAPITest" time="0.963">
+    <system-out><![CDATA[2023-10-31 16:55:17 DEBUG BasicClientConnectionManager:161 - Get connection for route {s}->https://cours-qualite.groupe-esiea.fr:443
+2023-10-31 16:55:17 DEBUG DefaultClientConnectionOperator:177 - Connecting to cours-qualite.groupe-esiea.fr:443
+2023-10-31 16:55:17 DEBUG RequestAddCookies:123 - CookieSpec selected: ignoreCookies
+2023-10-31 16:55:17 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2023-10-31 16:55:17 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2023-10-31 16:55:17 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2023-10-31 16:55:17 DEBUG DefaultHttpClient:677 - Attempt 1 to execute request
+2023-10-31 16:55:17 DEBUG DefaultClientConnection:274 - Sending request: GET /esieaBack/rest/voiture/get/all/ff/10 HTTP/1.1
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "GET /esieaBack/rest/voiture/get/all/ff/10 HTTP/1.1[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "Accept: */*[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "Host: cours-qualite.groupe-esiea.fr[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "[\r][\n]"
+2023-10-31 16:55:17 DEBUG headers:278 - >> GET /esieaBack/rest/voiture/get/all/ff/10 HTTP/1.1
+2023-10-31 16:55:17 DEBUG headers:281 - >> Accept: */*
+2023-10-31 16:55:17 DEBUG headers:281 - >> Host: cours-qualite.groupe-esiea.fr
+2023-10-31 16:55:17 DEBUG headers:281 - >> Connection: Keep-Alive
+2023-10-31 16:55:17 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+2023-10-31 16:55:17 DEBUG headers:281 - >> Accept-Encoding: gzip,deflate
+2023-10-31 16:55:17 DEBUG wire:73 -  << "HTTP/1.1 500 Internal Server Error[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Alt-Svc: h3=":443"; ma=2592000[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Content-Language: fr[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Content-Length: 3143[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Content-Type: text/html;charset=utf-8[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Date: Tue, 31 Oct 2023 15:55:17 GMT[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Server: Caddy[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "[\r][\n]"
+2023-10-31 16:55:17 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 500 Internal Server Error
+2023-10-31 16:55:17 DEBUG headers:262 - << HTTP/1.1 500 Internal Server Error
+2023-10-31 16:55:17 DEBUG headers:265 - << Alt-Svc: h3=":443"; ma=2592000
+2023-10-31 16:55:17 DEBUG headers:265 - << Content-Language: fr
+2023-10-31 16:55:17 DEBUG headers:265 - << Content-Length: 3143
+2023-10-31 16:55:17 DEBUG headers:265 - << Content-Type: text/html;charset=utf-8
+2023-10-31 16:55:17 DEBUG headers:265 - << Date: Tue, 31 Oct 2023 15:55:17 GMT
+2023-10-31 16:55:17 DEBUG headers:265 - << Server: Caddy
+2023-10-31 16:55:17 DEBUG DefaultHttpClient:504 - Connection can be kept alive indefinitely
+2023-10-31 16:55:17 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: text/html;charset=utf-8
+2023-10-31 16:55:17 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
 ]]></system-out>
   </testcase>
   <testcase name="testAjoutAvecDonneesIncorrectes" classname="esiea.api.VoitureAPITest" time="0"/>
-  <testcase name="getVoituresJsonOneParamTest" classname="esiea.api.VoitureAPITest" time="0.05">
-    <system-out><![CDATA[2023-10-31 15:29:51 DEBUG Configuration:52 - Lecture de la clÃ© bdd.serveur dans la config
-2023-10-31 15:29:51 DEBUG Configuration:57 - Lecture de la clé bdd.serveur dans la config : localhost
-2023-10-31 15:29:51 DEBUG Configuration:52 - Lecture de la clÃ© bdd.port dans la config
-2023-10-31 15:29:51 DEBUG Configuration:57 - Lecture de la clé bdd.port dans la config : 3306
-2023-10-31 15:29:51 DEBUG Configuration:52 - Lecture de la clÃ© bdd.nom dans la config
-2023-10-31 15:29:51 DEBUG Configuration:57 - Lecture de la clé bdd.nom dans la config : stockcar
-2023-10-31 15:29:51 DEBUG Configuration:52 - Lecture de la clÃ© bdd.utilisateur dans la config
-2023-10-31 15:29:51 DEBUG Configuration:57 - Lecture de la clé bdd.utilisateur dans la config : root
-2023-10-31 15:29:51 DEBUG Configuration:52 - Lecture de la clÃ© bdd.mdp dans la config
-2023-10-31 15:29:51 DEBUG Configuration:57 - Lecture de la clé bdd.mdp dans la config : root
-2023-10-31 15:29:51 DEBUG VoitureDAO:38 - Connexion ï¿½ la base OK !com.mysql.cj.jdbc.ConnectionImpl@15c4b89b
-2023-10-31 15:29:51 DEBUG VoitureDAO:38 - Connexion ï¿½ la base OK !com.mysql.cj.jdbc.ConnectionImpl@15c4b89b
-]]></system-out>
-  </testcase>
-  <testcase name="testGetVoituresJsonValid" classname="esiea.api.VoitureAPITest" time="0.901">
-    <system-out><![CDATA[2023-10-31 15:29:51 DEBUG BasicClientConnectionManager:161 - Get connection for route {s}->https://cours-qualite.groupe-esiea.fr:443
-2023-10-31 15:29:51 DEBUG DefaultClientConnectionOperator:177 - Connecting to cours-qualite.groupe-esiea.fr:443
-2023-10-31 15:29:51 DEBUG RequestAddCookies:123 - CookieSpec selected: ignoreCookies
-2023-10-31 15:29:51 DEBUG RequestAuthCache:77 - Auth cache not set in the context
-2023-10-31 15:29:51 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
-2023-10-31 15:29:51 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
-2023-10-31 15:29:51 DEBUG DefaultHttpClient:677 - Attempt 1 to execute request
-2023-10-31 15:29:51 DEBUG DefaultClientConnection:274 - Sending request: GET /esieaBack/rest/voiture/get/all/0/10 HTTP/1.1
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "GET /esieaBack/rest/voiture/get/all/0/10 HTTP/1.1[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "Accept: */*[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "Host: cours-qualite.groupe-esiea.fr[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "[\r][\n]"
-2023-10-31 15:29:51 DEBUG headers:278 - >> GET /esieaBack/rest/voiture/get/all/0/10 HTTP/1.1
-2023-10-31 15:29:51 DEBUG headers:281 - >> Accept: */*
-2023-10-31 15:29:51 DEBUG headers:281 - >> Host: cours-qualite.groupe-esiea.fr
-2023-10-31 15:29:51 DEBUG headers:281 - >> Connection: Keep-Alive
-2023-10-31 15:29:51 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
-2023-10-31 15:29:51 DEBUG headers:281 - >> Accept-Encoding: gzip,deflate
-2023-10-31 15:29:51 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Alt-Svc: h3=":443"; ma=2592000[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Content-Type: application/json[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Date: Tue, 31 Oct 2023 14:29:51 GMT[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Server: Caddy[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Transfer-Encoding: chunked[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "[\r][\n]"
-2023-10-31 15:29:51 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
-2023-10-31 15:29:51 DEBUG headers:262 - << HTTP/1.1 200 OK
-2023-10-31 15:29:51 DEBUG headers:265 - << Alt-Svc: h3=":443"; ma=2592000
-2023-10-31 15:29:51 DEBUG headers:265 - << Content-Type: application/json
-2023-10-31 15:29:51 DEBUG headers:265 - << Date: Tue, 31 Oct 2023 14:29:51 GMT
-2023-10-31 15:29:51 DEBUG headers:265 - << Server: Caddy
-2023-10-31 15:29:51 DEBUG headers:265 - << Transfer-Encoding: chunked
-2023-10-31 15:29:51 DEBUG DefaultHttpClient:504 - Connection can be kept alive indefinitely
-2023-10-31 15:29:51 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json
-2023-10-31 15:29:51 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2023-10-31 15:29:51 DEBUG BasicClientConnectionManager:161 - Get connection for route {s}->https://cours-qualite.groupe-esiea.fr:443
-2023-10-31 15:29:51 DEBUG DefaultClientConnectionOperator:177 - Connecting to cours-qualite.groupe-esiea.fr:443
-2023-10-31 15:29:51 DEBUG RequestAddCookies:123 - CookieSpec selected: ignoreCookies
-2023-10-31 15:29:51 DEBUG RequestAuthCache:77 - Auth cache not set in the context
-2023-10-31 15:29:51 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
-2023-10-31 15:29:51 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
-2023-10-31 15:29:51 DEBUG DefaultHttpClient:677 - Attempt 1 to execute request
-2023-10-31 15:29:51 DEBUG DefaultClientConnection:274 - Sending request: GET /esieaBack/rest/voiture/get/123/0/10 HTTP/1.1
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "GET /esieaBack/rest/voiture/get/123/0/10 HTTP/1.1[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "Accept: */*[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "Host: cours-qualite.groupe-esiea.fr[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  >> "[\r][\n]"
-2023-10-31 15:29:51 DEBUG headers:278 - >> GET /esieaBack/rest/voiture/get/123/0/10 HTTP/1.1
-2023-10-31 15:29:51 DEBUG headers:281 - >> Accept: */*
-2023-10-31 15:29:51 DEBUG headers:281 - >> Host: cours-qualite.groupe-esiea.fr
-2023-10-31 15:29:51 DEBUG headers:281 - >> Connection: Keep-Alive
-2023-10-31 15:29:51 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
-2023-10-31 15:29:51 DEBUG headers:281 - >> Accept-Encoding: gzip,deflate
-2023-10-31 15:29:51 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Alt-Svc: h3=":443"; ma=2592000[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Content-Type: application/json[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Date: Tue, 31 Oct 2023 14:29:51 GMT[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Server: Caddy[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "Transfer-Encoding: chunked[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "[\r][\n]"
-2023-10-31 15:29:51 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
-2023-10-31 15:29:51 DEBUG headers:262 - << HTTP/1.1 200 OK
-2023-10-31 15:29:51 DEBUG headers:265 - << Alt-Svc: h3=":443"; ma=2592000
-2023-10-31 15:29:51 DEBUG headers:265 - << Content-Type: application/json
-2023-10-31 15:29:51 DEBUG headers:265 - << Date: Tue, 31 Oct 2023 14:29:51 GMT
-2023-10-31 15:29:51 DEBUG headers:265 - << Server: Caddy
-2023-10-31 15:29:51 DEBUG headers:265 - << Transfer-Encoding: chunked
-2023-10-31 15:29:51 DEBUG DefaultHttpClient:504 - Connection can be kept alive indefinitely
-2023-10-31 15:29:51 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json
-2023-10-31 15:29:51 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2023-10-31 15:29:51 DEBUG wire:73 -  << "5d4[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:87 -  << "{"volume":12,"voitures":["{\"id\":25679,\"marque\":\"toyota\",\"modele\":\"Camry\",\"finition\":\"XLE\",\"carburant\":\"ESSENCE\",\"km\":13,\"annee\":2012,\"prix\":1890}","{\"id\":25680,\"marque\":\"test2\",\"modele\":\"test2\",\"finition\":\"test\",\"carburant\":\"HYBRIDE\",\"km\":32,\"annee\":1999,\"prix\":123}","{\"id\":25681,\"marque\":\"yes\",\"modele\":\"yes\",\"finition\":\"yes\",\"carburant\":\"DIESEL\",\"km\":12,\"annee\":1986,\"prix\":1000}","{\"id\":25682,\"marque\":\"123\",\"modele\":\"YES\",\"finition\":\"yes\",\"carburant\":\"ELECTRIQUE\",\"km\":12,\"annee\":2012,\"prix\":1234}","{\"id\":25683,\"marque\":\"yes\",\"modele\":\"123\",\"finition\":\"TER\",\"carburant\":\"HYBRIDE\",\"km\":54,\"annee\":2010,\"prix\":733}","{\"id\":25688,\"marque\":\"peugeot\",\"modele\":\"peugeot\",\"finition\":\"peugeot\",\"carburant\":\"ESSENCE\",\"km\":54,\"annee\":1950,\"prix\":876}","{\"id\":25690,\"marque\":\"peugeot\",\"modele\":\"peugeot\",\"finition\":\"peugeot\",\"carburant\":\"ESSENCE\",\"km\":56,\"annee\":1900,\"prix\":876}","{\"id\":25692,\"marque\":\"peugeot\",\"modele\":\"peugeot\",\"finition\":\"peugeot\",\"carburant\":\"HYBRIDE\",\"km\":12,\"annee\":2023,\"prix\":564}","{\"id\":25694,\"marque\":\"peu_geot\",\"modele\":\"peu_geot\",\"finition\":\"peu_geot\",\"carburant\":\"ESSENCE\",\"km\":12,\"annee\":1999,\"prix\":123}","{\"id\":25695,\"marque\":\"PEU\",\"modele\":\"PEU\",\"finition\":\"PEU\",\"carburant\":\"HYBRIDE\",\"km\":12,\"annee\":2012,\"prix\":767}"]}"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "0[\r][\n]"
-2023-10-31 15:29:51 DEBUG wire:73 -  << "[\r][\n]"
-2023-10-31 15:29:51 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1b316cac
-2023-10-31 15:29:51 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+  <testcase name="testGetVoituresJsonValid" classname="esiea.api.VoitureAPITest" time="0.768">
+    <system-out><![CDATA[2023-10-31 16:55:17 DEBUG BasicClientConnectionManager:161 - Get connection for route {s}->https://cours-qualite.groupe-esiea.fr:443
+2023-10-31 16:55:17 DEBUG DefaultClientConnectionOperator:177 - Connecting to cours-qualite.groupe-esiea.fr:443
+2023-10-31 16:55:17 DEBUG RequestAddCookies:123 - CookieSpec selected: ignoreCookies
+2023-10-31 16:55:17 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2023-10-31 16:55:17 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2023-10-31 16:55:17 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2023-10-31 16:55:17 DEBUG DefaultHttpClient:677 - Attempt 1 to execute request
+2023-10-31 16:55:17 DEBUG DefaultClientConnection:274 - Sending request: GET /esieaBack/rest/voiture/get/all/0/10 HTTP/1.1
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "GET /esieaBack/rest/voiture/get/all/0/10 HTTP/1.1[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "Accept: */*[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "Host: cours-qualite.groupe-esiea.fr[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "[\r][\n]"
+2023-10-31 16:55:17 DEBUG headers:278 - >> GET /esieaBack/rest/voiture/get/all/0/10 HTTP/1.1
+2023-10-31 16:55:17 DEBUG headers:281 - >> Accept: */*
+2023-10-31 16:55:17 DEBUG headers:281 - >> Host: cours-qualite.groupe-esiea.fr
+2023-10-31 16:55:17 DEBUG headers:281 - >> Connection: Keep-Alive
+2023-10-31 16:55:17 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+2023-10-31 16:55:17 DEBUG headers:281 - >> Accept-Encoding: gzip,deflate
+2023-10-31 16:55:17 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Alt-Svc: h3=":443"; ma=2592000[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Content-Type: application/json[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Date: Tue, 31 Oct 2023 15:55:17 GMT[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Server: Caddy[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Transfer-Encoding: chunked[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "[\r][\n]"
+2023-10-31 16:55:17 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2023-10-31 16:55:17 DEBUG headers:262 - << HTTP/1.1 200 OK
+2023-10-31 16:55:17 DEBUG headers:265 - << Alt-Svc: h3=":443"; ma=2592000
+2023-10-31 16:55:17 DEBUG headers:265 - << Content-Type: application/json
+2023-10-31 16:55:17 DEBUG headers:265 - << Date: Tue, 31 Oct 2023 15:55:17 GMT
+2023-10-31 16:55:17 DEBUG headers:265 - << Server: Caddy
+2023-10-31 16:55:17 DEBUG headers:265 - << Transfer-Encoding: chunked
+2023-10-31 16:55:17 DEBUG DefaultHttpClient:504 - Connection can be kept alive indefinitely
+2023-10-31 16:55:17 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json
+2023-10-31 16:55:17 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2023-10-31 16:55:17 DEBUG BasicClientConnectionManager:161 - Get connection for route {s}->https://cours-qualite.groupe-esiea.fr:443
+2023-10-31 16:55:17 DEBUG DefaultClientConnectionOperator:177 - Connecting to cours-qualite.groupe-esiea.fr:443
+2023-10-31 16:55:17 DEBUG RequestAddCookies:123 - CookieSpec selected: ignoreCookies
+2023-10-31 16:55:17 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2023-10-31 16:55:17 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2023-10-31 16:55:17 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2023-10-31 16:55:17 DEBUG DefaultHttpClient:677 - Attempt 1 to execute request
+2023-10-31 16:55:17 DEBUG DefaultClientConnection:274 - Sending request: GET /esieaBack/rest/voiture/get/123/0/10 HTTP/1.1
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "GET /esieaBack/rest/voiture/get/123/0/10 HTTP/1.1[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "Accept: */*[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "Host: cours-qualite.groupe-esiea.fr[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  >> "[\r][\n]"
+2023-10-31 16:55:17 DEBUG headers:278 - >> GET /esieaBack/rest/voiture/get/123/0/10 HTTP/1.1
+2023-10-31 16:55:17 DEBUG headers:281 - >> Accept: */*
+2023-10-31 16:55:17 DEBUG headers:281 - >> Host: cours-qualite.groupe-esiea.fr
+2023-10-31 16:55:17 DEBUG headers:281 - >> Connection: Keep-Alive
+2023-10-31 16:55:17 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+2023-10-31 16:55:17 DEBUG headers:281 - >> Accept-Encoding: gzip,deflate
+2023-10-31 16:55:17 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Alt-Svc: h3=":443"; ma=2592000[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Content-Type: application/json[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Date: Tue, 31 Oct 2023 15:55:17 GMT[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Server: Caddy[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "Transfer-Encoding: chunked[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "[\r][\n]"
+2023-10-31 16:55:17 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2023-10-31 16:55:17 DEBUG headers:262 - << HTTP/1.1 200 OK
+2023-10-31 16:55:17 DEBUG headers:265 - << Alt-Svc: h3=":443"; ma=2592000
+2023-10-31 16:55:17 DEBUG headers:265 - << Content-Type: application/json
+2023-10-31 16:55:17 DEBUG headers:265 - << Date: Tue, 31 Oct 2023 15:55:17 GMT
+2023-10-31 16:55:17 DEBUG headers:265 - << Server: Caddy
+2023-10-31 16:55:17 DEBUG headers:265 - << Transfer-Encoding: chunked
+2023-10-31 16:55:17 DEBUG DefaultHttpClient:504 - Connection can be kept alive indefinitely
+2023-10-31 16:55:17 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json
+2023-10-31 16:55:17 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2023-10-31 16:55:17 DEBUG wire:73 -  << "5d4[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:87 -  << "{"volume":12,"voitures":["{\"id\":25679,\"marque\":\"toyota\",\"modele\":\"Camry\",\"finition\":\"XLE\",\"carburant\":\"ESSENCE\",\"km\":13,\"annee\":2012,\"prix\":1890}","{\"id\":25680,\"marque\":\"test2\",\"modele\":\"test2\",\"finition\":\"test\",\"carburant\":\"HYBRIDE\",\"km\":32,\"annee\":1999,\"prix\":123}","{\"id\":25681,\"marque\":\"yes\",\"modele\":\"yes\",\"finition\":\"yes\",\"carburant\":\"DIESEL\",\"km\":12,\"annee\":1986,\"prix\":1000}","{\"id\":25682,\"marque\":\"123\",\"modele\":\"YES\",\"finition\":\"yes\",\"carburant\":\"ELECTRIQUE\",\"km\":12,\"annee\":2012,\"prix\":1234}","{\"id\":25683,\"marque\":\"yes\",\"modele\":\"123\",\"finition\":\"TER\",\"carburant\":\"HYBRIDE\",\"km\":54,\"annee\":2010,\"prix\":733}","{\"id\":25688,\"marque\":\"peugeot\",\"modele\":\"peugeot\",\"finition\":\"peugeot\",\"carburant\":\"ESSENCE\",\"km\":54,\"annee\":1950,\"prix\":876}","{\"id\":25690,\"marque\":\"peugeot\",\"modele\":\"peugeot\",\"finition\":\"peugeot\",\"carburant\":\"ESSENCE\",\"km\":56,\"annee\":1900,\"prix\":876}","{\"id\":25692,\"marque\":\"peugeot\",\"modele\":\"peugeot\",\"finition\":\"peugeot\",\"carburant\":\"HYBRIDE\",\"km\":12,\"annee\":2023,\"prix\":564}","{\"id\":25694,\"marque\":\"peu_geot\",\"modele\":\"peu_geot\",\"finition\":\"peu_geot\",\"carburant\":\"ESSENCE\",\"km\":12,\"annee\":1999,\"prix\":123}","{\"id\":25695,\"marque\":\"PEU\",\"modele\":\"PEU\",\"finition\":\"PEU\",\"carburant\":\"HYBRIDE\",\"km\":12,\"annee\":2012,\"prix\":767}"]}"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "0[\r][\n]"
+2023-10-31 16:55:17 DEBUG wire:73 -  << "[\r][\n]"
+2023-10-31 16:55:17 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@31a1b37b
+2023-10-31 16:55:17 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2023-10-31 16:55:17 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:52409<->185.235.207.2:443 closed
 ]]></system-out>
   </testcase>
   <testcase name="testAjoutVoitureReussi" classname="esiea.api.VoitureAPITest" time="0"/>

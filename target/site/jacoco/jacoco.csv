@@ -1,8 +1,8 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
 esiea Maven Webapp,utils,Configuration,23,106,1,5,4,23,1,7,0,5
-esiea Maven Webapp,utils,StringUtils,5,28,1,5,1,10,2,4,1,2
-esiea Maven Webapp,esiea.dao,VoitureDAO,111,564,12,36,27,111,12,25,2,11
+esiea Maven Webapp,utils,StringUtils,10,23,1,5,3,8,2,4,1,2
+esiea Maven Webapp,esiea.dao,VoitureDAO,383,292,34,14,80,58,24,13,4,9
 esiea Maven Webapp,esiea.dao,ReponseVoiture,0,32,0,2,0,11,0,7,0,6
 esiea Maven Webapp,esiea.metier,Voiture.Carburant,0,72,0,4,0,14,0,7,0,5
 esiea Maven Webapp,esiea.metier,Voiture,5,215,0,34,3,47,0,37,0,20
-esiea Maven Webapp,esiea.api,VoitureAPI,3,308,1,27,2,72,1,21,0,8
+esiea Maven Webapp,esiea.api,VoitureAPI,155,156,10,18,29,45,8,14,3,5
