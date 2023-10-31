@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: esiea.dao.VoitureDaoTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.738 s <<< FAILURE! - in esiea.dao.VoitureDaoTest
-esiea.dao.VoitureDaoTest  Time elapsed: 1.084 s  <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.451 s <<< FAILURE! - in esiea.dao.VoitureDaoTest
+esiea.dao.VoitureDaoTest  Time elapsed: 0.997 s  <<< ERROR!
 java.lang.RuntimeException: PowerMock internal error: Should never throw exception at this level
 	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl$PowerMockJUnit44MethodRunner.handleException(PowerMockJUnit44RunnerDelegateImpl.java:384)
 	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner.evaluateStatement(PowerMockJUnit47RunnerDelegateImpl.java:110)
@@ -27,7 +27,7 @@ java.lang.RuntimeException: PowerMock internal error: Should never throw excepti
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException accessible: module java.base does not "opens java.lang" to unnamed module @537dc661
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException accessible: module java.base does not "opens java.lang" to unnamed module @1e275478
 	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357)
 	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
 	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
