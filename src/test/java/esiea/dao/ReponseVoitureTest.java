@@ -49,20 +49,17 @@ public class ReponseVoitureTest
     public void setData2Test() {
         ReponseVoiture reponse = new ReponseVoiture();
         Voiture voiture = new Voiture();
-        reponse.setData(voiture, 0);
+        Voiture dataVoit = new Voiture();
+        Voiture[] tab = {dataVoit,null,null,null};
+        reponse.setData(tab);
         Voiture[] data = reponse.getData();
         assertNotNull(data);
-        assertEquals(1, data.length);
-        assertSame(voiture, data[0]);
+        reponse.setData(voiture, 2);
+
+        assertSame(voiture, data[2]);
     }
 
-    @Test
-    public void setDataNullTest() {
-        ReponseVoiture reponse = new ReponseVoiture();
-        Voiture voiture = new Voiture();
 
-
-    }
 
     @Test
     public void getVolumeTest()
@@ -80,6 +77,9 @@ public class ReponseVoitureTest
         assertEquals(voiture, donnes[0]);
 
     }
+
+
+
 
 
 
