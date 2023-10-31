@@ -9,6 +9,29 @@ public class ReponseVoitureTest
 {
 
     @Test
+    public void setDataNullTest() {
+        ReponseVoiture reponse = new ReponseVoiture();
+        Voiture voiture = new Voiture();
+        voiture.setMarque("Toyaota");
+        voiture.setModele("Serie E");
+        voiture.setFinition("Finin");
+        voiture.setCarburant(Voiture.Carburant.ELECTRIQUE);
+        voiture.setKm(10);
+        voiture.setAnnee(2000);
+        voiture.setPrix(10);
+        //Voiture[] data = null;
+        //reponse.setData(data);
+        assertNull(reponse.getData());
+        reponse.setData(voiture,3);
+        //System.out.println("Data : \n");
+        //System.out.println(reponse.getData()[3]);
+        assertEquals(4,reponse.getData().length);
+        assertEquals(voiture, reponse.getData()[3]);
+
+
+    }
+
+    @Test
     public void getDataTest()
     {
         ReponseVoiture data = new ReponseVoiture();
