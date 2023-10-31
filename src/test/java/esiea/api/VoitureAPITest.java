@@ -1,6 +1,7 @@
 package esiea.api;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.replaceFiltersWith;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -44,6 +45,130 @@ public class VoitureAPITest {
         //Unitaire
         vDao = mock(VoitureDAO.class);
         MockitoAnnotations.initMocks(this);
+    }
+
+
+    @Test
+    public void getVoituresJsonOneParamTest()
+    {
+        VoitureAPI voitureAPI = new VoitureAPI();
+        String aa= voitureAPI.getVoituresJson("all");
+        assertNotNull(aa);
+
+    }
+
+    @Test
+    public void getVoituresJsonTestParamIsENtier()
+    {
+        VoitureAPI voitureAPI = new VoitureAPI();
+        String aa= voitureAPI.getVoituresJson("1");
+        assertNotNull(aa);
+    }
+
+    @Test
+    public void getVoituresJsonTestParamIsNotALlNotEntier()
+    {
+        VoitureAPI voitureAPI = new VoitureAPI();
+
+        String aa= voitureAPI.getVoituresJson("");
+        assertNotNull(aa);
+    }
+
+    @Test
+    public void getVoituresJsonTestParamIsNotALlNotEntierButHasData()
+    {
+        /*VoitureAPI voitureAPI = new VoitureAPI();
+
+        try{
+            // Créez un exemple de données JSON pour simuler la saisie JSON
+            JSONObject jsonInput = new JSONObject();
+            jsonInput.put("id", "2544444");
+            jsonInput.put("marque", "TestMarque");
+            jsonInput.put("modele", "TestModele");
+            jsonInput.put("finition", "TestFinition");
+            jsonInput.put("carburant", "E");
+            jsonInput.put("km", "120000");
+            jsonInput.put("annee", "2001");
+            jsonInput.put("prix", "2500");
+
+            doNothing().when(vDao).ajouterVoiture(any(Voiture.class));
+
+            String inputJson = jsonInput.toString();
+            String responseJson = voitureAPI.ajouterVoiture(inputJson);
+            doNothing().when(vDao).ajouterVoiture(any(Voiture.class));
+            String aa= voitureAPI.getVoituresJson("");
+            assertNotNull(aa);
+
+            JSONObject jsonResponse = new JSONObject(responseJson);
+            assertTrue(jsonResponse.getBoolean("succes"));
+
+            verify(vDao).ajouterVoiture(any(Voiture.class));
+
+        }catch (SQLException e) {
+            e.printStackTrace(); // Ou gérer l'exception de manière appropriée
+        }*/
+
+    }
+
+    @Test
+    public void getVoituresJsonTest()
+    {
+        /*
+        JSONObject jsonInput = new JSONObject();
+        jsonInput.put("marque", "TestMarque");
+        jsonInput.put("modele", "TestModele");
+        jsonInput.put("finition", "TestFinition");
+        jsonInput.put("carburant", "E");
+        jsonInput.put("km", "120000");
+        jsonInput.put("annee", "2001");
+        jsonInput.put("prix", "2500");
+        String inputJson = jsonInput.toString();
+        String responseJson = voitureAPI.ajouterVoiture(inputJson);
+
+        JSONObject jsonInput2 = new JSONObject();
+        jsonInput.put("marque", "TestMarque2");
+        jsonInput.put("modele", "TestModele2");
+        jsonInput.put("finition", "TestFinition2");
+        jsonInput.put("carburant", "E");
+        jsonInput.put("km", "1200002");
+        jsonInput.put("annee", "2001");
+        jsonInput.put("prix", "2500");
+        String inputJson2 = jsonInput2.toString();
+        String responseJson2 = voitureAPI.ajouterVoiture(inputJson2);
+
+/*
+        String param = "all";
+        String mini = "0";
+        String nbVoitures = "1";
+
+        String result = voitureAPI.getVoituresJson("all");
+
+        // Écrire ici les assertions pour vérifier le résultat
+        // Par exemple, vérifier que result contient les données attendues
+        // Vous devrez peut-être analyser la chaîne JSON retournée pour effectuer des vérifications spécifiques.
+
+        // Exemple d'assertion simple
+        assertNotNull(result);*/
+        /*ReponseVoiture reponseMock = new ReponseVoiture();
+        Voiture[] voitures = new Voiture[1]; // Remplacez 1 par le nombre de voitures souhaité
+        // Initialisez vos voitures comme vous le souhaitez
+        voitures[0] = new Voiture("Marque", "Modele", "Finition", "E", 120000, 2001, 2500);
+        reponseMock.setData(voitures);
+        reponseMock.setVolume(1);
+
+        // Utilisez Mockito pour simuler le comportement de vDao.getToutesVoitures
+        when(vDao.getVoitures(anyInt(), anyInt())).thenReturn(reponseMock);
+
+        String result = voitureAPI.getVoituresJson("all");
+
+        // Écrivez vos assertions pour vérifier le résultat
+        // Par exemple, vérifiez que result contient les données attendues
+        // Vous devrez peut-être analyser la chaîne JSON retournée pour effectuer des vérifications spécifiques.
+
+        // Exemple d'assertion simple
+        assertNotNull(result);
+    }*/
+
     }
 
 
@@ -163,7 +288,12 @@ public class VoitureAPITest {
     }
 
 
+    @Test
+    public void GetAllVoituresExceptionTest() throws SQLException
+    {
 
+
+    }
 
 
     @Test
@@ -195,6 +325,8 @@ public class VoitureAPITest {
         assertTrue(jsonPath.getList("voitures").size() > 0);
         assertNotNull(jsonPath.getInt("volume"));
     }
+
+
 
 
     //test non passé, retour de l'api null
@@ -273,6 +405,31 @@ public class VoitureAPITest {
         try{
             verify(vDao, times(1)).supprimerVoiture(id);
         }catch(Exception e){}
+
+    }
+
+    @Test
+    public void getReponseTest()
+    {
+        JSONObject jsonInput = new JSONObject();
+        jsonInput.put("marque", "TestMarque");
+        jsonInput.put("modele", "TestModele");
+        jsonInput.put("finition", "TestFinition");
+        jsonInput.put("carburant", "E");
+        jsonInput.put("km", 120000);
+        jsonInput.put("annee", 2001);
+        jsonInput.put("prix", 2500);
+        VoitureAPI voitureapi = new VoitureAPI();
+
+        String inputJson = jsonInput.toString();
+        voitureapi.ajouterVoiture(inputJson);
+        ReponseVoiture reponse = voitureapi.getReponse("all",0,1);
+        System.out.println("Reponse :");
+        System.out.println(reponse);
+        //ReponseVoiture shouldbe = new ReponseVoiture();
+        // Vérifiez que la réponse indique un succès
+        //JSONObject jsonResponse = new JSONObject(responseJson);
+        assertNotNull(reponse);
 
     }
 
