@@ -27,8 +27,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.powermock.api.mockito.PowerMockito.*;
 
-@RunWith(PowerMockRunner.class)
-@PrepareForTest({Configuration.class, VoitureDAO.class})
+//@RunWith(PowerMockRunner.class)
+//@PrepareForTest({Configuration.class, VoitureDAO.class})
 public class VoitureDaoTest {
     /*
     private VoitureDAO vdao ;
