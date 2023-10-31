@@ -15,6 +15,8 @@
           <scope>test</scope>
       </dependency>
 
+
+
       <dependency>
           <groupId>io.rest-assured</groupId>
           <artifactId>rest-assured</artifactId>
@@ -42,7 +44,7 @@
       <dependency>
           <groupId>org.mockito</groupId>
           <artifactId>mockito-core</artifactId>
-          <version>3.12.4</version> <!-- Assurez-vous d'utiliser la dernière version de Mockito -->
+          <version>5.6.0</version> <!-- Assurez-vous d'utiliser la dernière version de Mockito -->
           <scope>test</scope>
       </dependency>
 
@@ -83,7 +85,7 @@
       <dependency>
           <groupId>org.powermock</groupId>
           <artifactId>powermock-api-mockito2</artifactId>
-          <version>2.0.9</version> <!-- Assurez-vous d'utiliser la dernière version compatible avec votre environnement -->
+          <version>2.0.9</version>
       </dependency>
       <dependency>
           <groupId>org.powermock</groupId>
@@ -116,11 +118,6 @@
         <finalName>esieaBack</finalName>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0</version> <!-- Remplacez la version par la version actuelle -->
-            </plugin>
-            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.7</version>
@@ -143,6 +140,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.1</version>
+
                 <configuration>
                     <webResources>
                         <resource>
@@ -152,6 +150,12 @@
                         </resource>
                     </webResources>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0</version>
+
             </plugin>
         </plugins>
     </build>
