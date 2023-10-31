@@ -27,10 +27,10 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.powermock.api.mockito.PowerMockito.*;
 
-//@RunWith(PowerMockRunner.class)
-//@PrepareForTest({Configuration.class, VoitureDAO.class})
+@RunWith(PowerMockRunner.class)
+@PrepareForTest({Configuration.class, VoitureDAO.class})
 public class VoitureDaoTest {
-    /*
+
     private VoitureDAO vdao ;
     private Connection connection;
 
@@ -43,8 +43,6 @@ public class VoitureDaoTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        vdao = new VoitureDAO();
-        //vdao = mock(VoitureDAO.class);
 
         connectionMock = mock(Connection.class); // Initialisez connectionMock
 
@@ -55,8 +53,9 @@ public class VoitureDaoTest {
         when(Configuration.getConfig("bdd.port")).thenReturn("3306");
         when(Configuration.getConfig("bdd.nom")).thenReturn("mydb");
 
-
+        vdao = new VoitureDAO(); // Créez une instance réelle de VoitureDAO si nécessaire
     }
+
 
 
 
