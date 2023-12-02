@@ -7,7 +7,6 @@ import static org.junit.Assert.*;
 
 public class ReponseVoitureTest
 {
-
     @Test
     public void setDataNullTest() {
         ReponseVoiture reponse = new ReponseVoiture();
@@ -77,10 +76,4 @@ public class ReponseVoitureTest
         assertEquals(voiture, donnes[0]);
 
     }
-
-
-
-
-
-
 }

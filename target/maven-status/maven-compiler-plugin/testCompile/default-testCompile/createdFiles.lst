@@ -1,0 +1,5 @@
+esiea\metier\VoitureTest.class
+esiea\dao\ReponseVoitureTest.class
+esiea\dao\VoitureDaoTest.class
+esiea\integrationtest\VoitureIntegrationTest.class
+esiea\api\VoitureAPITest.class

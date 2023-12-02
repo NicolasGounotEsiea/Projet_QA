@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: esiea.integrationtest.VoitureIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.724 s - in esiea.integrationtest.VoitureIntegrationTest
